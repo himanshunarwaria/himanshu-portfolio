@@ -74,12 +74,21 @@ nav .nav-links a:not(.nav-contact-btn):hover::after{width:100%}
 */
 .hero{
   min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:140px 3rem;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  padding:140px 3rem 140px;
   position:relative;
+  gap:2rem;
 }
+.hero-left{position:relative;z-index:2}
+.hero-image{position:relative;height:72vh;display:flex;align-items:center;justify-content:center}
+.hero-img-wrap{position:relative;width:100%;height:100%}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;transition:opacity .7s cubic-bezier(.25,.46,.45,.94);-webkit-mask-image:radial-gradient(ellipse 78% 88% at 55% 50%,black 20%,transparent 100%);mask-image:radial-gradient(ellipse 78% 88% at 55% 50%,black 20%,transparent 100%)}
+.hero-img-a{opacity:1}
+.hero-img-b{opacity:0}
+.hero-image:hover .hero-img-a{opacity:0}
+.hero-image:hover .hero-img-b{opacity:1}
 .hero-label{
   font-family:var(--font-mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
   color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;
@@ -235,7 +244,9 @@ section{padding:8rem 3rem}
 .card-desc{font-size:.85rem;color:var(--grey-light);max-width:32ch;line-height:1.6;font-weight:300}
 
 /* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+.about-grid{display:grid;grid-template-columns:1fr 0.75fr 1fr;gap:4rem;align-items:start}
+.about-img{position:relative;height:480px}
+.about-img img{width:100%;height:100%;object-fit:contain;object-position:center bottom;-webkit-mask-image:radial-gradient(ellipse 80% 90% at 50% 50%,black 25%,transparent 100%);mask-image:radial-gradient(ellipse 80% 90% at 50% 50%,black 25%,transparent 100%)}
 .about h2{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,3rem);line-height:1.15;letter-spacing:-.02em;font-weight:400}
 .about h2 em{font-style:italic}
 .about-text{font-size:1rem;line-height:1.85;color:var(--accent);font-weight:300}
@@ -262,10 +273,10 @@ footer a{transition:color .3s}footer a:hover{color:var(--white)}
 
 body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.6}
 
-@media(max-width:1024px){.work-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr;gap:3rem}.client-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1024px){.work-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr;gap:3rem}.client-grid{grid-template-columns:repeat(3,1fr)}.hero{grid-template-columns:1fr}.hero-image{display:none}.about-img{display:none}}
 @media(max-width:768px){
   nav{padding:1.2rem 1.5rem}nav .nav-links{display:none}.menu-toggle{display:flex}
-  .hero{padding:120px 1.5rem}section{padding:5rem 1.5rem}
+  .hero{padding:120px 1.5rem;grid-template-columns:1fr}.hero-image{display:none}section{padding:5rem 1.5rem}
   .work-card{padding:2.5rem 2rem;min-height:220px}.cta{padding:6rem 1.5rem}
   footer{flex-direction:column;gap:1rem;text-align:center}.hero-scroll{display:none}
   .client-grid{grid-template-columns:repeat(2,1fr)}
@@ -288,18 +299,26 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 <div class="mobile-menu" id="mobileMenu"><a href="#work" class="mobile-link">Work</a><a href="#about" class="mobile-link">About</a><a href="#contact" class="mobile-link">Contact</a></div>
 
 <section class="hero">
-  <div class="hero-label"><span class="pulse"></span> Available for freelance</div>
-  <h1>
-    <span class="line"><span class="word">I design brands</span></span>
-    <span class="line"><span class="word">that <em>dominate</em></span></span>
-    <span class="line"><span class="word">e-Commerce</span></span>
-  </h1>
-  <p class="hero-sub">Social Media Creatives, Performance Ads &amp; Product Listing Design that drive clicks, engagement, and conversions.</p>
-  <div class="hero-buttons">
-    <a href="#work" class="btn btn-filled"><span>View Work</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    <a href="#contact" class="btn"><span>Contact</span></a>
+  <div class="hero-left">
+    <div class="hero-label"><span class="pulse"></span> Available for freelance</div>
+    <h1>
+      <span class="line"><span class="word">I design brands</span></span>
+      <span class="line"><span class="word">that <em>dominate</em></span></span>
+      <span class="line"><span class="word">e-Commerce</span></span>
+    </h1>
+    <p class="hero-sub">Social Media Creatives, Performance Ads &amp; Product Listing Design that drive clicks, engagement, and conversions.</p>
+    <div class="hero-buttons">
+      <a href="#work" class="btn btn-filled"><span>View Work</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="#contact" class="btn"><span>Contact</span></a>
+    </div>
+    <div class="hero-scroll"><div class="scroll-arrow"></div>Scroll</div>
   </div>
-  <div class="hero-scroll"><div class="scroll-arrow"></div>Scroll</div>
+  <div class="hero-image">
+    <div class="hero-img-wrap">
+      <img class="hero-img hero-img-a" src="images/hero/Hero (11).png" alt="Himanshu Narwaria">
+      <img class="hero-img hero-img-b" src="images/hero/Hero (9).png" alt="Himanshu Narwaria">
+    </div>
+  </div>
 </section>
 
 <div class="marquee"><div class="marquee-track">
@@ -411,6 +430,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   <div class="section-label reveal">About</div>
   <div class="about-grid">
     <div class="reveal"><h2>Design is not<br>decoration — it's<br><em>communication</em></h2></div>
+    <div class="about-img reveal reveal-delay-1"><img src="images/hero/Hero (22).png" alt="Himanshu Narwaria"></div>
     <div class="reveal reveal-delay-1">
       <div class="about-text">
         <p>I'm Himanshu Narwaria, a graphic designer with 5+ years creating high-impact designs for social media, e-commerce platforms, and digital campaigns.</p>
