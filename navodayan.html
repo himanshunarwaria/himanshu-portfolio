@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navodayan Academy — Case Study — Himanshu Narwaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#08080a;--white:#f0efe9;--grey:#6b6b6b;--grey-light:#999;--accent:#c8c8bc;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Outfit',sans-serif;
+  --font-mono:'Space Mono',monospace;
+  --ease-out-expo:cubic-bezier(.16,1,.3,1);
+  --ease-smooth:cubic-bezier(.25,.46,.45,.94);
+  /* Brand-specific accent */
+  --brand-1:#1565c0;--brand-2:#0d47a1;--brand-3:#0a3070;--brand-bg:#e8f0fa;--brand-text:#0a2040;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--white);color:var(--black)}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.6}
+
+/* Cursor */
+.cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.5);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,background .3s;transform:translate(-50%,-50%)}.cursor.hover{width:60px;height:60px;border-color:var(--white);background:rgba(255,255,255,.06)}@media(pointer:coarse){.cursor{display:none}}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,10,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}
+nav .logo{font-family:var(--font-display);font-weight:500;font-size:1.15rem;letter-spacing:.02em}
+nav .back-link{font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;position:relative;padding:.3rem 0}
+nav .back-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--white);transition:width .5s var(--ease-out-expo)}
+nav .back-link:hover::after{width:100%}
+
+/* ═══════════ 1. HERO ═══════════ */
+.cs-hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 3rem 5rem;position:relative;overflow:hidden}
+.cs-hero .hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,var(--brand-1),var(--brand-2),var(--brand-3));opacity:.12;transition:transform 1.2s var(--ease-out-expo)}
+.cs-hero .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--black) 0%,transparent 60%)}
+.cs-hero .cs-label{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .3s forwards;position:relative;z-index:2}
+.cs-hero .cs-label::before{content:'';width:30px;height:1px;background:rgba(255,255,255,.2)}
+.cs-hero h1{font-family:var(--font-display);font-size:clamp(3.5rem,9vw,8rem);line-height:.9;letter-spacing:-.04em;font-weight:400;opacity:0;animation:fadeUp 1s var(--ease-out-expo) .4s forwards;position:relative;z-index:2}
+.cs-hero h1 em{font-style:italic}
+.cs-hero .hero-tagline{font-size:clamp(1rem,2vw,1.3rem);color:var(--grey-light);font-weight:300;margin-top:1.5rem;max-width:40ch;line-height:1.6;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .6s forwards;position:relative;z-index:2}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{opacity:0;transform:translateY(30px)}}
+
+/* ═══════════ 2. INTRO STRIP ═══════════ */
+.intro-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.intro-strip .strip-item{padding:2.5rem 3rem;border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:.4rem}
+.intro-strip .strip-item:last-child{border-right:none}
+.intro-strip .strip-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey)}
+.intro-strip .strip-value{font-family:var(--font-display);font-size:1.1rem;font-weight:400;letter-spacing:-.01em}
+
+/* ═══════════ SHARED SECTION ═══════════ */
+.cs-section{padding:7rem 3rem}
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 20%,rgba(255,255,255,.06) 80%,transparent)}
+.cs-section .sec-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:3rem;display:flex;align-items:center;gap:1rem}
+.cs-section .sec-label::before{content:'';width:24px;height:1px;background:rgba(255,255,255,.15)}
+
+/* ═══════════ 3. THE CHALLENGE ═══════════ */
+.challenge-text{font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.8rem);line-height:1.25;letter-spacing:-.02em;font-weight:400;max-width:28ch}
+.challenge-text em{font-style:italic;color:var(--brand-1)}
+.challenge-sub{margin-top:2rem;font-size:1rem;color:var(--grey-light);line-height:1.8;font-weight:300;max-width:55ch}
+
+/* ═══════════ 4. THE INSIGHT ═══════════ */
+.insight-section{text-align:center;padding:8rem 3rem}
+.insight-quote{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.2;letter-spacing:-.03em;font-weight:400;max-width:22ch;margin:0 auto;font-style:italic;position:relative}
+.insight-quote::before{content:'"';position:absolute;top:-.8em;left:-.4em;font-size:5rem;color:rgba(255,255,255,.06);font-family:var(--font-display);line-height:1}
+.insight-attr{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey);margin-top:2rem}
+
+/* ═══════════ 5. CREATIVE DIRECTION ═══════════ */
+.creative-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.creative-text h3{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.2rem);line-height:1.15;letter-spacing:-.02em;font-weight:400;margin-bottom:1.5rem}
+.creative-text h3 em{font-style:italic}
+.creative-text p{font-size:.95rem;color:var(--grey-light);line-height:1.8;font-weight:300;margin-bottom:1rem}
+
+/* Color palette */
+.palette{display:flex;gap:0;border-radius:12px;overflow:hidden;margin-top:2rem;height:80px}
+.palette .swatch{flex:1;position:relative;transition:flex .5s var(--ease-out-expo)}
+.palette .swatch:hover{flex:1.5}
+.palette .swatch .swatch-label{position:absolute;bottom:.6rem;left:.8rem;font-family:var(--font-mono);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;opacity:0;transition:opacity .3s ease}
+.palette .swatch:hover .swatch-label{opacity:1}
+
+/* Typography preview */
+.type-preview{margin-top:2.5rem;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:2.5rem;background:rgba(255,255,255,.02)}
+.type-preview .type-sample{font-family:var(--font-display);font-size:2.2rem;font-weight:400;letter-spacing:-.02em;margin-bottom:.5rem;line-height:1.2}
+.type-preview .type-body{font-family:var(--font-body);font-size:.9rem;color:var(--grey-light);font-weight:300;line-height:1.7;margin-bottom:1.5rem}
+.type-preview .type-meta{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+
+/* Moodboard placeholder */
+.moodboard{border:1px solid rgba(255,255,255,.06);border-radius:14px;overflow:hidden;background:rgba(255,255,255,.02);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative}
+.moodboard .mood-bg{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}
+.moodboard:hover .mood-bg{transform:scale(1.03)}
+.moodboard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.moodboard .mood-hint{position:relative;z-index:2;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.2)}
+
+/* ═══════════ 6. VISUAL EXPLORATION ═══════════ */
+.visual-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.visual-grid.three-col{grid-template-columns:repeat(3,1fr)}
+.visual-item{border-radius:12px;overflow:hidden;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);position:relative;transition:all .5s var(--ease-smooth)}
+.visual-item:hover{border-color:rgba(255,255,255,.12);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,0,0,.3)}
+.visual-item .vis-bg{aspect-ratio:4/3;position:relative;overflow:hidden}
+.visual-item .vis-bg .bg-fill{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}
+.visual-item:hover .bg-fill{transform:scale(1.06)}
+.visual-item .vis-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .8s var(--ease-out-expo)}
+.visual-item:hover .vis-bg img{transform:scale(1.06)}
+.visual-item .vis-label{padding:1.2rem 1.5rem;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+
+/* ═══════════ 7. FINAL DESIGN EXECUTION ═══════════ */
+.final-hero{border-radius:16px;overflow:hidden;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);margin-bottom:2rem}
+.final-hero .final-bg{aspect-ratio:16/9;position:relative;overflow:hidden}
+.final-hero .final-bg .bg-fill{position:absolute;inset:0;transition:transform 1s var(--ease-out-expo)}
+.final-hero:hover .bg-fill{transform:scale(1.03)}
+.final-hero .final-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+
+.final-alt{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;align-items:center}
+.final-alt .alt-text h4{font-family:var(--font-display);font-size:1.5rem;font-weight:400;margin-bottom:1rem;letter-spacing:-.01em}
+.final-alt .alt-text h4 em{font-style:italic}
+.final-alt .alt-text p{font-size:.9rem;color:var(--grey-light);line-height:1.7;font-weight:300}
+.final-alt .alt-visual{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02)}
+.final-alt .alt-visual .vis-bg{aspect-ratio:4/3;position:relative;overflow:hidden}
+.final-alt .alt-visual .vis-bg .bg-fill{position:absolute;inset:0}
+.final-alt .alt-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+
+/* ═══════════ 8. DETAIL HIGHLIGHTS ═══════════ */
+.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.detail-card{border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:2.5rem 2rem;background:rgba(255,255,255,.02);transition:all .5s ease}
+.detail-card:hover{border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.04);transform:translateY(-3px)}
+.detail-card .detail-icon{font-family:var(--font-display);font-size:2rem;margin-bottom:1.2rem;color:var(--brand-1)}
+.detail-card h4{font-family:var(--font-display);font-size:1.1rem;font-weight:400;margin-bottom:.6rem}
+.detail-card p{font-size:.82rem;color:var(--grey-light);line-height:1.6;font-weight:300}
+
+/* ═══════════ 9. BEFORE VS AFTER ═══════════ */
+.bva-grid{display:grid;grid-template-columns:1fr 60px 1fr;gap:0;align-items:center}
+.bva-side{border:1px solid rgba(255,255,255,.06);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.02)}
+.bva-side .bva-img{aspect-ratio:4/3;position:relative;overflow:hidden}
+.bva-side .bva-img .bg-fill{position:absolute;inset:0}
+.bva-side .bva-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.bva-side .bva-label{padding:1.2rem 1.5rem;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);text-align:center}
+.bva-arrow{display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.5rem;color:var(--grey)}
+
+/* ═══════════ 10. RESULTS ═══════════ */
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.result-card{border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:3.5rem 2.5rem;text-align:center;background:rgba(255,255,255,.02);transition:all .5s ease}
+.result-card:hover{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.04);transform:translateY(-4px)}
+.result-card .r-num{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,3.5rem);letter-spacing:-.03em;line-height:1;margin-bottom:.6rem}
+.result-card .r-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey);margin-bottom:.8rem}
+.result-card p{font-size:.85rem;color:var(--grey-light);line-height:1.6;font-weight:300}
+
+/* ═══════════ 11. CLOSING ═══════════ */
+.closing{text-align:center;padding:10rem 3rem;position:relative}
+.closing::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(214,201,176,.04) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.closing h2{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4.5rem);line-height:1;letter-spacing:-.04em;font-weight:400;margin-bottom:1.5rem}
+.closing h2 em{font-style:italic}
+.closing p{color:var(--grey-light);font-size:1rem;margin-bottom:3rem;max-width:38ch;margin-left:auto;margin-right:auto;font-weight:300;line-height:1.7}
+.cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2.4rem;border:1px solid rgba(255,255,255,.3);border-radius:100px;font-family:var(--font-body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--white);transition:all .45s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:'';position:absolute;inset:0;background:var(--white);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}
+.btn:hover::before{transform:scaleX(1);transform-origin:left}
+.btn span{position:relative;z-index:1;transition:color .4s ease}.btn:hover span{color:var(--black)}
+.btn svg{position:relative;z-index:1;transition:all .4s ease}.btn:hover svg{stroke:var(--black)}
+.btn-filled{background:var(--white);color:var(--black);border-color:var(--white)}.btn-filled::before{background:var(--black)}.btn-filled:hover span{color:var(--white)}.btn-filled:hover svg{stroke:var(--white)}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
+.r-d1{transition-delay:.1s}.r-d2{transition-delay:.2s}.r-d3{transition-delay:.3s}
+
+footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--white)}
+
+/* Responsive */
+@media(max-width:1024px){.creative-grid{grid-template-columns:1fr;gap:3rem}.final-alt{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr 1fr}.results-grid{grid-template-columns:1fr 1fr}.visual-grid.three-col{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+  nav{padding:1.2rem 1.5rem}.cs-hero{padding:0 1.5rem 3rem;min-height:80vh}
+  .intro-strip{grid-template-columns:1fr 1fr}.intro-strip .strip-item{padding:1.5rem}.intro-strip .strip-item:nth-child(2){border-right:none}
+  .cs-section{padding:4rem 1.5rem}.insight-section{padding:5rem 1.5rem}
+  .visual-grid{grid-template-columns:1fr}.visual-grid.three-col{grid-template-columns:1fr}
+  .detail-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr}
+  .bva-grid{grid-template-columns:1fr;gap:1rem}.bva-arrow{transform:rotate(90deg)}
+  .closing{padding:6rem 1.5rem}.cta-buttons{flex-direction:column;align-items:center}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+
+<nav>
+  <a href="index.html" class="logo">Himanshu Narwaria</a>
+  <a href="index.html#work" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Work</a>
+</nav>
+
+<!-- ═══ 1. HERO ═══ -->
+<section class="cs-hero">
+  <div class="hero-bg"></div>
+  <div class="cs-label">Case Study — Social + Ads</div>
+  <h1>Navodayan<br>Academy</h1>
+  <p class="hero-tagline">Structured and modern education visuals — building trust through clarity, precision, and institutional credibility.</p>
+</section>
+
+<!-- ═══ 2. INTRO STRIP ═══ -->
+<div class="intro-strip reveal">
+  <div class="strip-item"><span class="strip-label">Industry</span><span class="strip-value">Education &amp; EdTech</span></div>
+  <div class="strip-item"><span class="strip-label">Scope</span><span class="strip-value">Social + Ads + Branding</span></div>
+  <div class="strip-item"><span class="strip-label">Role</span><span class="strip-value">Design &amp; Campaign Strategy</span></div>
+  <div class="strip-item"><span class="strip-label">Duration</span><span class="strip-value">12 Weeks</span></div>
+</div>
+
+<!-- ═══ 3. THE CHALLENGE ═══ -->
+<section class="cs-section">
+  <div class="sec-label reveal">The Challenge</div>
+  <h2 class="challenge-text reveal">Nomme needed a visual identity that communicated <em>academic excellence</em> — structured, trustworthy, and parent-approved at first glance.</h2>
+  <p class="challenge-sub reveal">The existing brand presence felt too informal for a serious educational institution. Social media lacked consistency and the visual language didn't communicate the institutional credibility the brand deserved. We needed to bridge that gap without losing authenticity.</p>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ 4. THE INSIGHT ═══ -->
+<section class="insight-section">
+  <div class="sec-label reveal" style="justify-content:center">The Insight</div>
+  <blockquote class="insight-quote reveal">Education marketing isn't about being flashy — it's about building trust through structure and clarity.</blockquote>
+  <p class="insight-attr reveal">Design Philosophy — Navodayan</p>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ 5. CREATIVE DIRECTION ═══ -->
+<section class="cs-section">
+  <div class="sec-label reveal">Creative Direction</div>
+  <div class="creative-grid">
+    <div class="creative-text reveal">
+      <h3>Structured clarity with <em>institutional</em> precision</h3>
+      <p>We developed a visual system rooted in clean blues, grid systems, and data-driven layouts, and typographic hierarchy. Every element serves a purpose — nothing is decorative, everything communicates.</p>
+      <p>The palette draws from natural materials: sky blue, navy, and clean white. Typography pairs a refined serif for headlines with a clean sans-serif for body text.</p>
+
+      <!-- Color Palette -->
+      <div class="palette">
+        <div class="swatch" style="background:#e8f0fa"><span class="swatch-label" style="color:#0a2040">#e8f0fa</span></div>
+        <div class="swatch" style="background:#1565c0"><span class="swatch-label" style="color:#0a2040">#1565c0</span></div>
+        <div class="swatch" style="background:#0d47a1"><span class="swatch-label" style="color:#fff">#0d47a1</span></div>
+        <div class="swatch" style="background:#0a3070"><span class="swatch-label" style="color:#fff">#0a3070</span></div>
+        <div class="swatch" style="background:#0a2040"><span class="swatch-label" style="color:#1565c0">#0a2040</span></div>
+      </div>
+
+      <!-- Typography Preview -->
+      <div class="type-preview">
+        <div class="type-sample">Academic Trust</div>
+        <div class="type-body">Clear information, structured layouts, and credibility-first design that parents trust. Every detail is a deliberate choice.</div>
+        <div class="type-meta">Playfair Display / Outfit — Design System</div>
+      </div>
+    </div>
+
+    <div class="reveal r-d1">
+      <div class="moodboard">
+        <div class="mood-bg" style="background:linear-gradient(135deg,#e8f0fa,#1565c0,#0d47a1)"></div>
+        <!-- Replace with: <img src="images/case-studies/nomme-moodboard.jpg" alt="Nomme Moodboard"> -->
+        <span class="mood-hint">Upload moodboard</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ 6. VISUAL EXPLORATION ═══ -->
+<section class="cs-section">
+  <div class="sec-label reveal">Visual Exploration</div>
+  <div class="visual-grid reveal">
+    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#e8f0fa,#1565c0)"></div></div><div class="vis-label">Early concept — Info grid</div></div>
+    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#c8ddf5,#1050a0)"></div></div><div class="vis-label">Variation — Trust palette</div></div>
+    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#1565c0,#0a3070)"></div></div><div class="vis-label">Style exploration — Stats-driven</div></div>
+    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#0a2040,#0a3060)"></div></div><div class="vis-label">Admission variant — Lead gen</div></div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ 7. FINAL DESIGN EXECUTION ═══ -->
+<section class="cs-section">
+  <div class="sec-label reveal">Final Design Execution</div>
+
+  <!-- Full-width hero mockup -->
+  <div class="final-hero reveal">
+    <div class="final-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#e8f0fa,#1565c0,#0d47a1)"></div></div>
+  </div>
+
+  <!-- Alternating layout -->
+  <div class="final-alt reveal">
+    <div class="alt-text">
+      <h4>Admission <em>Campaign System</em></h4>
+      <p>A complete Instagram grid system with feed posts, carousels, and story templates — all sharing the same typographic rhythm and color language. Designed for structured trust across every parent touchpoint.</p>
+    </div>
+    <div class="alt-visual"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#c8ddf5,#1050a0)"></div></div></div>
+  </div>
+
+  <div class="final-alt reveal" style="margin-top:2rem">
+    <div class="alt-visual"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#1565c0,#0a3070)"></div></div></div>
+    <div class="alt-text">
+      <h4>Lead Gen <em>Ads</em></h4>
+      <p>Extended the visual language to admission ads, brochure design, landing pages, and promotional banners. Every customer touchpoint reinforces the trustworthy educational positioning.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ 8. DETAIL HIGHLIGHTS ═══ -->
+<section class="cs-section">
+  <div class="sec-label reveal">Detail Highlights</div>
+  <div class="detail-grid">
+    <div class="detail-card reveal">
+      <div class="detail-icon">Aa</div>
+      <h4>Typography</h4>
+      <p>Playfair Display for editorial headlines paired with Outfit for clean body text. Weight contrasts create clear visual hierarchy.</p>
+    </div>
+    <div class="detail-card reveal r-d1">
+      <div class="detail-icon">⊞</div>
+      <h4>Spacing System</h4>
+      <p>8px base grid with generous margins. Whitespace is treated as a design element — every gap is intentional.</p>
+    </div>
+    <div class="detail-card reveal r-d2">
+      <div class="detail-icon">◐</div>
+      <h4>Color Precision</h4>
+      <p>A 5-color palette grounded in institutional clarity. Clean blues and structured whites create parental trust without being boring.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ 9. BEFORE VS AFTER ═══ -->
+<section class="cs-section">
+  <div class="sec-label reveal">Before vs After</div>
+  <div class="bva-grid reveal">
+    <div class="bva-side">
+      <div class="bva-img"><div class="bg-fill" style="background:linear-gradient(135deg,#888,#666,#444)"></div></div>
+      <div class="bva-label">Before — Informal, cluttered presence</div>
+    </div>
+    <div class="bva-arrow">→</div>
+    <div class="bva-side">
+      <div class="bva-img"><div class="bg-fill" style="background:linear-gradient(135deg,#e8f0fa,#1565c0,#0d47a1)"></div></div>
+      <div class="bva-label">After — Clean institutional identity</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ 10. RESULTS ═══ -->
+<section class="cs-section">
+  <div class="sec-label reveal">Results &amp; Impact</div>
+  <div class="results-grid">
+    <div class="result-card reveal"><div class="r-num">+65%</div><div class="r-label">Lead Conversion</div><p>Post engagement rates surged within the first month of launching the new visual direction.</p></div>
+    <div class="result-card reveal r-d1"><div class="r-num">2.8x</div><div class="r-label">Ad ROAS</div><p>Unified visual identity created a recognizable, premium brand presence across all touchpoints.</p></div>
+    <div class="result-card reveal r-d2"><div class="r-num">+50%</div><div class="r-label">Admission Inquiries</div><p>Instagram profile visits increased significantly, driving more discovery and brand awareness.</p></div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ 11. CLOSING ═══ -->
+<section class="closing">
+  <h2 class="reveal">Building brands through<br><em>thoughtful design.</em></h2>
+  <p class="reveal r-d1">Every project is a chance to create something that matters.</p>
+  <div class="cta-buttons reveal r-d2">
+    <a href="index.html#work" class="btn btn-filled"><span>View More Work</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="index.html#contact" class="btn"><span>Get in Touch</span></a>
+  </div>
+</section>
+
+<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="index.html">Back to Home</a></footer>
+
+<script>
+const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;
+document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
+function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();
+document.querySelectorAll('a,button,.btn,.visual-item,.moodboard,.detail-card,.result-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon Listings — Himanshu Narwaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#08080a;--white:#f0efe9;--grey:#6b6b6b;--grey-light:#999;--font-display:'Playfair Display',Georgia,serif;--font-body:'Outfit',sans-serif;--font-mono:'Space Mono',monospace;--ease-out-expo:cubic-bezier(.16,1,.3,1);--ease-smooth:cubic-bezier(.25,.46,.45,.94)}
+html{scroll-behavior:smooth;font-size:16px}body{background:var(--black);color:var(--white);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--white);color:var(--black)}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.6}
+.cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.5);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,background .3s;transform:translate(-50%,-50%)}.cursor.hover{width:60px;height:60px;border-color:var(--white);background:rgba(255,255,255,.06)}@media(pointer:coarse){.cursor{display:none}}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,10,.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}nav .logo{font-family:var(--font-display);font-weight:500;font-size:1.15rem}nav .back-link{font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;position:relative;padding:.3rem 0}nav .back-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--white);transition:width .5s var(--ease-out-expo)}nav .back-link:hover::after{width:100%}
+.page-header{padding:10rem 3rem 5rem;position:relative}.page-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 20%,rgba(255,255,255,.06) 80%,transparent)}.page-header .label{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .1s forwards}.page-header .label::before{content:'';width:30px;height:1px;background:rgba(255,255,255,.2)}.page-header h1{font-family:var(--font-display);font-size:clamp(3rem,7vw,6rem);line-height:.95;letter-spacing:-.04em;font-weight:400;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .2s forwards}.page-header h1 em{font-style:italic}.page-header .desc{margin-top:1.5rem;color:var(--grey-light);font-size:1.05rem;max-width:55ch;line-height:1.7;font-weight:300;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .35s forwards}
+.page-header .stats-row{display:flex;gap:3rem;margin-top:2.5rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .45s forwards}.stat-pill{display:flex;flex-direction:column;gap:.2rem}.stat-pill .num{font-family:var(--font-display);font-size:1.8rem;letter-spacing:-.02em}.stat-pill .lbl{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{transform:translateY(30px)}}
+
+/* Category dividers */
+.cat-divider{padding:4rem 3rem 2rem}
+.cat-divider h2{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:400;letter-spacing:-.02em;display:flex;align-items:center;gap:1rem}
+.cat-divider h2 em{font-style:italic}
+.cat-divider h2::before{content:'';width:24px;height:1px;background:rgba(255,255,255,.2)}
+.cat-divider p{color:var(--grey);font-size:.85rem;margin-top:.5rem;font-weight:300}
+
+/* Project grid */
+.project-grid{padding:2rem 3rem 4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.project-card{position:relative;overflow:hidden;border-radius:12px;cursor:pointer;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);transition:all .6s var(--ease-smooth);display:flex;flex-direction:column;text-decoration:none;color:var(--white)}
+.project-card:hover{border-color:rgba(255,255,255,.15);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.project-card .card-img{aspect-ratio:4/3;overflow:hidden;position:relative;background:rgba(255,255,255,.03)}
+.project-card .card-img .img-bg{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}
+.project-card:hover .card-img .img-bg{transform:scale(1.08)}
+.project-card .card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .8s var(--ease-out-expo)}
+.project-card:hover .card-img img{transform:scale(1.08)}
+.project-card .card-img .badge{position:absolute;top:1rem;left:1rem;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .8rem;border:1px solid rgba(255,255,255,.2);border-radius:100px;color:rgba(255,255,255,.7);background:rgba(0,0,0,.4);backdrop-filter:blur(10px);z-index:3}
+.project-card .card-body{padding:1.6rem 1.8rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.project-card .card-body h3{font-family:var(--font-display);font-size:1.15rem;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.project-card .card-body p{font-size:.78rem;color:var(--grey-light);line-height:1.5;font-weight:300}
+.project-card .card-body .card-details{font-size:.7rem;color:var(--grey);line-height:1.6;margin-top:.3rem;font-weight:300}
+/* VIEW NOW button */
+.view-btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-light);padding:.6rem 1.3rem;border:1.5px solid rgba(255,255,255,.15);background:transparent;transition:all .3s var(--ease-smooth);align-self:flex-start;cursor:pointer;margin-top:.6rem}
+.project-card:hover .view-btn{background:var(--white);color:var(--black);border-color:var(--white)}
+.view-btn svg{width:11px;height:11px;stroke:currentColor;stroke-width:2;fill:none;transition:transform .3s ease}
+.project-card:hover .view-btn svg{transform:translate(2px,-2px)}
+.project-card .card-tags{padding:0 1.8rem 1.4rem;display:flex;gap:.4rem;flex-wrap:wrap}
+.tag{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border:1px solid rgba(255,255,255,.08);border-radius:100px;color:var(--grey-light)}
+
+.divider-line{height:1px;margin:0 3rem;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 20%,rgba(255,255,255,.06) 80%,transparent)}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
+footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--white)}
+@media(max-width:1024px){.project-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){nav{padding:1.2rem 1.5rem}.page-header{padding:8rem 1.5rem 3rem}.page-header .stats-row{gap:2rem;flex-wrap:wrap}.project-grid{padding:1.5rem 1.5rem 3rem;grid-template-columns:1fr;gap:1.2rem}.cat-divider{padding:3rem 1.5rem 1.5rem}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<nav><a href="index.html" class="logo">Himanshu Narwaria</a><a href="index.html#work" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Work</a></nav>
+
+<div class="page-header">
+  <div class="label">Listing Masters</div>
+  <h1>Amazon<br><em>Listings</em></h1>
+  <p class="desc">Conversion-optimized product images, A+ content, infographics, and comparison charts designed to dominate marketplace search results and boost purchases across Amazon, Flipkart &amp; D2C platforms.</p>
+  <div class="stats-row">
+    <div class="stat-pill"><span class="num">17+</span><span class="lbl">Brands</span></div>
+    <div class="stat-pill"><span class="num">200+</span><span class="lbl">Listings Designed</span></div>
+    <div class="stat-pill"><span class="num">42%</span><span class="lbl">Avg. CTR Increase</span></div>
+  </div>
+</div>
+
+<!-- ═══════════ HEALTH & BEAUTY ═══════════ -->
+<div class="cat-divider reveal"><h2><em>Health</em> &amp; Beauty</h2><p>Skincare, haircare, bath &amp; body — premium product listings for beauty brands</p></div>
+
+<div class="project-grid">
+  <a href="listing/listing-umai.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#1a1a1a,#2a2a2a,#1a1a1a)"></div><span class="badge">Stainless Steel</span></div>
+    <div class="card-body"><h3>UMAI</h3><p>Premium stainless steel bottle listings with feature callouts, insulation specs, and lifestyle photography. BPA-free, eco-friendly positioning.</p><span class="card-details">Hero images • Feature infographics • Comparison charts • Brand story</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">A+ Content</span><span class="tag">Bottles</span></div>
+  </a>
+  <a href="listing/listing-rejusure.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#f0c8d8,#e0a0c0,#d080a0)"></div><span class="badge">Skincare</span></div>
+    <div class="card-body"><h3>Rejusure</h3><p>Anti-aging retinol serum listings with ingredient highlights, PM routine integration, and Rejusure vs Others comparison charts.</p><span class="card-details">Product photography • Ingredient callouts • Comparison tables • Routine guides</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Skincare</span><span class="tag">Serum</span></div>
+  </a>
+  <a href="listing/listing-rey-naturals.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#8a9a70,#a0b088,#c0c8a0)"></div><span class="badge">Haircare</span></div>
+    <div class="card-body"><h3>Rey Naturals</h3><p>Pure olive oil listings with cold-pressed benefits, usage instructions, FDA-approved badges, and product range showcases.</p><span class="card-details">Lifestyle shots • Usage instructions • Certifications • Range display</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Haircare</span><span class="tag">Natural</span></div>
+  </a>
+  <a href="listing/listing-drfoot.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#1a3a6a,#2a5090,#1a3a6a)"></div><span class="badge">Foot Care</span></div>
+    <div class="card-body"><h3>DrFoot</h3><p>Arch support insole listings with ergonomic feature callouts, shoe compatibility visuals, and DrFoot vs Others comparison.</p><span class="card-details">Feature highlights • Comfort tech • Comparison charts • Use cases</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Health</span><span class="tag">Insoles</span></div>
+  </a>
+  <a href="listing-bathstore.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#e8c8a0,#d4a870,#c09050)"></div><span class="badge">Bath &amp; Body</span></div>
+    <div class="card-body"><h3>The Bath Store</h3><p>Mandarin orange body wash listings with ingredient benefits, variant showcases, and "What makes us better" comparison layouts.</p><span class="card-details">Product beauty shots • Ingredient callouts • Variant display • Brand story</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Flipkart</span><span class="tag">Body Wash</span></div>
+  </a>
+  <a href="listing/listing-petvit.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#8a4a8a,#a060a0,#c080c0)"></div><span class="badge">Pet Food</span></div>
+    <div class="card-body"><h3>Petvit</h3><p>Natural dog food listings with nutritional info, feeding guidelines, transition charts, and Petvit vs Others comparison tables.</p><span class="card-details">Product shots • Nutrition tables • Feeding guides • Comparison charts</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Pet Care</span><span class="tag">Dog Food</span></div>
+  </a>
+  <a href="listing/listing-butternut-co.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#d4b078,#c49850,#b08030)"></div><span class="badge">FMCG</span></div>
+    <div class="card-body"><h3>The Butternut Co.</h3><p>Peanut butter listings with protein callouts, no-junk messaging, nutrition facts, and appetizing product photography.</p><span class="card-details">Hero images • Nutrition facts • Ingredient story • Recipe integration</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Food</span><span class="tag">Peanut Butter</span></div>
+  </a>
+</div>
+
+<div class="divider-line"></div>
+
+<!-- ═══════════ HOME ═══════════ -->
+<div class="cat-divider reveal"><h2><em>Home</em> &amp; Kitchen</h2><p>Appliances, furniture, cookware &amp; home essentials — functional product storytelling</p></div>
+
+<div class="project-grid">
+  <a href="listing/listing-better-home.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#88c8c8,#60a8a8,#408888)"></div><span class="badge">Bottles</span></div>
+    <div class="card-body"><h3>The Better Home</h3><p>Double vacuum insulated bottles with feature specs, lifestyle integration shots, and TBH vs Others sustainability comparison.</p><span class="card-details">Product hero • Feature specs • Lifestyle shots • Eco-friendly story</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Home</span><span class="tag">Sustainable</span></div>
+  </a>
+  <a href="listing/listing-usha-shriram.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#a08080,#887070,#705858)"></div><span class="badge">Dinnerware</span></div>
+    <div class="card-body"><h3>Usha Shriram</h3><p>Premium melamine dinnerware set listings with pack contents, shatter-resistant features, and brand vs Others comparison.</p><span class="card-details">Set contents • Feature callouts • Durability specs • Brand story</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Kitchen</span><span class="tag">Dinnerware</span></div>
+  </a>
+  <a href="listing/listing-cheston.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#2a8888,#1a6868,#0a4848)"></div><span class="badge">Power Tools</span></div>
+    <div class="card-body"><h3>Cheston</h3><p>Cordless wrench driver listings with motor specs, battery capacity callouts, multi-use showcases, and competitor comparison.</p><span class="card-details">Tech specs • Use cases • Power comparison • Build quality</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Tools</span><span class="tag">Cordless</span></div>
+  </a>
+  <a href="listing/listing-kuber.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#c89060,#b07840,#986020)"></div><span class="badge">Copper</span></div>
+    <div class="card-body"><h3>Kuber Industries</h3><p>Hammered copper water dispenser listings with health benefits, capacity specs, rust-proof features, and brand quality positioning.</p><span class="card-details">Product hero • Health benefits • Material quality • Brand promise</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Home</span><span class="tag">Copper</span></div>
+  </a>
+  <a href="listing/listing-savya-homes.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#3a3a3a,#2a2a2a,#1a1a1a)"></div><span class="badge">Furniture</span></div>
+    <div class="card-body"><h3>Savya Homes</h3><p>Ergonomic office chair listings with dimension specs, lumbar support features, reclining mechanism, and comfort comparison.</p><span class="card-details">Dimension diagrams • Feature callouts • Ergonomic specs • Comparison</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Office</span><span class="tag">Ergonomic</span></div>
+  </a>
+  <a href="listing/listing-candes.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#484848,#383838,#282828)"></div><span class="badge">Fans</span></div>
+    <div class="card-body"><h3>Candes</h3><p>High-speed ceiling fan listings with blade specs, room fit visuals, energy rating badges, and corrosion-resistant features.</p><span class="card-details">Product angles • Room placement • Energy specs • Warranty info</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Home</span><span class="tag">Appliance</span></div>
+  </a>
+  <a href="listing/listing-fumato.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#9070c0,#7050a0,#503080)"></div><span class="badge">Cooker</span></div>
+    <div class="card-body"><h3>Fumato</h3><p>Multi-purpose rice cooker listings with accessory breakdown, dimension specs, convenience features, and brand vs Others comparison.</p><span class="card-details">Accessory layout • Dimension specs • Cooking modes • Comparison</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Kitchen</span><span class="tag">Appliance</span></div>
+  </a>
+</div>
+
+<div class="divider-line"></div>
+
+<!-- ═══════════ FITNESS & LIFESTYLE ═══════════ -->
+<div class="cat-divider reveal"><h2><em>Fitness</em> &amp; Lifestyle</h2><p>Sports gear, outdoor accessories &amp; lifestyle products — active living product design</p></div>
+
+<div class="project-grid">
+  <a href="listing/listing-mush.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#60c0c0,#40a0a0,#208080)"></div><span class="badge">Towels</span></div>
+    <div class="card-body"><h3>MUSH</h3><p>Bamboo towel listings with absorbency features, versatility showcases (beach, bath, travel), and eco-friendly brand positioning.</p><span class="card-details">Lifestyle photography • Use cases • Material specs • Sustainability</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Lifestyle</span><span class="tag">Bamboo</span></div>
+  </a>
+  <a href="listing/listing-carbinic.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#8a6830,#a07840,#685020)"></div><span class="badge">Auto</span></div>
+    <div class="card-body"><h3>Carbinic</h3><p>Custom car cover listings with UV protection specs, triple-stitched lining callouts, 4-step installation guide, and military-grade fabric story.</p><span class="card-details">Protection features • Installation steps • Material specs • Comparison</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Auto</span><span class="tag">Protection</span></div>
+  </a>
+  <a href="listing/listing-head.html" class="project-card reveal">
+    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#e06020,#c04810,#a03000)"></div><span class="badge">Fitness</span></div>
+    <div class="card-body"><h3>HEAD</h3><p>Skip rope and fitness equipment listings with workout benefits, ergonomic handle features, and globally-trusted brand positioning.</p><span class="card-details">Action photography • Workout benefits • Handle features • Brand trust</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Fitness</span><span class="tag">Equipment</span></div>
+  </a>
+</div>
+
+<div style="padding:4rem 3rem 0"></div>
+
+<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="index.html">Back to Home</a></footer>
+<script>const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();document.querySelectorAll('a,.project-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
+</body>
+</html>

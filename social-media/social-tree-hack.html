@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tree Hack — Social Media — Himanshu Narwaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#08080a;--white:#f0efe9;--grey:#6b6b6b;--grey-light:#999;--font-display:'Playfair Display',Georgia,serif;--font-body:'Outfit',sans-serif;--font-mono:'Space Mono',monospace;--ease-out-expo:cubic-bezier(.16,1,.3,1);--ease-smooth:cubic-bezier(.25,.46,.45,.94)}
+html{scroll-behavior:smooth;font-size:16px}body{background:var(--black);color:var(--white);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--white);color:var(--black)}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.6}
+.cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.5);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,background .3s;transform:translate(-50%,-50%)}.cursor.hover{width:60px;height:60px;border-color:var(--white);background:rgba(255,255,255,.06)}@media(pointer:coarse){.cursor{display:none}}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,10,.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}nav .logo{font-family:var(--font-display);font-weight:500;font-size:1.15rem}nav .back-link{font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;position:relative;padding:.3rem 0}nav .back-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--white);transition:width .5s var(--ease-out-expo)}nav .back-link:hover::after{width:100%}
+.hero{padding:10rem 3rem 4rem;position:relative}.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 20%,rgba(255,255,255,.06) 80%,transparent)}
+.hero .label{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .1s forwards}.hero .label::before{content:'';width:30px;height:1px;background:rgba(255,255,255,.2)}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5rem);line-height:.95;letter-spacing:-.04em;font-weight:400;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .2s forwards}.hero h1 em{font-style:italic}
+.hero .desc{margin-top:1.5rem;color:var(--grey-light);font-size:1rem;max-width:55ch;line-height:1.7;font-weight:300;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .35s forwards}
+.hero .meta-row{display:flex;gap:3rem;margin-top:2rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .45s forwards}.meta-item{display:flex;flex-direction:column;gap:.2rem}.meta-item .mv{font-family:var(--font-display);font-size:1rem}.meta-item .ml{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{transform:translateY(30px)}}
+.gallery{padding:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.gallery-item{border-radius:10px;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);aspect-ratio:1/1;position:relative;transition:all .5s var(--ease-smooth)}.gallery-item:hover{border-color:rgba(255,255,255,.12);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,0,0,.3)}
+.gallery-item .g-bg{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}.gallery-item:hover .g-bg{transform:scale(1.04)}
+.gallery-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.gallery-item .g-label{position:absolute;bottom:0;left:0;right:0;padding:1rem 1.2rem;background:linear-gradient(transparent,rgba(0,0,0,.6));z-index:2;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.upload-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.15)}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
+.r-d1{transition-delay:.1s}.r-d2{transition-delay:.2s}
+.cta-sec{text-align:center;padding:5rem 3rem 6rem}.cta-sec h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;margin-bottom:1rem}.cta-sec h2 em{font-style:italic}.cta-sec p{color:var(--grey-light);font-size:.9rem;margin-bottom:2rem;font-weight:300}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2rem;border:1px solid rgba(255,255,255,.3);border-radius:100px;font-family:var(--font-body);font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--white);transition:all .4s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:'';position:absolute;inset:0;background:var(--white);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}.btn:hover::before{transform:scaleX(1);transform-origin:left}.btn:hover{color:var(--black)}
+footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--white)}
+@media(max-width:768px){nav{padding:1.2rem 1.5rem}.hero{padding:8rem 1.5rem 3rem}.gallery{padding:1.5rem;grid-template-columns:1fr 1fr;gap:.8rem}.cta-sec{padding:3rem 1.5rem 4rem}.hero .meta-row{gap:1.5rem;flex-wrap:wrap}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<nav><a href="../index.html" class="logo">Himanshu Narwaria</a><a href="social-media.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Social Media</a></nav>
+
+<div class="hero">
+  <div class="label">Social Media Design</div>
+  <h1>Tree Hack</h1>
+  <p class="desc">Eco-conscious brand social media. Sustainability-driven content, green initiative campaigns, and environmental awareness creatives to inspire action.</p>
+  <div class="meta-row">
+    <div class="meta-item"><span class="mv">Sustainability</span><span class="ml">Industry</span></div>
+    <div class="meta-item"><span class="mv">Instagram, LinkedIn</span><span class="ml">Platforms</span></div>
+    <div class="meta-item"><span class="mv">Posts, Campaigns</span><span class="ml">Scope</span></div>
+  </div>
+</div>
+
+<div class="gallery">
+  <div class="gallery-item reveal"><div class="g-bg" style="background:linear-gradient(135deg,#1b5e20,#2e7d32)"></div><div class="g-label">Green initiative post</div><span class="upload-hint">Upload image</span></div>
+  <div class="gallery-item reveal r-d1"><div class="g-bg" style="background:linear-gradient(135deg,#2e7d32,#43a047)"></div><div class="g-label">Sustainability infographic</div><span class="upload-hint">Upload image</span></div>
+  <div class="gallery-item reveal r-d2"><div class="g-bg" style="background:linear-gradient(135deg,#43a047,#1b5e20)"></div><div class="g-label">Product eco-showcase</div><span class="upload-hint">Upload image</span></div>
+  <div class="gallery-item reveal"><div class="g-bg" style="background:linear-gradient(135deg,#2e7d32,#1b5e20)"></div><div class="g-label">Campaign — Plant a tree</div><span class="upload-hint">Upload image</span></div>
+  <div class="gallery-item reveal r-d1"><div class="g-bg" style="background:linear-gradient(135deg,#1b5e20,#43a047)"></div><div class="g-label">Impact stats carousel</div><span class="upload-hint">Upload image</span></div>
+  <div class="gallery-item reveal r-d2"><div class="g-bg" style="background:linear-gradient(135deg,#43a047,#2e7d32)"></div><div class="g-label">Community action post</div><span class="upload-hint">Upload image</span></div>
+</div>
+
+<section class="cta-sec reveal">
+  <h2>Like what you <em>see?</em></h2>
+  <p>Let's create scroll-stopping social media for your brand.</p>
+  <div class="cta-btns">
+    <a href="social-media.html" class="btn"><span>View All Brands</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="mailto:himanshunarwaria.work@gmail.com" class="btn"><span>Get in Touch</span></a>
+  </div>
+</section>
+
+<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="social-media.html">Back to Social Media</a></footer>
+<script>const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();document.querySelectorAll('a,.gallery-item,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}}},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
+</body>
+</html>
