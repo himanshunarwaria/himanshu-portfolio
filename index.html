@@ -83,7 +83,8 @@ nav .nav-links a:not(.nav-contact-btn):hover::after{width:100%}
 .hero-left{position:relative;z-index:2;max-width:54%}
 .hero-image{position:absolute;inset:0;z-index:0;overflow:hidden}
 .hero-img-wrap{position:absolute;inset:0}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;transition:opacity .7s cubic-bezier(.25,.46,.45,.94)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;transition:opacity .7s cubic-bezier(.25,.46,.45,.94)}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .hero-image::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(8,8,10,1) 28%,rgba(8,8,10,.65) 58%,rgba(8,8,10,.08) 100%)}
 .hero-img-a{opacity:1}
 .hero-img-b{opacity:0}
@@ -319,8 +320,14 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   <div class="hero-scroll"><div class="scroll-arrow"></div>Scroll</div>
   <div class="hero-image">
     <div class="hero-img-wrap">
-      <img class="hero-img hero-img-a" src="images/hero/Hero (11).png" alt="Himanshu Narwaria">
-      <img class="hero-img hero-img-b" src="images/hero/Hero (9).png" alt="Himanshu Narwaria">
+      <picture class="hero-img hero-img-a">
+        <source media="(max-width:768px)" srcset="images/hero/mobile/Hero (11).png">
+        <img src="images/hero/Hero (11).png" alt="Himanshu Narwaria" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+      </picture>
+      <picture class="hero-img hero-img-b">
+        <source media="(max-width:768px)" srcset="images/hero/mobile/Hero (9).png">
+        <img src="images/hero/Hero (9).png" alt="Himanshu Narwaria" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+      </picture>
     </div>
   </div>
 </section>
@@ -431,7 +438,10 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 <div class="section-divider"></div>
 
 <section class="about" id="about">
-  <div class="about-img"><img src="images/hero/Hero (22).png" alt="Himanshu Narwaria"></div>
+  <div class="about-img"><picture>
+    <source media="(max-width:768px)" srcset="images/hero/mobile/Hero (22).png">
+    <img src="images/hero/Hero (22).png" alt="Himanshu Narwaria" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+  </picture></div>
   <div class="section-label reveal">About</div>
   <div class="about-grid">
     <div class="reveal reveal-delay-1"><h2>Design is not<br>decoration — it's<br><em>communication</em></h2></div>
