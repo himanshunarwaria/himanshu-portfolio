@@ -35,7 +35,7 @@
     '*{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}',
     'img{-webkit-user-drag:none!important;user-drag:none!important;pointer-events:none!important}',
     /* transparent overlay on every image container blocks "save image as" */
-    '.gallery-item,.listing-img,.cat-card-thumb,.latest-card-thumb,.banner-item,.hero-img,.about-img,.hero-image{position:relative}',
+    '.gallery-item,.listing-img,.cat-card-thumb,.latest-card-thumb,.banner-item{position:relative}',
     '.gallery-item::after,.listing-img::after,.cat-card-thumb::after,.latest-card-thumb::after,.banner-item::after{content:"";position:absolute;inset:0;z-index:999}',
     /* block print / screenshot via print dialog */
     '@media print{html,body{display:none!important}}'
