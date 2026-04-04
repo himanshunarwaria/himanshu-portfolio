@@ -3,6 +3,5 @@ Allow: /
 
 # Block unneeded assets from crawl budget
 Disallow: /images/hero/mobile/
-Disallow: /*.js$
 
 Sitemap: https://himanshunarwaria.in/sitemap.xml

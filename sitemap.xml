@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- CORE PAGES -->
-  <url><loc>https://himanshunarwaria.in/</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://himanshunarwaria.in/social-media.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://himanshunarwaria.in/meta-ads.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://himanshunarwaria.in/listings.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://himanshunarwaria.in/banners.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://himanshunarwaria.in/</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://himanshunarwaria.in/social-media.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://himanshunarwaria.in/listings.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://himanshunarwaria.in/banners.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://himanshunarwaria.in/blog/</loc><lastmod>2026-04-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://himanshunarwaria.in/blog/social-media-design-impact-brand-growth-2026.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://himanshunarwaria.in/blog/amazon-listing-design-guide-increase-conversions.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://himanshunarwaria.in/blog/how-to-get-clients-graphic-designer-2026.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- SOCIAL MEDIA BRAND PAGES -->
   <url><loc>https://himanshunarwaria.in/social-media/social-nomme.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -26,12 +30,16 @@
   <url><loc>https://himanshunarwaria.in/social-media/social-bharat-baklava.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- META ADS BRAND PAGES -->
-  <url><loc>https://himanshunarwaria.in/meta-ads/meta-nomme.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://himanshunarwaria.in/meta-ads/meta-pista.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://himanshunarwaria.in/meta-ads/meta-dub.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://himanshunarwaria.in/meta-ads/meta-butternut.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://himanshunarwaria.in/meta-ads/meta-navodayan.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://himanshunarwaria.in/meta-ads/meta-tradejini.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads/meta-nomme.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads/meta-pista.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads/meta-dub.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads/meta-butternut.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads/meta-navodayan.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads/meta-tradejini.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads/meta-gourmet-baklava.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads/meta-dr-foot.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads/meta-the-bath-store.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://himanshunarwaria.in/meta-ads/meta-misc-ads.html</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- AMAZON LISTING PAGES -->
   <url><loc>https://himanshunarwaria.in/listing/listing-bathstore.html</loc><lastmod>2025-03-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
