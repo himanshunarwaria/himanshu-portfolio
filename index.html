@@ -506,6 +506,12 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .blog-read-more{display:inline-flex;align-items:center;gap:.4rem;transition:color .3s ease}
 .blog-read-more svg{stroke:currentColor;stroke-width:2;fill:none}
 .blog-card:hover .blog-read-more{color:var(--white)}
+.blog-card[data-accent="amber"]:hover{border-color:rgba(245,158,11,.2)}.blog-card[data-accent="amber"] .blog-card-tag{color:#f59e0b}
+.blog-card[data-accent="teal"]:hover{border-color:rgba(45,212,191,.2)}.blog-card[data-accent="teal"] .blog-card-tag{color:#2dd4bf}
+.blog-card[data-accent="rose"]:hover{border-color:rgba(251,113,133,.2)}.blog-card[data-accent="rose"] .blog-card-tag{color:#fb7185}
+.blog-card[data-accent="green"]:hover{border-color:rgba(74,222,128,.2)}.blog-card[data-accent="green"] .blog-card-tag{color:#4ade80}
+.blog-card[data-accent="blue"]:hover{border-color:rgba(96,165,250,.2)}.blog-card[data-accent="blue"] .blog-card-tag{color:#60a5fa}
+.blog-card[data-accent="purple"]:hover{border-color:rgba(192,132,252,.2)}.blog-card[data-accent="purple"] .blog-card-tag{color:#c084fc}
 
 /* PEOPLE ALSO ASK — LLM SEO */
 
@@ -821,8 +827,35 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   <div class="section-label reveal">From the Blog</div>
   <h2 class="reveal">Design Insights &amp;<br><em>Strategy Guides</em></h2>
   <div class="blog-grid">
-    <a href="blog/social-media-design-impact-brand-growth-2026.html" class="blog-card reveal">
-      <div class="blog-card-img"><div class="blog-img-bg" style="background:linear-gradient(145deg,#0a120a,#1a2a0a)"></div></div>
+    <a href="blog/social-media-design-increase-sales-case-studies.html" class="blog-card reveal" data-accent="amber">
+      <div class="blog-card-img"><div class="blog-img-bg" style="background:linear-gradient(145deg,#120c04,#1a1008)"></div><div class="card-deco" style="width:120px;height:120px;background:#f59e0b;right:-20px;top:-20px;position:absolute;border-radius:50%;filter:blur(40px);opacity:.4"></div></div>
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Case Studies</div>
+        <h3 class="blog-card-title">How Professional Social Media Design Can Increase Your Sales</h3>
+        <p class="blog-card-desc">Real case studies showing how design drives engagement, clicks, and sales — with actionable tips for small businesses.</p>
+        <div class="blog-card-footer"><span>10 min read</span><span class="blog-read-more">Read Article <svg width="12" height="12" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></div>
+      </div>
+    </a>
+    <a href="blog/social-media-packages-smm-agency.html" class="blog-card reveal reveal-delay-1" data-accent="teal">
+      <div class="blog-card-img"><div class="blog-img-bg" style="background:linear-gradient(145deg,#040e0c,#081a16)"></div><div class="card-deco" style="width:120px;height:120px;background:#2dd4bf;left:-20px;bottom:-20px;position:absolute;border-radius:50%;filter:blur(40px);opacity:.4"></div></div>
+      <div class="blog-card-body">
+        <div class="blog-card-tag">SMM Packages</div>
+        <h3 class="blog-card-title">Social Media Packages Explained: What to Expect From an SMM Agency</h3>
+        <p class="blog-card-desc">Clear breakdown of SMM pricing, package types, and how to choose the right social media management services.</p>
+        <div class="blog-card-footer"><span>9 min read</span><span class="blog-read-more">Read Article <svg width="12" height="12" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></div>
+      </div>
+    </a>
+    <a href="blog/social-media-design-process-explained.html" class="blog-card reveal reveal-delay-2" data-accent="rose">
+      <div class="blog-card-img"><div class="blog-img-bg" style="background:linear-gradient(145deg,#12060a,#1a0810)"></div><div class="card-deco" style="width:120px;height:120px;background:#fb7185;right:-20px;bottom:-20px;position:absolute;border-radius:50%;filter:blur(40px);opacity:.4"></div></div>
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Process</div>
+        <h3 class="blog-card-title">How We Help Businesses Grow with Social Media Design</h3>
+        <p class="blog-card-desc">Step-by-step workflow from brand research to performance tracking — understand exactly what working with a designer looks like.</p>
+        <div class="blog-card-footer"><span>8 min read</span><span class="blog-read-more">Read Article <svg width="12" height="12" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></div>
+      </div>
+    </a>
+    <a href="blog/social-media-design-impact-brand-growth-2026.html" class="blog-card reveal" data-accent="green">
+      <div class="blog-card-img"><div class="blog-img-bg" style="background:linear-gradient(145deg,#060e06,#0a1a0a)"></div><div class="card-deco" style="width:120px;height:120px;background:#4ade80;right:-20px;top:-20px;position:absolute;border-radius:50%;filter:blur(40px);opacity:.4"></div></div>
       <div class="blog-card-body">
         <div class="blog-card-tag">Social Media</div>
         <h3 class="blog-card-title">How Social Media Design Impacts Brand Growth in 2026</h3>
@@ -830,8 +863,8 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
         <div class="blog-card-footer"><span>8 min read</span><span class="blog-read-more">Read Article <svg width="12" height="12" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></div>
       </div>
     </a>
-    <a href="blog/amazon-listing-design-guide-increase-conversions.html" class="blog-card reveal reveal-delay-1">
-      <div class="blog-card-img"><div class="blog-img-bg" style="background:linear-gradient(145deg,#0a0e1a,#0a1830)"></div></div>
+    <a href="blog/amazon-listing-design-guide-increase-conversions.html" class="blog-card reveal reveal-delay-1" data-accent="blue">
+      <div class="blog-card-img"><div class="blog-img-bg" style="background:linear-gradient(145deg,#060810,#0a1428)"></div><div class="card-deco" style="width:120px;height:120px;background:#60a5fa;left:-20px;top:-20px;position:absolute;border-radius:50%;filter:blur(40px);opacity:.4"></div></div>
       <div class="blog-card-body">
         <div class="blog-card-tag">Amazon Design</div>
         <h3 class="blog-card-title">The Complete Amazon Listing Design Guide to Increase Conversions</h3>
@@ -839,8 +872,8 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
         <div class="blog-card-footer"><span>12 min read</span><span class="blog-read-more">Read Article <svg width="12" height="12" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></div>
       </div>
     </a>
-    <a href="blog/how-to-get-clients-graphic-designer-2026.html" class="blog-card reveal reveal-delay-2">
-      <div class="blog-card-img"><div class="blog-img-bg" style="background:linear-gradient(145deg,#14091a,#1a0a28)"></div></div>
+    <a href="blog/how-to-get-clients-graphic-designer-2026.html" class="blog-card reveal reveal-delay-2" data-accent="purple">
+      <div class="blog-card-img"><div class="blog-img-bg" style="background:linear-gradient(145deg,#0e0616,#180a28)"></div><div class="card-deco" style="width:120px;height:120px;background:#c084fc;right:-20px;bottom:-20px;position:absolute;border-radius:50%;filter:blur(40px);opacity:.4"></div></div>
       <div class="blog-card-body">
         <div class="blog-card-tag">Freelance</div>
         <h3 class="blog-card-title">How to Get Clients as a Freelance Graphic Designer in 2026</h3>
