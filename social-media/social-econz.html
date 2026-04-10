@@ -39,25 +39,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display
 .hero .desc{margin-top:1.5rem;color:var(--grey-light);font-size:1rem;max-width:55ch;line-height:1.7;font-weight:300;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .35s forwards}
 .hero .meta-row{display:flex;gap:3rem;margin-top:2rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .45s forwards}.meta-item{display:flex;flex-direction:column;gap:.2rem}.meta-item .mv{font-family:var(--font-display);font-size:1rem}.meta-item .ml{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{transform:translateY(30px)}}
-.gallery{padding:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.gallery-item{border-radius:10px;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);aspect-ratio:1/1;position:relative;transition:all .5s var(--ease-smooth)}.gallery-item:hover{border-color:rgba(255,255,255,.12);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,0,0,.3)}
-.gallery-item .g-bg{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}.gallery-item:hover .g-bg{transform:scale(1.04)}
-.gallery-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
-.gallery-item .g-label{position:absolute;bottom:0;left:0;right:0;padding:1rem 1.2rem;background:linear-gradient(transparent,rgba(0,0,0,.6));z-index:2;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.gallery{padding:2rem 3rem 4rem;columns:5;column-gap:.75rem}
+.gallery-item{break-inside:avoid;border-radius:8px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.06);box-shadow:0 4px 20px rgba(0,0,0,.35);margin-bottom:.75rem;transition:transform .5s var(--ease-smooth),box-shadow .5s var(--ease-smooth),border-color .5s}
+.gallery-item:hover{border-color:rgba(255,255,255,.18);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.55)}
+.gallery-item img{width:100%;height:auto;display:block}
+.reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.js-loaded .reveal{opacity:0;transform:translateY(40px)}.js-loaded .reveal.visible{opacity:1;transform:translateY(0)}
 .upload-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.15)}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.js-loaded .reveal{opacity:0;transform:translateY(40px)}.js-loaded .reveal.visible{opacity:1;transform:translateY(0)}.reveal.visible{opacity:1;transform:translateY(0)}
 .r-d1{transition-delay:.1s}.r-d2{transition-delay:.2s}
 .cta-sec{text-align:center;padding:5rem 3rem 6rem}.cta-sec h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;margin-bottom:1rem}.cta-sec h2 em{font-style:italic}.cta-sec p{color:var(--grey-light);font-size:.9rem;margin-bottom:2rem;font-weight:300}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2rem;border:1px solid rgba(255,255,255,.3);border-radius:100px;font-family:var(--font-body);font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--white);transition:all .4s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
 .btn::before{content:'';position:absolute;inset:0;background:var(--white);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}.btn:hover::before{transform:scaleX(1);transform-origin:left}.btn:hover{color:var(--black)}
 footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--white)}
-@media(max-width:768px){nav{padding:1.2rem 1.5rem}.hero{padding:8rem 1.5rem 3rem}.gallery{padding:1.5rem;grid-template-columns:1fr 1fr;gap:.8rem}.cta-sec{padding:3rem 1.5rem 4rem}.hero .meta-row{gap:1.5rem;flex-wrap:wrap}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}}
+@media(max-width:768px){nav{padding:1.2rem 1.5rem}.hero{padding:8rem 1.5rem 3rem}.gallery{padding:2rem 3rem 4rem;columns:5;column-gap:.75rem}
+.gallery-item{break-inside:avoid;border-radius:8px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.06);box-shadow:0 4px 20px rgba(0,0,0,.35);margin-bottom:.75rem;transition:transform .5s var(--ease-smooth),box-shadow .5s var(--ease-smooth),border-color .5s}
+.gallery-item:hover{border-color:rgba(255,255,255,.18);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.55)}
+.gallery-item img{width:100%;height:auto;display:block}
+.reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.js-loaded .reveal{opacity:0;transform:translateY(40px)}.js-loaded .reveal.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
-<nav><a href="/" class="logo">Himanshu Narwaria</a><a href="social-media.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Social Media</a></nav>
+<nav><a href="/" class="logo">Himanshu Narwaria</a><a href="../social-media.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Social Media</a></nav>
 
 <div class="hero">
   <div class="label">Social Media Design</div>
@@ -71,12 +75,382 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
 </div>
 
 <div class="gallery">
-  <div class="gallery-item reveal"><div class="g-bg" style="background:linear-gradient(135deg,#1a5276,#2980b9)"></div><div class="g-label">Market insight graphic</div><span class="upload-hint">Upload image</span></div>
-  <div class="gallery-item reveal r-d1"><div class="g-bg" style="background:linear-gradient(135deg,#2980b9,#3498db)"></div><div class="g-label">Data visualization post</div><span class="upload-hint">Upload image</span></div>
-  <div class="gallery-item reveal r-d2"><div class="g-bg" style="background:linear-gradient(135deg,#3498db,#1a5276)"></div><div class="g-label">Corporate announcement</div><span class="upload-hint">Upload image</span></div>
-  <div class="gallery-item reveal"><div class="g-bg" style="background:linear-gradient(135deg,#2980b9,#1a5276)"></div><div class="g-label">Service showcase</div><span class="upload-hint">Upload image</span></div>
-  <div class="gallery-item reveal r-d1"><div class="g-bg" style="background:linear-gradient(135deg,#1a5276,#3498db)"></div><div class="g-label">Industry report visual</div><span class="upload-hint">Upload image</span></div>
-  <div class="gallery-item reveal r-d2"><div class="g-bg" style="background:linear-gradient(135deg,#3498db,#2980b9)"></div><div class="g-label">Brand trust post</div><span class="upload-hint">Upload image</span></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-1.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-2.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-3.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-4.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-5.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-6.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-9.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-14.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-15.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-21.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-26.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-29.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-30.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-31.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-32.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-45.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-47.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-48.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-49.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-50.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-61.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-68.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-69.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-71.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-72.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-74.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-75.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-79.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-81.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-82.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-84.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-85.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-86.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-87.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-92.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-94.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-95.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-98.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-99.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-100.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-103.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-105.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-107.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-108.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-110.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-111.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-112.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-113.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-114.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-115.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-116.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-117.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-118.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-119.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-120.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-122.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-124.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-126.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-127.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-128.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-129.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-130.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-131.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-132.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-133.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-134.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-136.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-137.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-138.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-139.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-140.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-141.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-142.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-143.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-144.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-145.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-147.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-148.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-149.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-150.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-151.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-153.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-156.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-157.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-158.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-160.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-161.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-163.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-165.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-167.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-170.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-171.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-172.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-173.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-174.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-175.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-176.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-177.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-178.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-179.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-180.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-181.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-182.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-183.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-184.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-185.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-186.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-187.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-188.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-189.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-190.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-191.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-192.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-193.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-195.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-199.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-200.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-201.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-202.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-203.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-204.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-205.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-206.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-207.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-208.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-209.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-210.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-211.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-212.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-213.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-214.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-215.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-216.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-217.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-218.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-219.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-220.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-221.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-222.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-223.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-224.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-225.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-226.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-227.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-228.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-229.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-230.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-231.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-232.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-233.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-234.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-235.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-240.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-245.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-247.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-248.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-249.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-250.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-251.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-252.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-253.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-254.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-255.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-256.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-257.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-258.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-259.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-260.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-261.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-262.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-263.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-264.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-265.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-266.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-267.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-268.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-269.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-273.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-274.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-275.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-280.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-281.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-282.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-283.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-284.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-285.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-286.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-287.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-288.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-289.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-290.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-291.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-296.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-297.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-298.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-300.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-301.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-304.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-305.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-306.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-307.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-308.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-309.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-310.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-311.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-312.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-313.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-314.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-315.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-316.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-317.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-318.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-319.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-320.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-321.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-322.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-323.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-324.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-325.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-326.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-327.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-328.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-329.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-330.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-331.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-332.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-333.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-334.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-335.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-336.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-337.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-338.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-339.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-340.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-341.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-342.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-343.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-344.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-345.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-346.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-347.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-348.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-349.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-350.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-351.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-352.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-353.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-354.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-355.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-356.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-357.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-358.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-359.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-360.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-361.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-362.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-363.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-364.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-365.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-366.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-367.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-368.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-369.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-370.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-371.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-372.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-373.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-374.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-375.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-376.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-377.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-378.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-379.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-380.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-381.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-382.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-383.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-384.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-387.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-388.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-389.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-390.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-391.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-392.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-393.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-394.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-395.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-396.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-397.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-398.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-399.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-400.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-401.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-402.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-403.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-404.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-405.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-407.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-411.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-413.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-414.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-415.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-416.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-417.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-418.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-419.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-420.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-421.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-422.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-423.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-424.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-425.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-426.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-427.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-428.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-429.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-430.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-431.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-432.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-433.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-434.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-435.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-436.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-437.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-438.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-439.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-440.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-442.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-443.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-444.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-445.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-446.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-447.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-448.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-449.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-450.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-451.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-452.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-453.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-454.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-455.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-457.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-458.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-459.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-460.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-461.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-462.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-463.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-464.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-465.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-466.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-467.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-468.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-469.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-470.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-471.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-472.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-475.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-476.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-477.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-478.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-479.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-480.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-481.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-482.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-483.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-484.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-485.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-486.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-488.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-490.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-491.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-492.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-494.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-495.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/econz/image-497.jpg" alt="Econz social media design by Himanshu Narwaria" loading="lazy"></div>
 </div>
 
 <section class="cta-sec reveal" style="text-align:left;max-width:760px;margin:0 auto;padding-bottom:0">
@@ -107,12 +481,12 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
   <h2>Like what you <em>see?</em></h2>
   <p>Let's create scroll-stopping social media for your brand.</p>
   <div class="cta-btns">
-    <a href="social-media.html" class="btn"><span>View All Brands</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="../social-media.html" class="btn"><span>View All Brands</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     <a href="mailto:himanshunarwaria@gmail.com" class="btn"><span>Get in Touch</span></a>
   </div>
 </section>
 
-<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="social-media.html">Back to Social Media</a></footer>
-<script>const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();document.querySelectorAll('a,.gallery-item,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}}},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
+<footer><span>&copy; 2026 Himanshu Narwaria</span><a href="../social-media.html">Back to Social Media</a></footer>
+<script>document.documentElement.classList.add('js-loaded');const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();document.querySelectorAll('a,.gallery-item,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
 <script src="../protect.js"></script></body>
 </html>

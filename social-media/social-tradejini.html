@@ -39,25 +39,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display
 .hero .desc{margin-top:1.5rem;color:var(--grey-light);font-size:1rem;max-width:55ch;line-height:1.7;font-weight:300;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .35s forwards}
 .hero .meta-row{display:flex;gap:3rem;margin-top:2rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .45s forwards}.meta-item{display:flex;flex-direction:column;gap:.2rem}.meta-item .mv{font-family:var(--font-display);font-size:1rem}.meta-item .ml{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{transform:translateY(30px)}}
-.gallery{padding:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.gallery-item{border-radius:10px;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);aspect-ratio:1/1;position:relative;transition:all .5s var(--ease-smooth)}.gallery-item:hover{border-color:rgba(255,255,255,.12);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,0,0,.3)}
-.gallery-item .g-bg{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}.gallery-item:hover .g-bg{transform:scale(1.04)}
-.gallery-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
-.gallery-item .g-label{position:absolute;bottom:0;left:0;right:0;padding:1rem 1.2rem;background:linear-gradient(transparent,rgba(0,0,0,.6));z-index:2;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.gallery{padding:2rem 3rem 4rem;columns:5;column-gap:.75rem}
+.gallery-item{break-inside:avoid;border-radius:8px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.06);box-shadow:0 4px 20px rgba(0,0,0,.35);margin-bottom:.75rem;transition:transform .5s var(--ease-smooth),box-shadow .5s var(--ease-smooth),border-color .5s}
+.gallery-item:hover{border-color:rgba(255,255,255,.18);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.55)}
+.gallery-item img{width:100%;height:auto;display:block}
+.reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.js-loaded .reveal{opacity:0;transform:translateY(40px)}.js-loaded .reveal.visible{opacity:1;transform:translateY(0)}
 .upload-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.15)}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.js-loaded .reveal{opacity:0;transform:translateY(40px)}.js-loaded .reveal.visible{opacity:1;transform:translateY(0)}.reveal.visible{opacity:1;transform:translateY(0)}
 .r-d1{transition-delay:.1s}.r-d2{transition-delay:.2s}
 .cta-sec{text-align:center;padding:5rem 3rem 6rem}.cta-sec h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;margin-bottom:1rem}.cta-sec h2 em{font-style:italic}.cta-sec p{color:var(--grey-light);font-size:.9rem;margin-bottom:2rem;font-weight:300}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2rem;border:1px solid rgba(255,255,255,.3);border-radius:100px;font-family:var(--font-body);font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--white);transition:all .4s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
 .btn::before{content:'';position:absolute;inset:0;background:var(--white);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}.btn:hover::before{transform:scaleX(1);transform-origin:left}.btn:hover{color:var(--black)}
 footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--white)}
-@media(max-width:768px){nav{padding:1.2rem 1.5rem}.hero{padding:8rem 1.5rem 3rem}.gallery{padding:1.5rem;grid-template-columns:1fr 1fr;gap:.8rem}.cta-sec{padding:3rem 1.5rem 4rem}.hero .meta-row{gap:1.5rem;flex-wrap:wrap}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}}
+@media(max-width:768px){nav{padding:1.2rem 1.5rem}.hero{padding:8rem 1.5rem 3rem}.gallery{padding:2rem 3rem 4rem;columns:5;column-gap:.75rem}
+.gallery-item{break-inside:avoid;border-radius:8px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.06);box-shadow:0 4px 20px rgba(0,0,0,.35);margin-bottom:.75rem;transition:transform .5s var(--ease-smooth),box-shadow .5s var(--ease-smooth),border-color .5s}
+.gallery-item:hover{border-color:rgba(255,255,255,.18);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.55)}
+.gallery-item img{width:100%;height:auto;display:block}
+.reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.js-loaded .reveal{opacity:0;transform:translateY(40px)}.js-loaded .reveal.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
-<nav><a href="/" class="logo">Himanshu Narwaria</a><a href="social-media.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Social Media</a></nav>
+<nav><a href="/" class="logo">Himanshu Narwaria</a><a href="../social-media.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Social Media</a></nav>
 
 <div class="hero">
   <div class="label">Social Media Design</div>
@@ -71,12 +75,115 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
 </div>
 
 <div class="gallery">
-  <div class="gallery-item reveal"><div class="g-bg" style="background:linear-gradient(135deg,#2563eb,#1d4ed8)"></div><div class="g-label">Market update post</div><span class="upload-hint">Upload image</span></div>
-  <div class="gallery-item reveal r-d1"><div class="g-bg" style="background:linear-gradient(135deg,#1d4ed8,#1e40af)"></div><div class="g-label">Dashboard UI showcase</div><span class="upload-hint">Upload image</span></div>
-  <div class="gallery-item reveal r-d2"><div class="g-bg" style="background:linear-gradient(135deg,#1e40af,#2563eb)"></div><div class="g-label">Trading tip carousel</div><span class="upload-hint">Upload image</span></div>
-  <div class="gallery-item reveal"><div class="g-bg" style="background:linear-gradient(135deg,#1d4ed8,#2563eb)"></div><div class="g-label">Platform feature highlight</div><span class="upload-hint">Upload image</span></div>
-  <div class="gallery-item reveal r-d1"><div class="g-bg" style="background:linear-gradient(135deg,#2563eb,#1e40af)"></div><div class="g-label">Investor education post</div><span class="upload-hint">Upload image</span></div>
-  <div class="gallery-item reveal r-d2"><div class="g-bg" style="background:linear-gradient(135deg,#1e40af,#1d4ed8)"></div><div class="g-label">Brand trust graphic</div><span class="upload-hint">Upload image</span></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-1.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-2.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-3.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-4.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-5.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-6.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-7.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-8.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-9.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-10.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-11.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-12.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-13.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-14.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-15.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-16.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-17.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-18.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-19.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-20.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-21.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-22.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-23.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-24.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-25.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-26.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-27.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-28.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-29.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-30.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-31.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-32.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-33.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-34.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-35.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-36.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-37.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-38.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-39.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-40.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-41.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-42.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-43.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-44.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-45.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-46.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-47.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-48.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-49.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-50.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-51.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-52.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-53.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-54.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-55.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-56.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-57.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-58.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-59.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-60.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-61.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-62.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-63.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-64.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-65.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-66.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-67.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-68.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-69.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-70.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-71.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-72.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-73.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-74.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-75.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-76.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-77.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-78.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-79.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-80.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-81.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-82.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-83.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-84.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-85.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-86.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-87.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-88.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-89.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-90.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-91.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-92.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-93.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-94.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-95.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-96.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-97.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-98.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-99.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-100.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-101.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-102.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-103.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-104.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-105.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-106.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-107.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-108.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/tradejini/image-109.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"></div>
 </div>
 
 <section class="cta-sec reveal" style="text-align:left;max-width:760px;margin:0 auto;padding-bottom:0">
@@ -107,12 +214,12 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
   <h2>Like what you <em>see?</em></h2>
   <p>Let's create scroll-stopping social media for your brand.</p>
   <div class="cta-btns">
-    <a href="social-media.html" class="btn"><span>View All Brands</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="../social-media.html" class="btn"><span>View All Brands</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     <a href="mailto:himanshunarwaria@gmail.com" class="btn"><span>Get in Touch</span></a>
   </div>
 </section>
 
-<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="social-media.html">Back to Social Media</a></footer>
-<script>const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();document.querySelectorAll('a,.gallery-item,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}}},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
+<footer><span>&copy; 2026 Himanshu Narwaria</span><a href="../social-media.html">Back to Social Media</a></footer>
+<script>document.documentElement.classList.add('js-loaded');const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();document.querySelectorAll('a,.gallery-item,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
 <script src="../protect.js"></script></body>
 </html>
