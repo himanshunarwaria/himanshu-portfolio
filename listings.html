@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,16 +13,7 @@
 <meta property="og:title" content="Amazon Listing Design Portfolio — Himanshu Narwaria">
 <meta property="og:description" content="Conversion-optimized Amazon product listing designs for 17+ brands. Hero images, A+ content, infographics by Himanshu Narwaria.">
 <meta property="og:site_name" content="Himanshu Narwaria Portfolio">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Amazon Listing Design Portfolio — Himanshu Narwaria",
-  "description": "Amazon listing design portfolio with conversion-optimized product images, A+ content, infographics, and comparison charts for 17+ brands across health, home, and lifestyle categories.",
-  "url": "https://himanshunarwaria.in/listings.html",
-  "author": {"@type": "Person", "name": "Himanshu Narwaria", "url": "https://himanshunarwaria.in/"}
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Amazon Listing Design Portfolio — Himanshu Narwaria","description":"Amazon listing design portfolio with conversion-optimized product images, A+ content, infographics, and comparison charts for 17+ brands.","url":"https://himanshunarwaria.in/listings.html","author":{"@type":"Person","name":"Himanshu Narwaria","url":"https://himanshunarwaria.in/"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -32,52 +23,119 @@
 html{scroll-behavior:smooth;font-size:16px}body{background:var(--black);color:var(--white);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--white);color:var(--black)}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.6}
 .cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.5);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,background .3s;transform:translate(-50%,-50%)}.cursor.hover{width:60px;height:60px;border-color:var(--white);background:rgba(255,255,255,.06)}@media(pointer:coarse){.cursor{display:none}}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,10,.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}nav .logo{font-family:var(--font-display);font-weight:500;font-size:1.15rem}nav .back-link{font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;position:relative;padding:.3rem 0}nav .back-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--white);transition:width .5s var(--ease-out-expo)}nav .back-link:hover::after{width:100%}
-.page-header{padding:10rem 3rem 5rem;position:relative}.page-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 20%,rgba(255,255,255,.06) 80%,transparent)}.page-header .label{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .1s forwards}.page-header .label::before{content:'';width:30px;height:1px;background:rgba(255,255,255,.2)}.page-header h1{font-family:var(--font-display);font-size:clamp(3rem,7vw,6rem);line-height:.95;letter-spacing:-.04em;font-weight:400;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .2s forwards}.page-header h1 em{font-style:italic}.page-header .desc{margin-top:1.5rem;color:var(--grey-light);font-size:1.05rem;max-width:55ch;line-height:1.7;font-weight:300;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .35s forwards}
-.page-header .stats-row{display:flex;gap:3rem;margin-top:2.5rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .45s forwards}.stat-pill{display:flex;flex-direction:column;gap:.2rem}.stat-pill .num{font-family:var(--font-display);font-size:1.8rem;letter-spacing:-.02em}.stat-pill .lbl{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,10,.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}
+nav .logo{font-family:var(--font-display);font-weight:500;font-size:1.15rem}
+nav .back-link{font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;position:relative;padding:.3rem 0}
+nav .back-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--white);transition:width .5s var(--ease-out-expo)}
+nav .back-link:hover::after{width:100%}
+
+/* PAGE HERO */
+.pg-hero{padding:10rem 3rem 5rem;position:relative}
+.pg-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 20%,rgba(255,255,255,.06) 80%,transparent)}
+.pg-hero .label{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .1s forwards}
+.pg-hero .label::before{content:'';width:30px;height:1px;background:rgba(255,255,255,.2)}
+.pg-hero h1{font-family:var(--font-display);font-size:clamp(3rem,7vw,6rem);line-height:.95;letter-spacing:-.04em;font-weight:400;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .2s forwards}
+.pg-hero h1 em{font-style:italic}
+.pg-hero .desc{margin-top:1.5rem;color:var(--grey-light);font-size:1.05rem;max-width:55ch;line-height:1.7;font-weight:300;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .35s forwards}
+.stats-row{display:flex;gap:3rem;margin-top:2.5rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .45s forwards}
+.stat-pill{display:flex;flex-direction:column;gap:.2rem}
+.stat-pill .num{font-family:var(--font-display);font-size:1.8rem;letter-spacing:-.02em}
+.stat-pill .lbl{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{transform:translateY(30px)}}
 
-/* Category dividers */
-.cat-divider{padding:4rem 3rem 2rem}
-.cat-divider h2{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:400;letter-spacing:-.02em;display:flex;align-items:center;gap:1rem}
-.cat-divider h2 em{font-style:italic}
-.cat-divider h2::before{content:'';width:24px;height:1px;background:rgba(255,255,255,.2)}
-.cat-divider p{color:var(--grey);font-size:.85rem;margin-top:.5rem;font-weight:300}
+/* BRAND DIRECTORY */
+.brand-dir{margin-top:5rem}
+.dir-hdr{padding:1.8rem 3rem 1.4rem;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.07)}
+.dir-hdr-title{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);display:flex;align-items:center;gap:.8rem}
+.dir-hdr-title::before{content:'';width:18px;height:1px;background:rgba(255,255,255,.2)}
+.dir-hdr-count{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;color:var(--grey)}
+.dir-cat-lbl{padding:.65rem 3rem;font-family:var(--font-mono);font-size:.48rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.18);background:rgba(255,255,255,.012);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.04)}
+.dir-row{display:grid;grid-template-columns:2.5rem 1fr auto 1.2rem;align-items:center;gap:1.5rem;padding:1.15rem 3rem;border-bottom:1px solid rgba(255,255,255,.045);text-decoration:none;color:var(--white);position:relative;transition:background .22s ease;outline:none}
+.dir-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--white);transform:scaleY(0);transform-origin:top;transition:transform .38s var(--ease-out-expo)}
+.dir-row:hover,.dir-row:focus-visible{background:rgba(255,255,255,.022)}
+.dir-row:hover::before,.dir-row.dir-active::before,.dir-row:focus-visible::before{transform:scaleY(1)}
+.dir-row.dir-active{background:rgba(255,255,255,.014)}
+.dir-row:focus-visible{outline:1px solid rgba(255,255,255,.25);outline-offset:-1px}
+.dir-num{font-family:var(--font-mono);font-size:.48rem;letter-spacing:.1em;color:rgba(255,255,255,.2)}
+.dir-name{font-family:var(--font-display);font-size:1.32rem;font-weight:500;letter-spacing:-.02em;transition:font-style .18s}
+.dir-row:hover .dir-name,.dir-row.dir-active .dir-name{font-style:italic}
+.dir-meta{font-family:var(--font-mono);font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);transition:color .22s}
+.dir-row:hover .dir-meta{color:var(--grey-light)}
+.dir-arrow{font-size:.8rem;color:rgba(255,255,255,.18);transition:transform .28s ease,color .22s;line-height:1;justify-self:end}
+.dir-row:hover .dir-arrow{transform:translate(3px,-3px);color:rgba(255,255,255,.65)}
 
-/* Project grid */
-.project-grid{padding:2rem 3rem 4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.project-card{position:relative;overflow:hidden;border-radius:12px;cursor:pointer;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);transition:all .6s var(--ease-smooth);display:flex;flex-direction:column;text-decoration:none;color:var(--white)}
-.project-card:hover{border-color:rgba(255,255,255,.15);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.4)}
-.project-card .card-img{aspect-ratio:4/3;overflow:hidden;position:relative;background:rgba(255,255,255,.03)}
-.project-card .card-img .img-bg{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}
-.project-card:hover .card-img .img-bg{transform:scale(1.08)}
-.project-card .card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .8s var(--ease-out-expo)}
-.project-card:hover .card-img img{transform:scale(1.08)}
-.project-card .card-img .badge{position:absolute;top:1rem;left:1rem;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .8rem;border:1px solid rgba(255,255,255,.2);border-radius:100px;color:rgba(255,255,255,.7);background:rgba(0,0,0,.4);backdrop-filter:blur(10px);z-index:3}
-.project-card .card-body{padding:1.6rem 1.8rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
-.project-card .card-body h3{font-family:var(--font-display);font-size:1.15rem;font-weight:500;letter-spacing:-.01em;line-height:1.3}
-.project-card .card-body p{font-size:.78rem;color:var(--grey-light);line-height:1.5;font-weight:300}
-.project-card .card-body .card-details{font-size:.7rem;color:var(--grey);line-height:1.6;margin-top:.3rem;font-weight:300}
-/* VIEW NOW button */
-.view-btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-light);padding:.6rem 1.3rem;border:1.5px solid rgba(255,255,255,.15);background:transparent;transition:all .3s var(--ease-smooth);align-self:flex-start;cursor:pointer;margin-top:.6rem}
-.project-card:hover .view-btn{background:var(--white);color:var(--black);border-color:var(--white)}
-.view-btn svg{width:11px;height:11px;stroke:currentColor;stroke-width:2;fill:none;transition:transform .3s ease}
-.project-card:hover .view-btn svg{transform:translate(2px,-2px)}
-.project-card .card-tags{padding:0 1.8rem 1.4rem;display:flex;gap:.4rem;flex-wrap:wrap}
-.tag{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border:1px solid rgba(255,255,255,.08);border-radius:100px;color:var(--grey-light)}
+/* HOVER PREVIEW CARD */
+.preview-card{position:fixed;width:256px;background:rgba(13,13,15,.97);border:1px solid rgba(255,255,255,.1);z-index:8000;pointer-events:none;opacity:0;transform:translateY(10px) scale(.96);transition:opacity .2s ease,transform .22s var(--ease-out-expo);backdrop-filter:blur(24px);overflow:hidden;will-change:transform,opacity}
+.preview-card.visible{opacity:1;transform:translateY(0) scale(1)}
+.preview-thumb{width:100%;height:154px;overflow:hidden;background:#121214;display:flex;align-items:center;justify-content:center}
+.preview-thumb img{width:100%;height:100%;object-fit:contain;display:block}
+.preview-no-img{font-family:var(--font-mono);font-size:.44rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.12)}
+.preview-info{padding:.85rem 1rem .75rem;border-top:1px solid rgba(255,255,255,.07)}
+.preview-brand{font-family:var(--font-display);font-size:.92rem;font-weight:500;margin-bottom:.18rem}
+.preview-cat{font-family:var(--font-mono);font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-bottom:.45rem}
+.preview-hint{font-family:var(--font-mono);font-size:.46rem;letter-spacing:.08em;color:rgba(255,255,255,.28)}
 
-.divider-line{height:1px;margin:0 3rem;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 20%,rgba(255,255,255,.06) 80%,transparent)}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
+/* BRAND SHOWCASE */
+.showcase{padding-top:5rem}
+.brand-section{border-top:1px solid rgba(255,255,255,.06);padding-top:5rem;scroll-margin-top:88px}
+.bs-hdr{padding:0 3rem 2.5rem;display:grid;grid-template-columns:3rem 1fr auto;gap:2rem;align-items:start}
+.bs-num{font-family:var(--font-mono);font-size:.5rem;letter-spacing:.12em;color:rgba(255,255,255,.18);padding-top:.55rem}
+.bs-title{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.8rem);font-weight:400;letter-spacing:-.04em;line-height:.95;margin-bottom:1.3rem}
+.bs-title em{font-style:italic}
+.bs-meta{display:flex;gap:2.5rem;flex-wrap:wrap}
+.bs-mi{display:flex;flex-direction:column;gap:.22rem}
+.bs-mv{font-size:.85rem;color:var(--grey-light);font-weight:300}
+.bs-ml{font-family:var(--font-mono);font-size:.48rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+.bs-action{padding-top:.5rem;flex-shrink:0}
+.bs-link{font-family:var(--font-mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);display:inline-flex;align-items:center;gap:.45rem;padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.1);transition:color .28s,border-color .28s;white-space:nowrap}
+.bs-link:hover{color:var(--white);border-color:rgba(255,255,255,.4)}
+.bs-link svg{transition:transform .28s ease;flex-shrink:0}
+.bs-link:hover svg{transform:translate(2px,-2px)}
+
+/* IMAGE STRIP */
+.img-strip{position:relative}
+.img-strip::before,.img-strip::after{content:'';position:absolute;top:0;bottom:0;width:3.5rem;z-index:2;pointer-events:none}
+.img-strip::before{left:0;background:linear-gradient(to right,var(--black) 5%,transparent)}
+.img-strip::after{right:0;background:linear-gradient(to left,var(--black) 5%,transparent)}
+.strip-scroll{display:flex;gap:.65rem;overflow-x:auto;scrollbar-width:none;padding:0 3rem 3.5rem;-webkit-overflow-scrolling:touch}
+.strip-scroll::-webkit-scrollbar{display:none}
+.strip-item{flex-shrink:0;width:260px;height:260px;background:#0d0d0f;border:1px solid rgba(255,255,255,.06);overflow:hidden;display:flex;align-items:center;justify-content:center;transition:border-color .38s}
+.strip-item:hover{border-color:rgba(255,255,255,.18)}
+.strip-item img{width:100%;height:100%;object-fit:contain;transition:transform .55s var(--ease-smooth)}
+.strip-item:hover img{transform:scale(1.05)}
+.strip-no-img{width:360px;height:260px;flex-shrink:0;border:1px dashed rgba(255,255,255,.07);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem}
+.strip-no-img span{font-family:var(--font-mono);font-size:.48rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.14)}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
 footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--white)}
-@media(max-width:1024px){.project-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:768px){nav{padding:1.2rem 1.5rem}.page-header{padding:8rem 1.5rem 3rem}.page-header .stats-row{gap:2rem;flex-wrap:wrap}.project-grid{padding:1.5rem 1.5rem 3rem;grid-template-columns:1fr;gap:1.2rem}.cat-divider{padding:3rem 1.5rem 1.5rem}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}}
+
+@media(max-width:1024px){.bs-hdr{grid-template-columns:2.5rem 1fr}}
+@media(max-width:768px){
+  nav{padding:1.2rem 1.5rem}
+  .pg-hero{padding:8rem 1.5rem 3rem}
+  .stats-row{gap:2rem;flex-wrap:wrap}
+  .brand-dir{margin-top:3rem}
+  .dir-hdr{padding:1.4rem 1.5rem 1rem}
+  .dir-cat-lbl{padding:.6rem 1.5rem}
+  .dir-row{grid-template-columns:2rem 1fr 1rem;gap:.8rem;padding:1rem 1.5rem}
+  .dir-meta{display:none}
+  .showcase{padding-top:3rem}
+  .brand-section{padding-top:3.5rem;scroll-margin-top:72px}
+  .bs-hdr{grid-template-columns:1fr;padding:0 1.5rem 2rem;gap:.5rem}
+  .bs-num,.bs-action{display:none}
+  .bs-title{font-size:clamp(1.8rem,7vw,2.8rem)}
+  .bs-meta{gap:1.5rem}
+  .strip-scroll{padding:0 1.5rem 2.5rem}
+  .strip-item{width:190px;height:190px}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}
+}
 </style>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
 <nav><a href="/" class="logo">Himanshu Narwaria</a><a href="/#work" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Work</a></nav>
 
-<div class="page-header">
+<div class="pg-hero">
   <div class="label">Listing Masters</div>
   <h1>Amazon<br><em>Listings</em></h1>
   <p class="desc">Conversion-optimized product images, A+ content, infographics, and comparison charts designed to dominate marketplace search results and boost purchases across Amazon, Flipkart &amp; D2C platforms.</p>
@@ -88,116 +146,623 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
   </div>
 </div>
 
-<!-- ═══════════ HEALTH & BEAUTY ═══════════ -->
-<div class="cat-divider reveal"><h2><em>Health</em> &amp; Beauty</h2><p>Skincare, haircare, bath &amp; body — premium product listings for beauty brands</p></div>
+<!-- ═══ BRAND DIRECTORY ═══ -->
+<section class="brand-dir" aria-label="Brand index">
+  <div class="dir-hdr">
+    <span class="dir-hdr-title">Brand Directory</span>
+    <span class="dir-hdr-count">17 brands</span>
+  </div>
 
-<div class="project-grid">
-  <a href="listing/listing-umai.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#1a1a1a,#2a2a2a,#1a1a1a)"></div><span class="badge">Stainless Steel</span></div>
-    <div class="card-body"><h3>UMAI</h3><p>Premium stainless steel bottle listings with feature callouts, insulation specs, and lifestyle photography. BPA-free, eco-friendly positioning.</p><span class="card-details">Hero images • Feature infographics • Comparison charts • Brand story</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">A+ Content</span><span class="tag">Bottles</span></div>
+  <div class="dir-cat-lbl">Health &amp; Beauty</div>
+  <a class="dir-row" href="#brand-umai" data-thumb="images/listing/umai/Picture1.png" data-category="Stainless Steel · Amazon">
+    <span class="dir-num">01</span><span class="dir-name">UMAI</span><span class="dir-meta">Stainless Steel · Amazon</span><span class="dir-arrow">↗</span>
   </a>
-  <a href="listing/listing-rejusure.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#f0c8d8,#e0a0c0,#d080a0)"></div><span class="badge">Skincare</span></div>
-    <div class="card-body"><h3>Rejusure</h3><p>Anti-aging retinol serum listings with ingredient highlights, PM routine integration, and Rejusure vs Others comparison charts.</p><span class="card-details">Product photography • Ingredient callouts • Comparison tables • Routine guides</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Skincare</span><span class="tag">Serum</span></div>
+  <a class="dir-row" href="#brand-rejusure" data-thumb="images/listing/rejusure/Picture7.jpg" data-category="Skincare · Amazon">
+    <span class="dir-num">02</span><span class="dir-name">Rejusure</span><span class="dir-meta">Skincare · Amazon</span><span class="dir-arrow">↗</span>
   </a>
-  <a href="listing/listing-rey-naturals.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#8a9a70,#a0b088,#c0c8a0)"></div><span class="badge">Haircare</span></div>
-    <div class="card-body"><h3>Rey Naturals</h3><p>Pure olive oil listings with cold-pressed benefits, usage instructions, FDA-approved badges, and product range showcases.</p><span class="card-details">Lifestyle shots • Usage instructions • Certifications • Range display</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Haircare</span><span class="tag">Natural</span></div>
+  <a class="dir-row" href="#brand-rey-naturals" data-thumb="images/listing/rey-naturals/Picture13.jpg" data-category="Haircare · Amazon">
+    <span class="dir-num">03</span><span class="dir-name">Rey Naturals</span><span class="dir-meta">Haircare · Amazon</span><span class="dir-arrow">↗</span>
   </a>
-  <a href="listing/listing-drfoot.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#1a3a6a,#2a5090,#1a3a6a)"></div><span class="badge">Foot Care</span></div>
-    <div class="card-body"><h3>DrFoot</h3><p>Arch support insole listings with ergonomic feature callouts, shoe compatibility visuals, and DrFoot vs Others comparison.</p><span class="card-details">Feature highlights • Comfort tech • Comparison charts • Use cases</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Health</span><span class="tag">Insoles</span></div>
+  <a class="dir-row" href="#brand-drfoot" data-thumb="images/listing/drfoot/Picture19.jpg" data-category="Foot Care · Amazon">
+    <span class="dir-num">04</span><span class="dir-name">DrFoot</span><span class="dir-meta">Foot Care · Amazon</span><span class="dir-arrow">↗</span>
   </a>
-  <a href="listing-bathstore.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#e8c8a0,#d4a870,#c09050)"></div><span class="badge">Bath &amp; Body</span></div>
-    <div class="card-body"><h3>The Bath Store</h3><p>Mandarin orange body wash listings with ingredient benefits, variant showcases, and "What makes us better" comparison layouts.</p><span class="card-details">Product beauty shots • Ingredient callouts • Variant display • Brand story</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Flipkart</span><span class="tag">Body Wash</span></div>
+  <a class="dir-row" href="#brand-bathstore" data-thumb="images/listing/thebathstore/Picture25.jpg" data-category="Bath &amp; Body · Amazon">
+    <span class="dir-num">05</span><span class="dir-name">The Bath Store</span><span class="dir-meta">Bath &amp; Body · Amazon</span><span class="dir-arrow">↗</span>
   </a>
-  <a href="listing/listing-petvit.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#8a4a8a,#a060a0,#c080c0)"></div><span class="badge">Pet Food</span></div>
-    <div class="card-body"><h3>Petvit</h3><p>Natural dog food listings with nutritional info, feeding guidelines, transition charts, and Petvit vs Others comparison tables.</p><span class="card-details">Product shots • Nutrition tables • Feeding guides • Comparison charts</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Pet Care</span><span class="tag">Dog Food</span></div>
+  <a class="dir-row" href="#brand-petvit" data-thumb="images/listing/petvit/Picture31.png" data-category="Pet Care · Amazon">
+    <span class="dir-num">06</span><span class="dir-name">Petvit</span><span class="dir-meta">Pet Care · Amazon</span><span class="dir-arrow">↗</span>
   </a>
-  <a href="listing/listing-butternut-co.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#d4b078,#c49850,#b08030)"></div><span class="badge">FMCG</span></div>
-    <div class="card-body"><h3>The Butternut Co.</h3><p>Peanut butter listings with protein callouts, no-junk messaging, nutrition facts, and appetizing product photography.</p><span class="card-details">Hero images • Nutrition facts • Ingredient story • Recipe integration</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Food</span><span class="tag">Peanut Butter</span></div>
+  <a class="dir-row" href="#brand-butternut" data-thumb="" data-category="FMCG · Amazon">
+    <span class="dir-num">07</span><span class="dir-name">The Butternut Co.</span><span class="dir-meta">FMCG · Amazon</span><span class="dir-arrow">↗</span>
   </a>
+
+  <div class="dir-cat-lbl">Home &amp; Kitchen</div>
+  <a class="dir-row" href="#brand-better-home" data-thumb="images/listing/better-home/Picture44.jpg" data-category="Sustainable Living · Amazon">
+    <span class="dir-num">08</span><span class="dir-name">The Better Home</span><span class="dir-meta">Sustainable Living · Amazon</span><span class="dir-arrow">↗</span>
+  </a>
+  <a class="dir-row" href="#brand-usha-shriram" data-thumb="images/listing/usha-shriram/Picture50.png" data-category="Kitchenware · Amazon">
+    <span class="dir-num">09</span><span class="dir-name">Usha Shriram</span><span class="dir-meta">Kitchenware · Amazon</span><span class="dir-arrow">↗</span>
+  </a>
+  <a class="dir-row" href="#brand-cheston" data-thumb="images/listing/cheston/Picture56.jpg" data-category="Power Tools · Amazon">
+    <span class="dir-num">10</span><span class="dir-name">Cheston</span><span class="dir-meta">Power Tools · Amazon</span><span class="dir-arrow">↗</span>
+  </a>
+  <a class="dir-row" href="#brand-kuber" data-thumb="images/listing/kuber/Picture62.jpg" data-category="Home Decor · Amazon">
+    <span class="dir-num">11</span><span class="dir-name">Kuber Industries</span><span class="dir-meta">Home Decor · Amazon</span><span class="dir-arrow">↗</span>
+  </a>
+  <a class="dir-row" href="#brand-savya-homes" data-thumb="images/listing/savya-homes/Picture68.png" data-category="Furniture · Amazon">
+    <span class="dir-num">12</span><span class="dir-name">Savya Homes</span><span class="dir-meta">Furniture · Amazon</span><span class="dir-arrow">↗</span>
+  </a>
+  <a class="dir-row" href="#brand-candes" data-thumb="images/listing/candes/Picture74.jpg" data-category="Appliances · Amazon">
+    <span class="dir-num">13</span><span class="dir-name">Candes</span><span class="dir-meta">Appliances · Amazon</span><span class="dir-arrow">↗</span>
+  </a>
+  <a class="dir-row" href="#brand-fumato" data-thumb="images/listing/fumato/Picture80.jpg" data-category="Kitchen Appliances · Amazon">
+    <span class="dir-num">14</span><span class="dir-name">Fumato</span><span class="dir-meta">Kitchen Appliances · Amazon</span><span class="dir-arrow">↗</span>
+  </a>
+
+  <div class="dir-cat-lbl">Fitness &amp; Lifestyle</div>
+  <a class="dir-row" href="#brand-mush" data-thumb="images/listing/mush/Picture86.png" data-category="Lifestyle · Amazon">
+    <span class="dir-num">15</span><span class="dir-name">MUSH</span><span class="dir-meta">Lifestyle · Amazon</span><span class="dir-arrow">↗</span>
+  </a>
+  <a class="dir-row" href="#brand-carbinic" data-thumb="images/listing/carbinic/Picture88.png" data-category="Auto Accessories · Amazon">
+    <span class="dir-num">16</span><span class="dir-name">Carbinic</span><span class="dir-meta">Auto Accessories · Amazon</span><span class="dir-arrow">↗</span>
+  </a>
+  <a class="dir-row" href="#brand-head" data-thumb="images/listing/head/Picture102.jpg" data-category="Fitness Equipment · Amazon">
+    <span class="dir-num">17</span><span class="dir-name">HEAD</span><span class="dir-meta">Fitness Equipment · Amazon</span><span class="dir-arrow">↗</span>
+  </a>
+</section>
+
+<!-- ═══ HOVER PREVIEW CARD ═══ -->
+<div class="preview-card" id="previewCard" aria-hidden="true" role="tooltip">
+  <div class="preview-thumb">
+    <img id="previewImg" src="" alt="" loading="lazy">
+    <span class="preview-no-img" id="previewNoImg">No preview</span>
+  </div>
+  <div class="preview-info">
+    <div class="preview-brand" id="previewName"></div>
+    <div class="preview-cat" id="previewCat"></div>
+    <div class="preview-hint">View listing work ↗</div>
+  </div>
 </div>
 
-<div class="divider-line"></div>
+<!-- ═══ BRAND SHOWCASE ═══ -->
+<section class="showcase" aria-label="Brand showcase">
 
-<!-- ═══════════ HOME ═══════════ -->
-<div class="cat-divider reveal"><h2><em>Home</em> &amp; Kitchen</h2><p>Appliances, furniture, cookware &amp; home essentials — functional product storytelling</p></div>
+  <!-- 01 · UMAI -->
+  <div class="brand-section reveal" id="brand-umai">
+    <div class="bs-hdr">
+      <div class="bs-num">01</div>
+      <div>
+        <h2 class="bs-title">UMAI</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Stainless Steel Bottles</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Hero · Infographics · Comparison</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-umai.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/umai/Picture1.png" alt="UMAI listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/umai/Picture2.png" alt="UMAI listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/umai/Picture3.png" alt="UMAI listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/umai/Picture4.png" alt="UMAI listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/umai/Picture5.png" alt="UMAI listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/umai/Picture6.png" alt="UMAI listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
 
-<div class="project-grid">
-  <a href="listing/listing-better-home.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#88c8c8,#60a8a8,#408888)"></div><span class="badge">Bottles</span></div>
-    <div class="card-body"><h3>The Better Home</h3><p>Double vacuum insulated bottles with feature specs, lifestyle integration shots, and TBH vs Others sustainability comparison.</p><span class="card-details">Product hero • Feature specs • Lifestyle shots • Eco-friendly story</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Home</span><span class="tag">Sustainable</span></div>
-  </a>
-  <a href="listing/listing-usha-shriram.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#a08080,#887070,#705858)"></div><span class="badge">Dinnerware</span></div>
-    <div class="card-body"><h3>Usha Shriram</h3><p>Premium melamine dinnerware set listings with pack contents, shatter-resistant features, and brand vs Others comparison.</p><span class="card-details">Set contents • Feature callouts • Durability specs • Brand story</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Kitchen</span><span class="tag">Dinnerware</span></div>
-  </a>
-  <a href="listing/listing-cheston.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#2a8888,#1a6868,#0a4848)"></div><span class="badge">Power Tools</span></div>
-    <div class="card-body"><h3>Cheston</h3><p>Cordless wrench driver listings with motor specs, battery capacity callouts, multi-use showcases, and competitor comparison.</p><span class="card-details">Tech specs • Use cases • Power comparison • Build quality</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Tools</span><span class="tag">Cordless</span></div>
-  </a>
-  <a href="listing/listing-kuber.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#c89060,#b07840,#986020)"></div><span class="badge">Copper</span></div>
-    <div class="card-body"><h3>Kuber Industries</h3><p>Hammered copper water dispenser listings with health benefits, capacity specs, rust-proof features, and brand quality positioning.</p><span class="card-details">Product hero • Health benefits • Material quality • Brand promise</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Home</span><span class="tag">Copper</span></div>
-  </a>
-  <a href="listing/listing-savya-homes.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#3a3a3a,#2a2a2a,#1a1a1a)"></div><span class="badge">Furniture</span></div>
-    <div class="card-body"><h3>Savya Homes</h3><p>Ergonomic office chair listings with dimension specs, lumbar support features, reclining mechanism, and comfort comparison.</p><span class="card-details">Dimension diagrams • Feature callouts • Ergonomic specs • Comparison</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Office</span><span class="tag">Ergonomic</span></div>
-  </a>
-  <a href="listing/listing-candes.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#484848,#383838,#282828)"></div><span class="badge">Fans</span></div>
-    <div class="card-body"><h3>Candes</h3><p>High-speed ceiling fan listings with blade specs, room fit visuals, energy rating badges, and corrosion-resistant features.</p><span class="card-details">Product angles • Room placement • Energy specs • Warranty info</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Home</span><span class="tag">Appliance</span></div>
-  </a>
-  <a href="listing/listing-fumato.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#9070c0,#7050a0,#503080)"></div><span class="badge">Cooker</span></div>
-    <div class="card-body"><h3>Fumato</h3><p>Multi-purpose rice cooker listings with accessory breakdown, dimension specs, convenience features, and brand vs Others comparison.</p><span class="card-details">Accessory layout • Dimension specs • Cooking modes • Comparison</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Kitchen</span><span class="tag">Appliance</span></div>
-  </a>
-</div>
+  <!-- 02 · REJUSURE -->
+  <div class="brand-section reveal" id="brand-rejusure">
+    <div class="bs-hdr">
+      <div class="bs-num">02</div>
+      <div>
+        <h2 class="bs-title">Rejusure</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Anti-Aging Serum</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Photography · Callouts · Comparison</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-rejusure.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/rejusure/Picture7.jpg" alt="Rejusure listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/rejusure/Picture8.jpg" alt="Rejusure listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/rejusure/Picture9.jpg" alt="Rejusure listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/rejusure/Picture10.jpg" alt="Rejusure listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/rejusure/Picture11.jpg" alt="Rejusure listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/rejusure/Picture12.jpg" alt="Rejusure listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
 
-<div class="divider-line"></div>
+  <!-- 03 · REY NATURALS -->
+  <div class="brand-section reveal" id="brand-rey-naturals">
+    <div class="bs-hdr">
+      <div class="bs-num">03</div>
+      <div>
+        <h2 class="bs-title">Rey Naturals</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Haircare / Olive Oil</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Lifestyle · Certifications · Range</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-rey-naturals.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/rey-naturals/Picture13.jpg" alt="Rey Naturals listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/rey-naturals/Picture14.jpg" alt="Rey Naturals listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/rey-naturals/Picture15.jpg" alt="Rey Naturals listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/rey-naturals/Picture16.jpg" alt="Rey Naturals listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/rey-naturals/Picture17.jpg" alt="Rey Naturals listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/rey-naturals/Picture18.jpg" alt="Rey Naturals listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
 
-<!-- ═══════════ FITNESS & LIFESTYLE ═══════════ -->
-<div class="cat-divider reveal"><h2><em>Fitness</em> &amp; Lifestyle</h2><p>Sports gear, outdoor accessories &amp; lifestyle products — active living product design</p></div>
+  <!-- 04 · DRFOOT -->
+  <div class="brand-section reveal" id="brand-drfoot">
+    <div class="bs-hdr">
+      <div class="bs-num">04</div>
+      <div>
+        <h2 class="bs-title">DrFoot</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Arch Support Insoles</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Feature Highlights · Comparison</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-drfoot.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/drfoot/Picture19.jpg" alt="DrFoot listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/drfoot/Picture20.jpg" alt="DrFoot listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/drfoot/Picture21.jpg" alt="DrFoot listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/drfoot/Picture22.jpg" alt="DrFoot listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/drfoot/Picture23.jpg" alt="DrFoot listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/drfoot/Picture24.jpg" alt="DrFoot listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
 
-<div class="project-grid">
-  <a href="listing/listing-mush.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#60c0c0,#40a0a0,#208080)"></div><span class="badge">Towels</span></div>
-    <div class="card-body"><h3>MUSH</h3><p>Bamboo towel listings with absorbency features, versatility showcases (beach, bath, travel), and eco-friendly brand positioning.</p><span class="card-details">Lifestyle photography • Use cases • Material specs • Sustainability</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Lifestyle</span><span class="tag">Bamboo</span></div>
-  </a>
-  <a href="listing/listing-carbinic.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#8a6830,#a07840,#685020)"></div><span class="badge">Auto</span></div>
-    <div class="card-body"><h3>Carbinic</h3><p>Custom car cover listings with UV protection specs, triple-stitched lining callouts, 4-step installation guide, and military-grade fabric story.</p><span class="card-details">Protection features • Installation steps • Material specs • Comparison</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Auto</span><span class="tag">Protection</span></div>
-  </a>
-  <a href="listing/listing-head.html" class="project-card reveal">
-    <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#e06020,#c04810,#a03000)"></div><span class="badge">Fitness</span></div>
-    <div class="card-body"><h3>HEAD</h3><p>Skip rope and fitness equipment listings with workout benefits, ergonomic handle features, and globally-trusted brand positioning.</p><span class="card-details">Action photography • Workout benefits • Handle features • Brand trust</span><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    <div class="card-tags"><span class="tag">Amazon</span><span class="tag">Fitness</span><span class="tag">Equipment</span></div>
-  </a>
-</div>
+  <!-- 05 · THE BATH STORE -->
+  <div class="brand-section reveal" id="brand-bathstore">
+    <div class="bs-hdr">
+      <div class="bs-num">05</div>
+      <div>
+        <h2 class="bs-title">The Bath Store</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Body Wash</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon · Flipkart</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Beauty Shots · Ingredients · Variants</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing-bathstore.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/thebathstore/Picture25.jpg" alt="The Bath Store listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/thebathstore/Picture26.jpg" alt="The Bath Store listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/thebathstore/Picture27.jpg" alt="The Bath Store listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/thebathstore/Picture28.jpg" alt="The Bath Store listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/thebathstore/Picture29.jpg" alt="The Bath Store listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/thebathstore/Picture30.jpg" alt="The Bath Store listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
 
-<div style="padding:4rem 3rem 0"></div>
+  <!-- 06 · PETVIT -->
+  <div class="brand-section reveal" id="brand-petvit">
+    <div class="bs-hdr">
+      <div class="bs-num">06</div>
+      <div>
+        <h2 class="bs-title">Petvit</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Natural Dog Food</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Nutrition · Feeding Guides · Comparison</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-petvit.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/petvit/Picture31.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture32.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture33.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture34.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture35.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture36.jpg" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture37.jpg" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture38.jpg" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture39.jpg" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture40.jpg" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture41.jpg" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture42.jpg" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture43.jpg" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture108.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture109.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture110.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture111.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture112.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture113.png" alt="Petvit listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/petvit/Picture114.png" alt="Petvit listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
 
+  <!-- 07 · THE BUTTERNUT CO. -->
+  <div class="brand-section reveal" id="brand-butternut">
+    <div class="bs-hdr">
+      <div class="bs-num">07</div>
+      <div>
+        <h2 class="bs-title">The Butternut Co.</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Peanut Butter</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Hero · Nutrition · Recipe Integration</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-butternut-co.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-no-img"><span>Portfolio images coming soon</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 08 · THE BETTER HOME -->
+  <div class="brand-section reveal" id="brand-better-home">
+    <div class="bs-hdr">
+      <div class="bs-num">08</div>
+      <div>
+        <h2 class="bs-title">The Better Home</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Vacuum Insulated Bottles</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Hero · Specs · Eco Story</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-better-home.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/better-home/Picture44.jpg" alt="The Better Home listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/better-home/Picture45.jpg" alt="The Better Home listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/better-home/Picture46.jpg" alt="The Better Home listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/better-home/Picture47.jpg" alt="The Better Home listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/better-home/Picture48.jpg" alt="The Better Home listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/better-home/Picture49.jpg" alt="The Better Home listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 09 · USHA SHRIRAM -->
+  <div class="brand-section reveal" id="brand-usha-shriram">
+    <div class="bs-hdr">
+      <div class="bs-num">09</div>
+      <div>
+        <h2 class="bs-title">Usha Shriram</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Melamine Dinnerware</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Set Contents · Features · Comparison</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-usha-shriram.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/usha-shriram/Picture50.png" alt="Usha Shriram listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/usha-shriram/Picture51.png" alt="Usha Shriram listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/usha-shriram/Picture52.png" alt="Usha Shriram listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/usha-shriram/Picture53.png" alt="Usha Shriram listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/usha-shriram/Picture54.png" alt="Usha Shriram listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/usha-shriram/Picture55.png" alt="Usha Shriram listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 · CHESTON -->
+  <div class="brand-section reveal" id="brand-cheston">
+    <div class="bs-hdr">
+      <div class="bs-num">10</div>
+      <div>
+        <h2 class="bs-title">Cheston</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Cordless Wrench Driver</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Tech Specs · Use Cases · Comparison</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-cheston.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/cheston/Picture56.jpg" alt="Cheston listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/cheston/Picture57.jpg" alt="Cheston listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/cheston/Picture58.jpg" alt="Cheston listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/cheston/Picture59.jpg" alt="Cheston listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/cheston/Picture60.jpg" alt="Cheston listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/cheston/Picture61.jpg" alt="Cheston listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11 · KUBER INDUSTRIES -->
+  <div class="brand-section reveal" id="brand-kuber">
+    <div class="bs-hdr">
+      <div class="bs-num">11</div>
+      <div>
+        <h2 class="bs-title">Kuber Industries</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Copper Water Dispenser</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Health Benefits · Material Quality</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-kuber.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/kuber/Picture62.jpg" alt="Kuber Industries listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/kuber/Picture63.jpg" alt="Kuber Industries listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/kuber/Picture64.jpg" alt="Kuber Industries listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/kuber/Picture65.jpg" alt="Kuber Industries listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/kuber/Picture66.jpg" alt="Kuber Industries listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/kuber/Picture67.jpg" alt="Kuber Industries listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12 · SAVYA HOMES -->
+  <div class="brand-section reveal" id="brand-savya-homes">
+    <div class="bs-hdr">
+      <div class="bs-num">12</div>
+      <div>
+        <h2 class="bs-title">Savya Homes</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Ergonomic Office Chair</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Dimension Diagrams · Ergonomic Specs</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-savya-homes.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/savya-homes/Picture68.png" alt="Savya Homes listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/savya-homes/Picture69.png" alt="Savya Homes listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/savya-homes/Picture70.png" alt="Savya Homes listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/savya-homes/Picture71.png" alt="Savya Homes listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/savya-homes/Picture72.png" alt="Savya Homes listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/savya-homes/Picture73.png" alt="Savya Homes listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13 · CANDES -->
+  <div class="brand-section reveal" id="brand-candes">
+    <div class="bs-hdr">
+      <div class="bs-num">13</div>
+      <div>
+        <h2 class="bs-title">Candes</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Ceiling Fan</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Product Angles · Energy Specs · Warranty</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-candes.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/candes/Picture74.jpg" alt="Candes listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/candes/Picture75.jpg" alt="Candes listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/candes/Picture76.jpg" alt="Candes listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/candes/Picture77.jpg" alt="Candes listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/candes/Picture78.jpg" alt="Candes listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/candes/Picture79.jpg" alt="Candes listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 14 · FUMATO -->
+  <div class="brand-section reveal" id="brand-fumato">
+    <div class="bs-hdr">
+      <div class="bs-num">14</div>
+      <div>
+        <h2 class="bs-title">Fumato</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Rice Cooker</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Accessory Layout · Dimension Specs</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-fumato.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/fumato/Picture80.jpg" alt="Fumato listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/fumato/Picture81.jpg" alt="Fumato listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/fumato/Picture82.jpg" alt="Fumato listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/fumato/Picture83.jpg" alt="Fumato listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/fumato/Picture84.jpg" alt="Fumato listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/fumato/Picture85.jpg" alt="Fumato listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15 · MUSH -->
+  <div class="brand-section reveal" id="brand-mush">
+    <div class="bs-hdr">
+      <div class="bs-num">15</div>
+      <div>
+        <h2 class="bs-title">MUSH</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Bamboo Towels</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Lifestyle · Use Cases · Sustainability</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-mush.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/mush/Picture86.png" alt="MUSH listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/mush/Picture87.png" alt="MUSH listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/mush/Picture89.jpg" alt="MUSH listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/mush/Picture90.jpg" alt="MUSH listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/mush/Picture91.jpg" alt="MUSH listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/mush/Picture92.jpg" alt="MUSH listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/mush/Picture93.jpg" alt="MUSH listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/mush/Picture94.jpg" alt="MUSH listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/mush/Picture95.jpg" alt="MUSH listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 16 · CARBINIC -->
+  <div class="brand-section reveal" id="brand-carbinic">
+    <div class="bs-hdr">
+      <div class="bs-num">16</div>
+      <div>
+        <h2 class="bs-title">Carbinic</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Custom Car Cover</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Protection Features · Install Guide</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-carbinic.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/carbinic/Picture88.png" alt="Carbinic listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/carbinic/Picture96.jpg" alt="Carbinic listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/carbinic/Picture97.jpg" alt="Carbinic listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/carbinic/Picture98.jpg" alt="Carbinic listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/carbinic/Picture99.jpg" alt="Carbinic listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/carbinic/Picture100.jpg" alt="Carbinic listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/carbinic/Picture101.jpg" alt="Carbinic listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17 · HEAD -->
+  <div class="brand-section reveal" id="brand-head">
+    <div class="bs-hdr">
+      <div class="bs-num">17</div>
+      <div>
+        <h2 class="bs-title">HEAD</h2>
+        <div class="bs-meta">
+          <div class="bs-mi"><span class="bs-mv">Skip Rope &amp; Fitness Gear</span><span class="bs-ml">Product</span></div>
+          <div class="bs-mi"><span class="bs-mv">Amazon</span><span class="bs-ml">Marketplace</span></div>
+          <div class="bs-mi"><span class="bs-mv">Action Photography · Workout Benefits</span><span class="bs-ml">Deliverables</span></div>
+        </div>
+      </div>
+      <div class="bs-action"><a href="listing/listing-head.html" class="bs-link">Full Case Study <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    </div>
+    <div class="img-strip">
+      <div class="strip-scroll">
+        <div class="strip-item"><img src="images/listing/head/Picture102.jpg" alt="HEAD listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/head/Picture103.jpg" alt="HEAD listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/head/Picture104.jpg" alt="HEAD listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/head/Picture105.jpg" alt="HEAD listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/head/Picture106.jpg" alt="HEAD listing design" loading="lazy"></div>
+        <div class="strip-item"><img src="images/listing/head/Picture107.jpg" alt="HEAD listing design" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div style="padding:2rem 0"></div>
 <footer><span>&copy; 2025 Himanshu Narwaria</span><a href="/">Back to Home</a></footer>
-<script>const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();document.querySelectorAll('a,.project-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
-<script src="protect.js"></script></body>
+
+<script>
+// Custom cursor
+const cursor=document.getElementById('cursor');
+let cx=0,cy=0,tx=0,ty=0;
+document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
+function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();
+document.querySelectorAll('a,.dir-row,.strip-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));
+  el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'));
+});
+
+// Reveal on scroll
+const reveals=document.querySelectorAll('.reveal');
+const revealIO=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60);revealIO.unobserve(e.target)}});
+},{threshold:.06});
+reveals.forEach(r=>revealIO.observe(r));
+
+// Hover preview (desktop only)
+const isFinePtrMQ=window.matchMedia('(pointer:fine)');
+if(isFinePtrMQ.matches){
+  const card=document.getElementById('previewCard');
+  const pImg=document.getElementById('previewImg');
+  const pNoImg=document.getElementById('previewNoImg');
+  const pName=document.getElementById('previewName');
+  const pCat=document.getElementById('previewCat');
+  const CW=256,CH=232;
+  let hideT;
+
+  document.querySelectorAll('.dir-row').forEach(row=>{
+    row.addEventListener('mouseenter',()=>{
+      clearTimeout(hideT);
+      const rect=row.getBoundingClientRect();
+      const thumb=row.dataset.thumb;
+      const name=row.querySelector('.dir-name').textContent;
+      const cat=row.dataset.category||'';
+      pName.textContent=name;
+      pCat.textContent=cat;
+      if(thumb){pImg.src=thumb;pImg.style.display='block';pNoImg.style.display='none';}
+      else{pImg.style.display='none';pNoImg.style.display='block';}
+      let L=rect.right+20,T=rect.top+rect.height/2-CH/2;
+      if(L+CW>window.innerWidth-12){L=rect.left-CW-20;}
+      if(L<12)L=12;
+      if(T<12)T=12;
+      if(T+CH>window.innerHeight-12)T=window.innerHeight-CH-12;
+      card.style.left=L+'px';card.style.top=T+'px';
+      card.classList.add('visible');
+    });
+    row.addEventListener('mouseleave',()=>{
+      hideT=setTimeout(()=>card.classList.remove('visible'),100);
+    });
+  });
+}
+
+// Active brand tracking via IntersectionObserver
+const sections=document.querySelectorAll('.brand-section');
+const dirRows=document.querySelectorAll('.dir-row');
+const activeIO=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const id=entry.target.id;
+      dirRows.forEach(r=>r.classList.toggle('dir-active',r.getAttribute('href')==='#'+id));
+    }
+  });
+},{threshold:.25,rootMargin:'-15% 0px -55% 0px'});
+sections.forEach(s=>activeIO.observe(s));
+
+// Smooth scroll for dir links
+document.querySelectorAll('.dir-row').forEach(row=>{
+  row.addEventListener('click',e=>{
+    e.preventDefault();
+    const target=document.querySelector(row.getAttribute('href'));
+    if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+<script src="protect.js"></script>
+</body>
 </html>
