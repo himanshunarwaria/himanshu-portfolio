@@ -45,24 +45,19 @@ nav .back-link:hover::after{width:100%}
 
 /* BRAND DIRECTORY */
 .brand-dir{margin-top:5rem}
-.dir-hdr{padding:1.8rem 3rem 1.4rem;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.07)}
-.dir-hdr-title{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);display:flex;align-items:center;gap:.8rem}
-.dir-hdr-title::before{content:'';width:18px;height:1px;background:rgba(255,255,255,.2)}
-.dir-hdr-count{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;color:var(--grey)}
-.dir-cat-lbl{padding:.65rem 3rem;font-family:var(--font-mono);font-size:.48rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.18);background:rgba(255,255,255,.012);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.04)}
-.dir-row{display:grid;grid-template-columns:2.5rem 1fr auto 1.2rem;align-items:center;gap:1.5rem;padding:1.15rem 3rem;border-bottom:1px solid rgba(255,255,255,.045);text-decoration:none;color:var(--white);position:relative;transition:background .22s ease;outline:none}
-.dir-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--white);transform:scaleY(0);transform-origin:top;transition:transform .38s var(--ease-out-expo)}
-.dir-row:hover,.dir-row:focus-visible{background:rgba(255,255,255,.022)}
-.dir-row:hover::before,.dir-row.dir-active::before,.dir-row:focus-visible::before{transform:scaleY(1)}
-.dir-row.dir-active{background:rgba(255,255,255,.014)}
-.dir-row:focus-visible{outline:1px solid rgba(255,255,255,.25);outline-offset:-1px}
-.dir-num{font-family:var(--font-mono);font-size:.48rem;letter-spacing:.1em;color:rgba(255,255,255,.2)}
-.dir-name{font-family:var(--font-display);font-size:1.32rem;font-weight:500;letter-spacing:-.02em;transition:font-style .18s}
-.dir-row:hover .dir-name,.dir-row.dir-active .dir-name{font-style:italic}
-.dir-meta{font-family:var(--font-mono);font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);transition:color .22s}
-.dir-row:hover .dir-meta{color:var(--grey-light)}
-.dir-arrow{font-size:.8rem;color:rgba(255,255,255,.18);transition:transform .28s ease,color .22s;line-height:1;justify-self:end}
-.dir-row:hover .dir-arrow{transform:translate(3px,-3px);color:rgba(255,255,255,.65)}
+.dir-hdr{padding:1.4rem 3rem 1.2rem;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.07)}
+.dir-hdr-title{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);display:flex;align-items:center;gap:.8rem}
+.dir-hdr-title::before{content:'';width:16px;height:1px;background:rgba(255,255,255,.18)}
+.dir-hdr-count{font-family:var(--font-mono);font-size:.52rem;letter-spacing:.1em;color:var(--grey)}
+/* 4-col brand grid */
+.brand-grid{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid rgba(255,255,255,.07);border-top:1px solid rgba(255,255,255,.07)}
+.brand-cell{border-right:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:1.8rem 1.2rem;display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;color:var(--white);position:relative;transition:background .22s ease;outline:none;min-height:80px;cursor:pointer}
+.brand-cell:hover{background:rgba(255,255,255,.03)}
+.brand-cell.dir-active{background:rgba(255,255,255,.02)}
+.brand-cell:focus-visible{outline:1px solid rgba(255,255,255,.2);outline-offset:-2px}
+.brand-cell--empty{pointer-events:none;cursor:default}
+.brand-cell-name{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.42);transition:color .22s ease;line-height:1.5}
+.brand-cell:hover .brand-cell-name,.brand-cell.dir-active .brand-cell-name{color:rgba(255,255,255,.88)}
 
 /* HOVER PREVIEW CARD */
 .preview-card{position:fixed;width:256px;background:rgba(13,13,15,.97);border:1px solid rgba(255,255,255,.1);z-index:8000;pointer-events:none;opacity:0;transform:translateY(10px) scale(.96);transition:opacity .2s ease,transform .22s var(--ease-out-expo);backdrop-filter:blur(24px);overflow:hidden;will-change:transform,opacity}
@@ -109,16 +104,16 @@ nav .back-link:hover::after{width:100%}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
 footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--white)}
 
-@media(max-width:1024px){.bs-hdr{grid-template-columns:2.5rem 1fr}}
+@media(max-width:1024px){.bs-hdr{grid-template-columns:2.5rem 1fr}.brand-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
   nav{padding:1.2rem 1.5rem}
   .pg-hero{padding:8rem 1.5rem 3rem}
   .stats-row{gap:2rem;flex-wrap:wrap}
   .brand-dir{margin-top:3rem}
-  .dir-hdr{padding:1.4rem 1.5rem 1rem}
-  .dir-cat-lbl{padding:.6rem 1.5rem}
-  .dir-row{grid-template-columns:2rem 1fr 1rem;gap:.8rem;padding:1rem 1.5rem}
-  .dir-meta{display:none}
+  .dir-hdr{padding:1.2rem 1.5rem .9rem}
+  .brand-grid{grid-template-columns:repeat(2,1fr)}
+  .brand-cell{padding:1.4rem 1rem;min-height:68px}
+  .brand-cell-name{font-size:.52rem;letter-spacing:.12em}
   .showcase{padding-top:3rem}
   .brand-section{padding-top:3.5rem;scroll-margin-top:72px}
   .bs-hdr{grid-template-columns:1fr;padding:0 1.5rem 2rem;gap:.5rem}
@@ -152,63 +147,29 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
     <span class="dir-hdr-title">Brand Directory</span>
     <span class="dir-hdr-count">17 brands</span>
   </div>
-
-  <div class="dir-cat-lbl">Health &amp; Beauty</div>
-  <a class="dir-row" href="#brand-umai" data-thumb="images/listing/umai/Picture1.png" data-category="Stainless Steel · Amazon">
-    <span class="dir-num">01</span><span class="dir-name">UMAI</span><span class="dir-meta">Stainless Steel · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-rejusure" data-thumb="images/listing/rejusure/Picture7.jpg" data-category="Skincare · Amazon">
-    <span class="dir-num">02</span><span class="dir-name">Rejusure</span><span class="dir-meta">Skincare · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-rey-naturals" data-thumb="images/listing/rey-naturals/Picture13.jpg" data-category="Haircare · Amazon">
-    <span class="dir-num">03</span><span class="dir-name">Rey Naturals</span><span class="dir-meta">Haircare · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-drfoot" data-thumb="images/listing/drfoot/Picture19.jpg" data-category="Foot Care · Amazon">
-    <span class="dir-num">04</span><span class="dir-name">DrFoot</span><span class="dir-meta">Foot Care · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-bathstore" data-thumb="images/listing/thebathstore/Picture25.jpg" data-category="Bath &amp; Body · Amazon">
-    <span class="dir-num">05</span><span class="dir-name">The Bath Store</span><span class="dir-meta">Bath &amp; Body · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-petvit" data-thumb="images/listing/petvit/Picture31.png" data-category="Pet Care · Amazon">
-    <span class="dir-num">06</span><span class="dir-name">Petvit</span><span class="dir-meta">Pet Care · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-butternut" data-thumb="" data-category="FMCG · Amazon">
-    <span class="dir-num">07</span><span class="dir-name">The Butternut Co.</span><span class="dir-meta">FMCG · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-
-  <div class="dir-cat-lbl">Home &amp; Kitchen</div>
-  <a class="dir-row" href="#brand-better-home" data-thumb="images/listing/better-home/Picture44.jpg" data-category="Sustainable Living · Amazon">
-    <span class="dir-num">08</span><span class="dir-name">The Better Home</span><span class="dir-meta">Sustainable Living · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-usha-shriram" data-thumb="images/listing/usha-shriram/Picture50.png" data-category="Kitchenware · Amazon">
-    <span class="dir-num">09</span><span class="dir-name">Usha Shriram</span><span class="dir-meta">Kitchenware · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-cheston" data-thumb="images/listing/cheston/Picture56.jpg" data-category="Power Tools · Amazon">
-    <span class="dir-num">10</span><span class="dir-name">Cheston</span><span class="dir-meta">Power Tools · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-kuber" data-thumb="images/listing/kuber/Picture62.jpg" data-category="Home Decor · Amazon">
-    <span class="dir-num">11</span><span class="dir-name">Kuber Industries</span><span class="dir-meta">Home Decor · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-savya-homes" data-thumb="images/listing/savya-homes/Picture68.png" data-category="Furniture · Amazon">
-    <span class="dir-num">12</span><span class="dir-name">Savya Homes</span><span class="dir-meta">Furniture · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-candes" data-thumb="images/listing/candes/Picture74.jpg" data-category="Appliances · Amazon">
-    <span class="dir-num">13</span><span class="dir-name">Candes</span><span class="dir-meta">Appliances · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-fumato" data-thumb="images/listing/fumato/Picture80.jpg" data-category="Kitchen Appliances · Amazon">
-    <span class="dir-num">14</span><span class="dir-name">Fumato</span><span class="dir-meta">Kitchen Appliances · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-
-  <div class="dir-cat-lbl">Fitness &amp; Lifestyle</div>
-  <a class="dir-row" href="#brand-mush" data-thumb="images/listing/mush/Picture86.png" data-category="Lifestyle · Amazon">
-    <span class="dir-num">15</span><span class="dir-name">MUSH</span><span class="dir-meta">Lifestyle · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-carbinic" data-thumb="images/listing/carbinic/Picture88.png" data-category="Auto Accessories · Amazon">
-    <span class="dir-num">16</span><span class="dir-name">Carbinic</span><span class="dir-meta">Auto Accessories · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
-  <a class="dir-row" href="#brand-head" data-thumb="images/listing/head/Picture102.jpg" data-category="Fitness Equipment · Amazon">
-    <span class="dir-num">17</span><span class="dir-name">HEAD</span><span class="dir-meta">Fitness Equipment · Amazon</span><span class="dir-arrow">↗</span>
-  </a>
+  <div class="brand-grid">
+    <a class="brand-cell" href="#brand-umai"        data-thumb="images/listing/umai/Picture1.png"           data-category="Stainless Steel · Amazon"><span class="brand-cell-name">UMAI</span></a>
+    <a class="brand-cell" href="#brand-rejusure"    data-thumb="images/listing/rejusure/Picture7.jpg"       data-category="Skincare · Amazon"><span class="brand-cell-name">Rejusure</span></a>
+    <a class="brand-cell" href="#brand-rey-naturals" data-thumb="images/listing/rey-naturals/Picture13.jpg" data-category="Haircare · Amazon"><span class="brand-cell-name">Rey Naturals</span></a>
+    <a class="brand-cell" href="#brand-drfoot"      data-thumb="images/listing/drfoot/Picture19.jpg"        data-category="Foot Care · Amazon"><span class="brand-cell-name">DrFoot</span></a>
+    <a class="brand-cell" href="#brand-bathstore"   data-thumb="images/listing/thebathstore/Picture25.jpg"  data-category="Bath &amp; Body · Amazon"><span class="brand-cell-name">The Bath Store</span></a>
+    <a class="brand-cell" href="#brand-petvit"      data-thumb="images/listing/petvit/Picture31.png"        data-category="Pet Care · Amazon"><span class="brand-cell-name">Petvit</span></a>
+    <a class="brand-cell" href="#brand-butternut"   data-thumb=""                                           data-category="FMCG · Amazon"><span class="brand-cell-name">The Butternut Co.</span></a>
+    <a class="brand-cell" href="#brand-better-home" data-thumb="images/listing/better-home/Picture44.jpg"   data-category="Sustainable Living · Amazon"><span class="brand-cell-name">The Better Home</span></a>
+    <a class="brand-cell" href="#brand-usha-shriram" data-thumb="images/listing/usha-shriram/Picture50.png" data-category="Kitchenware · Amazon"><span class="brand-cell-name">Usha Shriram</span></a>
+    <a class="brand-cell" href="#brand-cheston"     data-thumb="images/listing/cheston/Picture56.jpg"       data-category="Power Tools · Amazon"><span class="brand-cell-name">Cheston</span></a>
+    <a class="brand-cell" href="#brand-kuber"       data-thumb="images/listing/kuber/Picture62.jpg"         data-category="Home Decor · Amazon"><span class="brand-cell-name">Kuber Industries</span></a>
+    <a class="brand-cell" href="#brand-savya-homes" data-thumb="images/listing/savya-homes/Picture68.png"   data-category="Furniture · Amazon"><span class="brand-cell-name">Savya Homes</span></a>
+    <a class="brand-cell" href="#brand-candes"      data-thumb="images/listing/candes/Picture74.jpg"        data-category="Appliances · Amazon"><span class="brand-cell-name">Candes</span></a>
+    <a class="brand-cell" href="#brand-fumato"      data-thumb="images/listing/fumato/Picture80.jpg"        data-category="Kitchen Appliances · Amazon"><span class="brand-cell-name">Fumato</span></a>
+    <a class="brand-cell" href="#brand-mush"        data-thumb="images/listing/mush/Picture86.png"          data-category="Lifestyle · Amazon"><span class="brand-cell-name">MUSH</span></a>
+    <a class="brand-cell" href="#brand-carbinic"    data-thumb="images/listing/carbinic/Picture88.png"      data-category="Auto Accessories · Amazon"><span class="brand-cell-name">Carbinic</span></a>
+    <a class="brand-cell" href="#brand-head"        data-thumb="images/listing/head/Picture102.jpg"         data-category="Fitness Equipment · Amazon"><span class="brand-cell-name">HEAD</span></a>
+    <!-- 3 empty cells to complete the 5th row -->
+    <div class="brand-cell brand-cell--empty" aria-hidden="true"></div>
+    <div class="brand-cell brand-cell--empty" aria-hidden="true"></div>
+    <div class="brand-cell brand-cell--empty" aria-hidden="true"></div>
+  </div>
 </section>
 
 <!-- ═══ HOVER PREVIEW CARD ═══ -->
@@ -693,7 +654,7 @@ const cursor=document.getElementById('cursor');
 let cx=0,cy=0,tx=0,ty=0;
 document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
 function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();
-document.querySelectorAll('a,.dir-row,.strip-item').forEach(el=>{
+document.querySelectorAll('a,.brand-cell,.strip-item').forEach(el=>{
   el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));
   el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'));
 });
@@ -716,26 +677,28 @@ if(isFinePtrMQ.matches){
   const CW=256,CH=232;
   let hideT;
 
-  document.querySelectorAll('.dir-row').forEach(row=>{
-    row.addEventListener('mouseenter',()=>{
+  document.querySelectorAll('.brand-cell[href]').forEach(cell=>{
+    cell.addEventListener('mouseenter',()=>{
       clearTimeout(hideT);
-      const rect=row.getBoundingClientRect();
-      const thumb=row.dataset.thumb;
-      const name=row.querySelector('.dir-name').textContent;
-      const cat=row.dataset.category||'';
+      const rect=cell.getBoundingClientRect();
+      const thumb=cell.dataset.thumb;
+      const name=cell.querySelector('.brand-cell-name').textContent;
+      const cat=cell.dataset.category||'';
       pName.textContent=name;
       pCat.textContent=cat;
       if(thumb){pImg.src=thumb;pImg.style.display='block';pNoImg.style.display='none';}
       else{pImg.style.display='none';pNoImg.style.display='block';}
-      let L=rect.right+20,T=rect.top+rect.height/2-CH/2;
-      if(L+CW>window.innerWidth-12){L=rect.left-CW-20;}
+      // Position above or below the cell, centered horizontally
+      const cX=rect.left+rect.width/2;
+      let L=cX-CW/2,T=rect.bottom+12;
+      if(T+CH>window.innerHeight-12){T=rect.top-CH-12;}
       if(L<12)L=12;
+      if(L+CW>window.innerWidth-12)L=window.innerWidth-CW-12;
       if(T<12)T=12;
-      if(T+CH>window.innerHeight-12)T=window.innerHeight-CH-12;
       card.style.left=L+'px';card.style.top=T+'px';
       card.classList.add('visible');
     });
-    row.addEventListener('mouseleave',()=>{
+    cell.addEventListener('mouseleave',()=>{
       hideT=setTimeout(()=>card.classList.remove('visible'),100);
     });
   });
@@ -743,22 +706,22 @@ if(isFinePtrMQ.matches){
 
 // Active brand tracking via IntersectionObserver
 const sections=document.querySelectorAll('.brand-section');
-const dirRows=document.querySelectorAll('.dir-row');
+const brandCells=document.querySelectorAll('.brand-cell[href]');
 const activeIO=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       const id=entry.target.id;
-      dirRows.forEach(r=>r.classList.toggle('dir-active',r.getAttribute('href')==='#'+id));
+      brandCells.forEach(c=>c.classList.toggle('dir-active',c.getAttribute('href')==='#'+id));
     }
   });
 },{threshold:.25,rootMargin:'-15% 0px -55% 0px'});
 sections.forEach(s=>activeIO.observe(s));
 
-// Smooth scroll for dir links
-document.querySelectorAll('.dir-row').forEach(row=>{
-  row.addEventListener('click',e=>{
+// Smooth scroll for grid cells
+document.querySelectorAll('.brand-cell[href]').forEach(cell=>{
+  cell.addEventListener('click',e=>{
     e.preventDefault();
-    const target=document.querySelector(row.getAttribute('href'));
+    const target=document.querySelector(cell.getAttribute('href'));
     if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
   });
 });
