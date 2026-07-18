@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="images/Icons/fav.png"><link rel="apple-touch-icon" href="images/Icons/fav.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Padma Shree Travels — Website Case Study — Himanshu Narwaria</title>
+<meta name="description" content="Case study: designing and building padmashreetravels.in end to end — booking system with Razorpay, 27 SEO route pages, WhatsApp-first flow, Netlify deployment. By Himanshu Narwaria.">
+<link rel="canonical" href="https://himanshunarwaria.in/padma-shree-travels.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://himanshunarwaria.in/padma-shree-travels.html">
+<meta property="og:title" content="Padma Shree Travels — Website Case Study — Himanshu Narwaria">
+<meta property="og:description" content="Case study: designing and building padmashreetravels.in end to end — booking system with Razorpay, 27 SEO route pages, WhatsApp-first flow, Netlify deployment. By Himanshu Narwaria.">
+<meta property="og:image" content="https://himanshunarwaria.in/images/web/og-padma-shree-travels.jpg">
+<meta property="og:site_name" content="Himanshu Narwaria Portfolio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Padma Shree Travels — Website Case Study — Himanshu Narwaria">
+<meta name="twitter:image" content="https://himanshunarwaria.in/images/web/og-padma-shree-travels.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media=&#39;all&#39;">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#0f172a;--white:#faf9f6;--surface:#ffffff;--surface-alt:#f1f5f9;--surface-glass:rgba(250,249,246,0.88);
+  --grey:#475569;--grey-light:#64748b;--border:rgba(15,23,42,0.08);--border-hover:rgba(15,23,42,0.15);
+  --shadow-soft:0 12px 40px rgba(15,23,42,0.06);--shadow-hover:0 20px 50px rgba(15,23,42,0.1);
+  --font-display:'Playfair Display',Georgia,serif;--font-body:'Outfit',sans-serif;--font-mono:'Space Mono',monospace;
+  --ease-out-expo:cubic-bezier(.16,1,.3,1);--ease-smooth:cubic-bezier(.25,.46,.45,.94);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--white);color:var(--black);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--black);color:var(--white)}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.6}
+.cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(15,23,42,.3);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,background .3s;transform:translate(-50%,-50%)}.cursor.hover{width:60px;height:60px;border-color:var(--black);background:rgba(15,23,42,.06)}@media(pointer:coarse){.cursor{display:none}}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;background:var(--surface-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+nav .logo{font-family:var(--font-display);font-weight:500;font-size:1.15rem;letter-spacing:.02em}
+nav .back-link{font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;position:relative;padding:.3rem 0}
+nav .back-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--black);transition:width .5s var(--ease-out-expo)}
+nav .back-link:hover::after{width:100%}
+
+.cs-hero{padding:10rem 3rem 4rem;position:relative}
+.cs-hero .cs-label{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .1s forwards}
+.cs-hero .cs-label::before{content:'';width:30px;height:1px;background:rgba(15,23,42,.25)}
+.cs-hero h1{font-family:var(--font-display);font-size:clamp(3rem,8vw,6.5rem);line-height:.95;letter-spacing:-.04em;font-weight:400;opacity:0;animation:fadeUp 1s var(--ease-out-expo) .2s forwards}
+.cs-hero .hero-tagline{font-size:clamp(1rem,2vw,1.25rem);color:var(--grey-light);font-weight:300;margin-top:1.5rem;max-width:52ch;line-height:1.65;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .35s forwards}
+.cs-hero .hero-actions{display:flex;gap:1rem;align-items:center;margin-top:2.2rem;flex-wrap:wrap;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .5s forwards}
+.hero-domain{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;color:var(--grey-light)}
+.status-chip{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);padding:.7rem 1.4rem;border:1px dashed rgba(15,23,42,.25);border-radius:100px}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{opacity:0;transform:translateY(30px)}}
+
+.intro-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.intro-strip .strip-item{padding:2.2rem 3rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.4rem}
+.intro-strip .strip-item:last-child{border-right:none}
+.strip-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey)}
+.strip-value{font-family:var(--font-display);font-size:1.05rem;font-weight:400;letter-spacing:-.01em}
+
+.cs-section{padding:6rem 3rem;max-width:1400px;margin:0 auto}
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border) 20%,var(--border) 80%,transparent)}
+.sec-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2.5rem;display:flex;align-items:center;gap:1rem}
+.sec-label::before{content:'';width:24px;height:1px;background:var(--grey-light)}
+.brief-text{font-family:var(--font-display);font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.45;letter-spacing:-.01em;font-weight:400;max-width:32em;color:var(--black)}
+
+.scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.scope-card{border:1px solid var(--border);border-radius:12px;padding:2.2rem 1.9rem;background:var(--surface);transition:all .5s ease}
+.scope-card:hover{border-color:var(--border-hover);transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+.scope-num{font-family:var(--font-mono);font-size:.6rem;color:var(--grey-light);letter-spacing:.12em;margin-bottom:1rem}
+.scope-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:500;margin-bottom:.7rem;letter-spacing:-.01em}
+.scope-card p{font-size:.85rem;color:var(--grey-light);line-height:1.65;font-weight:300}
+
+.shot{margin:0}
+.shot-img{border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--surface-alt);box-shadow:var(--shadow-soft)}
+.shot-img img{width:100%;height:auto}
+.shot figcaption{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);padding:1rem .2rem 0}
+.shot-main{margin-bottom:2rem}
+.shot-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.dev-panel{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:21/9;display:flex;align-items:center;justify-content:center;border:1px solid var(--border)}
+.dev-panel .panel-bg{position:absolute;inset:0}
+.dev-panel .panel-name{position:relative;z-index:2;font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);color:#fff;letter-spacing:.02em;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.dev-panel .panel-sub{position:absolute;bottom:1.4rem;left:0;right:0;text-align:center;z-index:2;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+
+.build-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+.build-wrap h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.2;letter-spacing:-.02em;font-weight:400}
+.build-wrap h2 em{font-style:italic}
+.build-list{list-style:none;display:flex;flex-direction:column}
+.build-list li{padding:1.1rem 0;border-bottom:1px solid var(--border);font-size:.92rem;color:var(--grey);font-weight:300;line-height:1.6;display:flex;gap:1rem}
+.build-list li::before{content:'—';color:var(--grey-light);flex-shrink:0}
+.build-list li:last-child{border-bottom:none}
+
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.result-card{border:1px solid var(--border);border-radius:14px;padding:2.4rem 2rem;background:var(--surface);transition:all .5s ease}
+.result-card:hover{border-color:var(--border-hover);background:var(--surface-alt)}
+.result-card p{font-size:.92rem;color:var(--grey);line-height:1.7;font-weight:300}
+
+.closing{text-align:center;padding:8rem 3rem;position:relative}
+.closing h2{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;letter-spacing:-.03em;font-weight:400;margin-bottom:1.2rem}
+.closing h2 em{font-style:italic}
+.closing p{color:var(--grey-light);font-size:1rem;margin-bottom:2.6rem;max-width:44ch;margin-left:auto;margin-right:auto;font-weight:300;line-height:1.7}
+.cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2.4rem;border:1px solid rgba(15,23,42,.3);border-radius:100px;font-family:var(--font-body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--black);transition:all .45s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:'';position:absolute;inset:0;background:var(--black);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}
+.btn:hover::before{transform:scaleX(1);transform-origin:left}
+.btn span{position:relative;z-index:1;transition:color .4s ease}.btn:hover span{color:var(--white)}
+.btn svg{position:relative;z-index:1;transition:all .4s ease}.btn:hover svg{stroke:var(--white)}
+.btn-filled{background:var(--black);color:var(--white);border-color:var(--black)}.btn-filled::before{background:var(--white)}.btn-filled:hover span{color:var(--black)}.btn-filled:hover svg{stroke:var(--black)}
+
+.project-nav{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)}
+.project-nav a{padding:2.4rem 3rem;display:flex;flex-direction:column;gap:.4rem;transition:background .3s ease}
+.project-nav a:hover{background:var(--surface)}
+.project-nav a:first-child{border-right:1px solid var(--border)}
+.project-nav .pn-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey-light)}
+.project-nav .pn-name{font-family:var(--font-display);font-size:1.2rem;letter-spacing:-.01em}
+.project-nav a:last-child{text-align:right}
+
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
+.r-d1{transition-delay:.1s}.r-d2{transition-delay:.2s}
+footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--black)}
+
+@media(max-width:1024px){.scope-grid{grid-template-columns:1fr 1fr}.results-grid{grid-template-columns:1fr}.build-wrap{grid-template-columns:1fr;gap:2rem}}
+@media(max-width:768px){
+  nav{padding:1.2rem 1.5rem}.cs-hero{padding:8rem 1.5rem 3rem}
+  .intro-strip{grid-template-columns:1fr 1fr}.intro-strip .strip-item{padding:1.4rem 1.5rem}.intro-strip .strip-item:nth-child(2){border-right:none}
+  .cs-section{padding:4rem 1.5rem}.scope-grid{grid-template-columns:1fr}.shot-grid{grid-template-columns:1fr;gap:1.5rem}
+  .closing{padding:5rem 1.5rem}.cta-buttons{flex-direction:column;align-items:center}
+  .project-nav{grid-template-columns:1fr}.project-nav a:first-child{border-right:none;border-bottom:1px solid var(--border)}.project-nav a:last-child{text-align:left}
+  .project-nav a{padding:1.6rem 1.5rem}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0ms !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1 !important;transform:none !important}
+}
+</style>
+<noscript><style>.reveal{opacity:1;transform:none}.cs-label,.cs-hero h1,.hero-tagline,.hero-actions{opacity:1;animation:none}</style></noscript>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+
+<nav>
+  <a href="index.html" class="logo">Himanshu Narwaria</a>
+  <a href="websites.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Websites</a>
+</nav>
+
+<section class="cs-hero">
+  <div class="cs-label">Website Case Study — Live</div>
+  <h1>Padma Shree Travels</h1>
+  <p class="hero-tagline">A fixed-fare taxi booking website that turned a local Agra operator into a findable, bookable, trusted online brand.</p>
+  <div class="hero-actions"><a class="btn btn-filled" href="https://padmashreetravels.in/" target="_blank" rel="noopener"><span>Visit Live Site</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a><span class="hero-domain">padmashreetravels.in</span></div>
+</section>
+
+<div class="intro-strip reveal">
+  <div class="strip-item"><span class="strip-label">Industry</span><span class="strip-value">Travel &amp; Tourism</span></div>
+  <div class="strip-item"><span class="strip-label">My Role</span><span class="strip-value">Everything — Design to Deploy</span></div>
+  <div class="strip-item"><span class="strip-label">Stack</span><span class="strip-value">HTML / CSS / JS &middot; Netlify Functions &middot; Razorpay</span></div>
+  <div class="strip-item"><span class="strip-label">Status</span><span class="strip-value">Live</span></div>
+</div>
+
+<section class="cs-section">
+  <div class="sec-label reveal">The Brief</div>
+  <p class="brief-text reveal">Padma Shree Travels runs private AC cabs out of Agra — pilgrimage circuits, Taj Mahal sightseeing, outstation routes. All of that business lived on phone calls. There was no way for a tourist planning from another city to find them, check a fare, or book. The brief I set with the owner: build a website that earns trust in ten seconds, gets found for the exact routes people search, and takes a booking without forcing anyone to install an app.</p>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="cs-section">
+  <div class="sec-label reveal">What I Delivered — All of It</div>
+  <div class="scope-grid">
+    <div class="scope-card reveal">
+      <div class="scope-num">01</div>
+      <h3>Design</h3>
+      <p>A confident dark hero with the promise up front — fixed fare, verified driver, 24/7. Route card system, trust strip, and a booking widget designed around how travellers actually decide.</p>
+    </div>
+    <div class="scope-card reveal r-d1">
+      <div class="scope-num">02</div>
+      <h3>Development</h3>
+      <p>Hand-coded static frontend (no page builder), with a Node.js backend on Netlify Functions: Razorpay checkout, payment verification, booking records written to Google Sheets, and SendGrid confirmation emails.</p>
+    </div>
+    <div class="scope-card reveal r-d2">
+      <div class="scope-num">03</div>
+      <h3>Copywriting</h3>
+      <p>Every word on the site, written for trust: "The fare we quote is the fare you pay." Route descriptions, tour itineraries, FAQ answers, and blog articles — all original.</p>
+    </div>
+    <div class="scope-card reveal">
+      <div class="scope-num">04</div>
+      <h3>SEO</h3>
+      <p>27 dedicated route and tour landing pages targeting real search intent — "Agra to Jaipur taxi", "temple tour by cab" — each with unique titles, descriptions, and structured content. Plus 301 redirect hygiene.</p>
+    </div>
+    <div class="scope-card reveal r-d1">
+      <div class="scope-num">05</div>
+      <h3>Responsive</h3>
+      <p>Mobile-first throughout: most bookings happen on a phone, so the booking widget, tap-to-call, and WhatsApp actions lead the mobile layout.</p>
+    </div>
+    <div class="scope-card reveal r-d2">
+      <div class="scope-num">06</div>
+      <h3>Deployment</h3>
+      <p>Netlify static hosting + serverless functions on a custom domain, with Google Ads conversion tracking and UTM capture wired into the booking flow. I also built the owner a lightweight internal CRM page to manage bookings.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="cs-section">
+  <div class="sec-label reveal">The Work, Live</div>
+  <figure class="shot shot-main reveal">
+    <div class="shot-img"><img src="images/web/padma-shree-travels.webp" alt="Padma Shree Travels homepage — dark hero with fixed-fare promise and WhatsApp booking" loading="lazy" width="1280" height="800" decoding="async"></div>
+    <figcaption>Homepage — the ten-second trust pitch</figcaption>
+  </figure>
+  <div class="shot-grid">
+    <figure class="shot reveal">
+      <div class="shot-img"><img src="images/web/pst-booking.webp" alt="Booking page with round-trip and one-way fare widget" loading="lazy" width="1280" height="800" decoding="async"></div>
+      <figcaption>Booking flow — no app, no advance payment</figcaption>
+    </figure>
+    <figure class="shot reveal">
+      <div class="shot-img"><img src="images/web/pst-route.webp" alt="Agra to Jaipur route landing page" loading="lazy" width="1280" height="800" decoding="async"></div>
+      <figcaption>One of 27 SEO route pages</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="cs-section">
+  <div class="build-wrap">
+    <h2 class="reveal">Under the <em>hood</em></h2>
+    <ul class="build-list reveal r-d1">
+      <li>Static HTML/CSS/vanilla JS — no framework overhead, fast on cheap phones and slow networks</li>
+      <li>Netlify Functions (Node.js): createOrder + verifyPayment for Razorpay Standard Checkout</li>
+      <li>Verified bookings written to Google Sheets via service account — the owner’s live lead pipeline</li>
+      <li>SendGrid transactional emails confirm every booking automatically</li>
+      <li>Blog with route-linked CTAs feeding the booking funnel</li>
+      <li>Google Ads conversion tracking with UTM capture end to end</li>
+      <li>Internal CRM page for staff — bookings managed without any third-party subscription</li>
+    </ul>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="cs-section">
+  <div class="sec-label reveal">Where It Stands</div>
+  <div class="results-grid">
+    <div class="result-card reveal"><p>The site is live and taking real bookings — WhatsApp-first, no app, no advance payment for most trips.</p></div>
+    <div class="result-card reveal r-d1"><p>Every major route the company drives now has its own page a traveller can actually find.</p></div>
+    <div class="result-card reveal r-d2"><p>The owner gets each lead in a spreadsheet and an email the moment it happens — no dashboard to learn.</p></div>
+  </div>
+</section>
+
+<section class="closing">
+  <h2 class="reveal">One person.<br><em>The whole build.</em></h2>
+  <p class="reveal r-d1">Design, code, copy, SEO, and launch — handled end to end, so nothing gets lost between a designer, a developer, and an agency. Your project could be next.</p>
+  <div class="cta-buttons reveal r-d2">
+    <a href="mailto:himanshunarwaria@gmail.com" class="btn btn-filled"><span>Start a Project</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="https://wa.me/917089271701" class="btn" target="_blank" rel="noopener"><span>WhatsApp Me</span></a>
+  </div>
+</section>
+
+<div class="project-nav">
+  <a href="upsc-quiz-app.html"><span class="pn-label">&larr; Previous Project</span><span class="pn-name">UPSC Quiz App</span></a>
+  <a href="nafume.html"><span class="pn-label">Next Project &rarr;</span><span class="pn-name">NAFUME</span></a>
+</div>
+
+<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="websites.html">All Website Case Studies</a></footer>
+
+<script>
+const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;
+document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
+function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}if(matchMedia('(pointer:fine)').matches)ac();
+document.querySelectorAll('a,.btn,.scope-card,.result-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(r=>obs.observe(r));
+</script>
+<script src="protect.js"></script></body>
+</html>

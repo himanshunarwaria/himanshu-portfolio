@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" type="image/png" href="/images/Icons/fav.png"><link rel="apple-touch-icon" href="/images/Icons/fav.png">
+<link rel="icon" type="image/png" href="images/Icons/fav.png"><link rel="apple-touch-icon" href="images/Icons/fav.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>if(location.pathname==='/index.html')location.replace('/'+(location.search||'')+(location.hash||''));</script>
 
@@ -19,7 +19,7 @@
 <meta property="og:url" content="https://himanshunarwaria.in/">
 <meta property="og:title" content="Himanshu Narwaria | Graphic Designer — Social Media, Amazon & Meta Ads">
 <meta property="og:description" content="5+ years crafting high-impact designs for social media, Amazon listings, and performance ads. Trusted by 100+ brands across India.">
-<meta property="og:image" content="https://himanshunarwaria.in/images/hero/Hero (11).png">
+<meta property="og:image" content="https://himanshunarwaria.in/images/hero/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Himanshu Narwaria Portfolio">
@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Himanshu Narwaria | Graphic Designer India">
 <meta name="twitter:description" content="Social media creatives, Amazon A+ content & Meta ads for eCommerce brands. 100+ clients. 5+ years experience.">
-<meta name="twitter:image" content="https://himanshunarwaria.in/images/hero/Hero (11).png">
+<meta name="twitter:image" content="https://himanshunarwaria.in/images/hero/og-cover.jpg">
 
 <!-- ══ SCHEMA MARKUP — JSON-LD ══ -->
 <script type="application/ld+json">
@@ -41,7 +41,7 @@
       "@id": "https://himanshunarwaria.in/#person",
       "name": "Himanshu Narwaria",
       "url": "https://himanshunarwaria.in/",
-      "image": "https://himanshunarwaria.in/images/hero/Hero (11).png",
+      "image": "https://himanshunarwaria.in/images/hero/og-cover.jpg",
       "jobTitle": "Graphic Designer",
       "description": "Professional graphic designer with 5+ years of experience specializing in social media creatives, Amazon A+ content, Meta ads, and branding for eCommerce brands and startups in India.",
       "knowsAbout": ["Social Media Design", "Amazon A+ Content", "Meta Ads", "Branding", "UI/UX Design", "Graphic Design", "eCommerce Design"],
@@ -180,11 +180,23 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media=&#39;all&#39;">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --black:#08080a;--white:#f0efe9;--grey:#6b6b6b;--grey-light:#999;--accent:#c8c8bc;
+  --black:#0f172a;
+  --white:#faf9f6;
+  --surface:#ffffff;
+  --surface-alt:#f1f5f9;
+  --surface-glass:rgba(250,249,246,0.88);
+  --grey:#475569;
+  --grey-light:#64748b;
+  --border:rgba(15,23,42,0.08);
+  --border-hover:rgba(15,23,42,0.15);
+  --shadow-soft:0 12px 40px rgba(15,23,42,0.06);
+  --shadow-hover:0 20px 50px rgba(15,23,42,0.1);
   --font-display:'Playfair Display',Georgia,serif;
   --font-body:'Outfit',sans-serif;
   --font-mono:'Space Mono',monospace;
@@ -193,42 +205,34 @@
   --ease-smooth:cubic-bezier(.25,.46,.45,.94);
 }
 html{scroll-behavior:smooth;font-size:16px}
-body{background:var(--black);color:var(--white);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-::selection{background:var(--white);color:var(--black)}
+body{background:var(--white);color:var(--black);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--black);color:var(--white)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 
-/* LOADER */
-.loader{position:fixed;inset:0;background:var(--black);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
-.loader.out{animation:loaderOut .9s var(--ease-out-expo) forwards}
-.loader-name{font-family:var(--font-display);font-size:clamp(1.5rem,4vw,3rem);font-weight:400;letter-spacing:.05em;opacity:0;transform:translateY(30px);animation:fadeSlideUp .8s var(--ease-out-expo) .1s forwards}
-.loader-line{width:60px;height:1px;background:var(--grey);position:relative;overflow:hidden;opacity:0;animation:fadeIn .4s ease .5s forwards}
-.loader-line::after{content:'';position:absolute;inset:0;background:var(--white);animation:loaderProgress 1.2s var(--ease-smooth) .5s forwards}
-@keyframes loaderProgress{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-@keyframes loaderOut{0%{clip-path:inset(0)}100%{clip-path:inset(0 0 100% 0)}}
 @keyframes fadeSlideUp{to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{to{opacity:1}}
 
-.cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.5);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,transform .3s,background .3s;transform:translate(-50%,-50%)}
-.cursor.hover{width:50px;height:50px;border-color:var(--white);background:rgba(255,255,255,.06)}
+.cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(15,23,42,.5);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,transform .3s,background .3s;transform:translate(-50%,-50%)}
+.cursor.hover{width:50px;height:50px;border-color:var(--black);background:rgba(15,23,42,.06)}
 @media(pointer:coarse){.cursor{display:none}}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all .5s ease}
-nav.scrolled{padding:1rem 3rem;background:rgba(8,8,10,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}
+nav.scrolled{padding:1rem 3rem;background:var(--surface-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
 nav .logo{font-family:var(--font-display);font-weight:500;font-size:1.15rem;letter-spacing:.02em}
 nav .nav-links{display:flex;gap:2.5rem;align-items:center}
 nav .nav-links a{font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;position:relative;padding:.3rem 0}
-nav .nav-links a:not(.nav-contact-btn)::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--white);transition:width .5s var(--ease-out-expo)}
+nav .nav-links a:not(.nav-contact-btn)::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--black);transition:width .5s var(--ease-out-expo)}
 nav .nav-links a:not(.nav-contact-btn):hover::after{width:100%}
-.nav-contact-btn{padding:.6rem 1.5rem !important;border:1px solid rgba(255,255,255,.25);border-radius:100px;transition:all .4s ease !important}
-.nav-contact-btn:hover{background:var(--white);color:var(--black);border-color:var(--white)}
-.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;padding:5px}
-.menu-toggle span{display:block;width:24px;height:1.5px;background:var(--white);transition:all .4s ease}
+.nav-contact-btn{padding:.6rem 1.5rem !important;border:1px solid rgba(15,23,42,.25);border-radius:100px;transition:all .4s ease !important}
+.nav-contact-btn:hover{background:var(--white);color:var(--black);border-color:var(--black)}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;padding:5px;background:transparent;border:none}
+.menu-toggle span{display:block;width:24px;height:1.5px;background:var(--black);transition:all .4s ease}
 .menu-toggle.active span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
 .menu-toggle.active span:nth-child(2){opacity:0}
 .menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-.mobile-menu{position:fixed;inset:0;background:var(--black);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;visibility:hidden;transition:all .5s ease}
+.mobile-menu{position:fixed;inset:0;background:var(--surface-alt);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;visibility:hidden;transition:all .5s ease}
 .mobile-menu.open{opacity:1;visibility:visible}
 .mobile-menu a{font-family:var(--font-display);font-size:2rem;opacity:0;transform:translateY(20px);transition:all .5s ease}
 .mobile-menu.open a{opacity:1;transform:translateY(0)}
@@ -298,141 +302,133 @@ nav .nav-links a:not(.nav-contact-btn):hover::after{width:100%}
   FIX: Added isolation:isolate on .btn, z-index:-1 on ::before, and z-index:1
   on span and svg. This ensures the fill animation always stays behind text.
 */
-.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2.4rem;border:1px solid rgba(255,255,255,.3);border-radius:100px;font-family:var(--font-body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--white);transition:all .45s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
-.btn::before{content:'';position:absolute;inset:0;background:var(--white);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2.4rem;border:1px solid rgba(15,23,42,.3);border-radius:100px;font-family:var(--font-body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--black);transition:all .45s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:'';position:absolute;inset:0;background:var(--black);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}
 .btn:hover::before{transform:scaleX(1);transform-origin:left}
 .btn span{position:relative;z-index:1;transition:color .4s ease}
-.btn:hover span{color:var(--black)}
+.btn:hover span{color:var(--white)}
 .btn svg{position:relative;z-index:1;transition:all .4s ease}
-.btn:hover svg{stroke:var(--black);transform:translateX(3px)}
-.btn-filled{background:var(--white);color:var(--black);border-color:var(--white)}
-.btn-filled::before{background:var(--black)}
-.btn-filled:hover span{color:var(--white)}
-.btn-filled:hover svg{stroke:var(--white)}
+.btn:hover svg{stroke:var(--white);transform:translateX(3px)}
+.btn-filled{background:var(--white);color:var(--black);border-color:var(--black)}
+.btn-filled::before{background:var(--surface-alt)}
+.btn-filled:hover span{color:var(--black)}
+.btn-filled:hover svg{stroke:var(--black)}
 
 .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey);display:flex;flex-direction:column;align-items:center;gap:.8rem;opacity:0;animation:fadeSlideUp .8s var(--ease-out-expo) 1.5s forwards;z-index:3;white-space:nowrap}
-.scroll-arrow{width:1px;height:50px;background:rgba(255,255,255,.15);position:relative;overflow:hidden}
-.scroll-arrow::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:50%;background:var(--white);animation:scrollDown 2s ease infinite}
+.scroll-arrow{width:1px;height:50px;background:rgba(15,23,42,.15);position:relative;overflow:hidden}
+.scroll-arrow::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:50%;background:var(--black);animation:scrollDown 2s ease infinite}
 @keyframes scrollDown{0%{top:-50%}100%{top:150%}}
 
 /* MARQUEE */
-.marquee{border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:1.8rem 0;overflow:hidden;white-space:nowrap}
+.marquee{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.8rem 0;overflow:hidden;white-space:nowrap}
 .marquee-track{display:inline-flex;animation:marqueeScroll 40s linear infinite}
 .marquee-track:hover{animation-play-state:paused}
-.marquee-item{font-family:var(--font-display);font-size:clamp(1.1rem,1.8vw,1.5rem);padding:0 2.5rem;color:rgba(255,255,255,.18);display:inline-flex;align-items:center;gap:2rem;transition:color .5s ease,text-shadow .5s ease,filter .5s ease;cursor:default}
-.marquee-item:hover{color:#fff;text-shadow:0 0 20px rgba(255,255,255,.7),0 0 50px rgba(255,255,255,.4),0 0 90px rgba(255,255,255,.2);filter:brightness(1.3)}
-.marquee-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.12);transition:all .5s ease;flex-shrink:0}
-.marquee-item:hover .marquee-dot{background:#fff;box-shadow:0 0 8px rgba(255,255,255,.6)}
+.marquee-item{font-family:var(--font-display);font-size:clamp(1.1rem,1.8vw,1.5rem);padding:0 2.5rem;color:rgba(15,23,42,.18);display:inline-flex;align-items:center;gap:2rem;transition:color .5s ease,text-shadow .5s ease,filter .5s ease;cursor:default}
+.marquee-item:hover{color:var(--black)}
+.marquee-dot{width:5px;height:5px;border-radius:50%;background:rgba(15,23,42,.12);transition:all .5s ease;flex-shrink:0}
+.marquee-item:hover .marquee-dot{background:var(--black)}
 @keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* LATEST WORK — white bg horizontal scroll */
-.latest-work{background:#fff;color:#000;padding:6rem 0 7rem;position:relative;overflow:hidden}
-.latest-work-header{padding:0 3rem;display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem}
-.latest-work-header h2{font-family:var(--font-suisse);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;letter-spacing:-.03em;line-height:1;text-transform:uppercase;color:#000}
 .scroll-nav{display:flex;gap:.5rem;flex-shrink:0}
-.scroll-nav button{width:48px;height:48px;border:1.5px solid rgba(255,255,255,.2);background:transparent;border-radius:0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s ease}
-.scroll-nav button:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.35)}
-.scroll-nav button svg{width:20px;height:20px;stroke:rgba(255,255,255,.6);stroke-width:1.5;fill:none;transition:stroke .3s ease}
-.scroll-nav button:hover svg{stroke:#fff}
-.latest-scroll{display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 3rem;-ms-overflow-style:none;scrollbar-width:none;scroll-behavior:smooth}
-.latest-scroll::-webkit-scrollbar{display:none}
-.latest-card{flex-shrink:0;width:clamp(320px,30vw,440px);scroll-snap-align:start;cursor:pointer;text-decoration:none;color:#000;transition:opacity .3s ease}
-.latest-card:hover{opacity:.85}
-.latest-card-thumb{width:100%;aspect-ratio:4/5;border-radius:8px;overflow:hidden;position:relative;margin-bottom:1.2rem}
-.latest-card-thumb .thumb-bg{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}
-.latest-card:hover .thumb-bg{transform:scale(1.04)}
-/* Image support in latest cards */
-.latest-card-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
-.thumb-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 1.8rem;z-index:2}
-.thumb-overlay::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.55) 100%);z-index:-1}
-.thumb-overlay .overlay-tag{font-family:var(--font-suisse);font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
-.thumb-overlay .overlay-tag .level-badge{width:18px;height:18px;border:1px solid rgba(255,255,255,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.5rem;color:rgba(255,255,255,.6)}
-.thumb-overlay .overlay-title{font-family:var(--font-display);font-size:clamp(1.2rem,2vw,1.6rem);font-weight:500;color:#fff;line-height:1.2;letter-spacing:-.01em}
-.latest-card-status{font-family:var(--font-suisse);font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#666;margin-bottom:.6rem}
-.latest-card-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
-.latest-card-meta .meta-info{flex:1}
-.latest-card-meta .meta-info h3{font-family:var(--font-suisse);font-size:.82rem;font-weight:700;letter-spacing:.02em;text-transform:uppercase;line-height:1.4;color:#000}
-.latest-card-cta{flex-shrink:0;display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-suisse);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.55rem 1.2rem;border:1.5px solid #000;color:#000;transition:all .3s ease;white-space:nowrap}
-.latest-card:hover .latest-card-cta{background:#000;color:#fff}
-.latest-card-cta svg{width:12px;height:12px;stroke:currentColor;stroke-width:2;fill:none}
+.scroll-nav button{width:48px;height:48px;border:1.5px solid rgba(15,23,42,.2);background:transparent;border-radius:0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s ease}
+.scroll-nav button:hover{background:rgba(15,23,42,.08);border-color:rgba(15,23,42,.35)}
+.scroll-nav button svg{width:20px;height:20px;stroke:rgba(15,23,42,.6);stroke-width:1.5;fill:none;transition:stroke .3s ease}
+.scroll-nav button:hover svg{stroke:var(--black)}
 
 /* CATEGORY SECTIONS */
-.category-section{background:var(--black);color:#f0efe9;padding:2.5rem 0 3rem;border-top:1px solid rgba(255,255,255,.06);position:relative}
+.category-section{background:var(--surface-alt);color:var(--black);padding:2.5rem 0 3rem;border-top:1px solid var(--border);position:relative}
 .category-section-header{padding:0 3rem;display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem}
-.category-section-header h2{font-family:var(--font-suisse);font-size:clamp(1.8rem,4vw,3rem);font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#f0efe9;line-height:1}
+.category-section-header h2{font-family:var(--font-suisse);font-size:clamp(1.8rem,4vw,3rem);font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:var(--black);line-height:1}
 .category-scroll{display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 3rem 1rem;-ms-overflow-style:none;scrollbar-width:none;scroll-behavior:smooth}
 .category-scroll::-webkit-scrollbar{display:none}
 .category-view-all{padding:.8rem 3rem 0;display:flex;justify-content:flex-end}
-.cat-view-all-btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--font-mono);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#f0efe9;padding:.7rem 1.6rem;border:1.5px solid rgba(255,255,255,.2);text-decoration:none;transition:all .35s ease}
-.cat-view-all-btn:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.5)}
+.cat-view-all-btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--font-mono);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--black);padding:.7rem 1.6rem;border:1.5px solid rgba(15,23,42,.2);text-decoration:none;transition:all .35s ease}
+.cat-view-all-btn:hover{background:rgba(15,23,42,.06);border-color:rgba(15,23,42,.5)}
 .cat-view-all-btn svg{width:11px;height:11px;stroke:currentColor;stroke-width:2;fill:none;transition:transform .3s ease}
 .cat-view-all-btn:hover svg{transform:translate(2px,-2px)}
-.cat-card{flex-shrink:0;width:clamp(300px,28vw,420px);scroll-snap-align:start;border:1px solid rgba(255,255,255,.06);border-radius:6px;overflow:hidden;cursor:pointer;transition:all .4s ease;text-decoration:none;color:#f0efe9;background:rgba(255,255,255,.02)}
-.cat-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.3);transform:translateY(-4px);border-color:rgba(255,255,255,.12)}
+.cat-card{flex-shrink:0;width:clamp(300px,28vw,420px);scroll-snap-align:start;border:1px solid var(--border);border-radius:6px;overflow:hidden;cursor:pointer;transition:all .4s ease;text-decoration:none;color:var(--black);background:var(--surface)}
+.cat-card:hover{box-shadow:var(--shadow-soft);transform:translateY(-4px);border-color:var(--border-hover)}
 .cat-card-thumb{width:100%;aspect-ratio:1/1;overflow:hidden;position:relative}
 .cat-card-thumb .cat-thumb-bg{position:absolute;inset:0;transition:transform .7s var(--ease-out-expo)}
 .cat-card:hover .cat-thumb-bg{transform:scale(1.04)}
 /* Image support for category cards */
 .cat-card-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
 .cat-thumb-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;z-index:2}
-.cat-thumb-content .cat-badge{font-family:var(--font-suisse);font-size:.55rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1rem}
+.cat-thumb-content .cat-badge{font-family:var(--font-suisse);font-size:.55rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:1rem}
 .cat-thumb-content h3{font-family:var(--font-display);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:400;color:#fff;line-height:1.2;letter-spacing:-.01em;text-shadow:0 2px 20px rgba(0,0,0,.3)}
-.cat-thumb-content .cat-sub{font-family:var(--font-body);font-size:.8rem;font-weight:300;color:rgba(255,255,255,.7);margin-top:.6rem;line-height:1.5}
+.cat-thumb-content .cat-sub{font-family:var(--font-body);font-size:.8rem;font-weight:300;color:rgba(255,255,255,.75);margin-top:.6rem;line-height:1.5}
 .cat-card-info{padding:1.5rem 1.8rem;display:flex;flex-direction:column;gap:.8rem}
-.cat-card-info h4{font-family:var(--font-suisse);font-size:.85rem;font-weight:700;letter-spacing:.01em;margin-bottom:0;color:#f0efe9}
+.cat-card-info h4{font-family:var(--font-suisse);font-size:.85rem;font-weight:700;letter-spacing:.01em;margin-bottom:0;color:var(--black)}
 .cat-card-info p{font-size:.78rem;color:#666;line-height:1.5;font-weight:400}
-.cat-view-btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#f0efe9;padding:.6rem 1.3rem;border:1.5px solid rgba(255,255,255,.25);background:transparent;transition:all .3s ease;align-self:flex-start;cursor:pointer;margin-top:.3rem}
-.cat-card:hover .cat-view-btn{background:#f0efe9;color:#08080a}
+.cat-view-btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);padding:.6rem 1.3rem;border:1.5px solid rgba(15,23,42,.25);background:transparent;transition:all .3s ease;align-self:flex-start;cursor:pointer;margin-top:.3rem}
+.cat-card:hover .cat-view-btn{background:var(--black);color:var(--white)}
 .cat-view-btn svg{width:11px;height:11px;stroke:currentColor;stroke-width:2;fill:none;transition:transform .3s ease}
 .cat-card:hover .cat-view-btn svg{transform:translate(2px,-2px)}
 
 /* SECTIONS */
 section{padding:8rem 3rem}
 .section-label{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:3.5rem;display:flex;align-items:center;gap:1.2rem}
-.section-label::before{content:'';width:30px;height:1px;background:rgba(255,255,255,.2)}
-.section-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 20%,rgba(255,255,255,.06) 80%,transparent)}
+.section-label::before{content:'';width:30px;height:1px;background:var(--grey-light)}
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border) 20%,var(--border) 80%,transparent)}
 
 /* CLIENTS — supports both text AND logo images */
 .clients h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;letter-spacing:-.02em;font-weight:400;margin-bottom:1rem}
 .clients p{color:var(--grey-light);font-size:.95rem;margin-bottom:4rem;max-width:48ch;line-height:1.7;font-weight:300}
-.client-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.04)}
-.client-card{background:var(--black);padding:2.8rem 1.5rem;display:flex;align-items:center;justify-content:center;font-family:var(--font-body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);transition:all .5s ease;text-align:center;position:relative;overflow:hidden}
-.client-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(255,255,255,.04),transparent 70%);opacity:0;transition:opacity .5s ease}
+.client-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--surface)}
+.client-card{background:var(--surface-alt);padding:2.8rem 1.5rem;display:flex;align-items:center;justify-content:center;font-family:var(--font-body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);transition:all .5s ease;text-align:center;position:relative;overflow:hidden}
+.client-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(15,23,42,.04),transparent 70%);opacity:0;transition:opacity .5s ease}
 .client-card:hover::before{opacity:1}
-.client-card:hover{color:var(--white)}
-.client-card img{max-width:120px;max-height:40px;object-fit:contain;filter:grayscale(1) brightness(.5);transition:filter .5s ease}
-.client-card:hover img{filter:grayscale(0) brightness(1)}
+.client-card:hover{color:var(--black)}
+.client-card img{max-width:120px;max-height:40px;object-fit:contain;filter:grayscale(1) brightness(0) opacity(.6);transition:filter .5s ease}
+.client-card:hover img{filter:grayscale(0); opacity:1;}
 
 /* WORK */
 .work h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;letter-spacing:-.02em;font-weight:400;margin-bottom:4rem}
 .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-.work-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:3.5rem 3rem;display:flex;flex-direction:column;justify-content:space-between;min-height:300px;position:relative;overflow:hidden;cursor:pointer;transition:all .6s var(--ease-smooth)}
-.work-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15) 50%,transparent);opacity:0;transition:opacity .6s ease}
-.work-card:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12);transform:translateY(-4px)}
+.work-card.wide{grid-column:1/-1}
+.work-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:3.5rem 3rem;display:flex;flex-direction:column;justify-content:space-between;min-height:300px;position:relative;overflow:hidden;cursor:pointer;transition:all .6s var(--ease-smooth)}
+.work-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(15,23,42,.15) 50%,transparent);opacity:0;transition:opacity .6s ease}
+.work-card:hover{background:var(--surface);border-color:var(--border-hover);transform:translateY(-4px)}
 .work-card:hover::before{opacity:1}
 .card-top{display:flex;justify-content:space-between;align-items:flex-start}
 .card-number{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.1em;color:var(--grey)}
-.card-arrow{width:48px;height:48px;border:1px solid rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .5s var(--ease-out-expo)}
-.work-card:hover .card-arrow{background:var(--white);border-color:var(--white)}
-.card-arrow svg{width:16px;height:16px;stroke:var(--white);stroke-width:1.5;fill:none;transition:all .5s ease}
-.work-card:hover .card-arrow svg{stroke:var(--black)}
+.card-arrow{width:48px;height:48px;border:1px solid rgba(15,23,42,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .5s var(--ease-out-expo)}
+.work-card:hover .card-arrow{background:var(--black);border-color:var(--black)}
+.card-arrow svg{width:16px;height:16px;stroke:var(--black);stroke-width:1.5;fill:none;transition:all .5s ease}
+.work-card:hover .card-arrow svg{stroke:#fff}
 .card-content{margin-top:auto}
 .card-title{font-family:var(--font-display);font-size:clamp(1.6rem,2.5vw,2.4rem);line-height:1.1;letter-spacing:-.015em;margin-bottom:.8rem}
 .card-desc{font-size:.85rem;color:var(--grey-light);max-width:32ch;line-height:1.6;font-weight:300}
+
+/* CASE STUDIES — compact strip */
+.case-studies h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;letter-spacing:-.02em;font-weight:400;margin-bottom:1rem}
+.case-studies h2 em{font-style:italic}
+.cs-intro{color:var(--grey-light);font-size:.95rem;margin-bottom:3rem;max-width:52ch;line-height:1.7;font-weight:300}
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.cs-link{display:flex;align-items:center;gap:1.2rem;padding:1.6rem 1.8rem;border:1px solid var(--border);border-radius:8px;background:var(--surface);transition:all .4s ease}
+.cs-link:hover{border-color:var(--border-hover);transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+.cs-num{font-family:var(--font-mono);font-size:.6rem;color:var(--grey-light);letter-spacing:.1em;flex-shrink:0}
+.cs-body h3{font-family:var(--font-display);font-size:1.15rem;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.cs-body p{font-size:.78rem;color:var(--grey-light);font-weight:300;margin-top:.2rem;line-height:1.4}
+.cs-link>svg{margin-left:auto;width:14px;height:14px;stroke:var(--grey);stroke-width:1.5;fill:none;transition:all .3s ease;flex-shrink:0}
+.cs-link:hover>svg{stroke:var(--black);transform:translate(2px,-2px)}
+@media(max-width:1024px){.cs-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.cs-grid{grid-template-columns:1fr}}
 
 /* ABOUT */
 .about{position:relative;overflow:hidden}
 .about .section-label{position:relative;z-index:2}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative;z-index:2}
 .about-img{position:absolute;inset:0;z-index:0;height:100%;display:block}
+@media(min-width:769px){.about-img::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 34%,var(--white) 54%)}}
 .about-img picture{display:block;width:100%;height:100%}
 .about-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .about h2{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,3rem);line-height:1.15;letter-spacing:-.02em;font-weight:400}
 .about h2 em{font-style:italic}
-.about-text{font-size:1rem;line-height:1.85;color:var(--accent);font-weight:300;margin-top:2rem}
+.about-text{font-size:1rem;line-height:1.85;color:var(--grey);font-weight:300;margin-top:2rem}
 .about-text p+p{margin-top:1.5rem}
 .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:4rem}
-.stat{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem}
+.stat{border-top:1px solid var(--border);padding-top:1.5rem}
 .stat-number{font-family:var(--font-display);font-size:2.5rem;letter-spacing:-.02em}
 .stat-label{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:.5rem}
 
@@ -443,8 +439,8 @@ section{padding:8rem 3rem}
 .cta p{color:var(--grey-light);font-size:1rem;margin-bottom:3rem;max-width:38ch;margin-left:auto;margin-right:auto;font-weight:300;line-height:1.7}
 .cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
-footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}
-footer a{transition:color .3s}footer a:hover{color:var(--white)}
+footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}
+footer a{transition:color .3s}footer a:hover{color:var(--black)}
 
 .reveal{opacity:0;transform:translateY(50px);transition:opacity .9s ease,transform .9s var(--ease-out-expo)}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -464,44 +460,62 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   /* dark gradient so text is readable over photo */
   .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88) 45%,rgba(0,0,0,.35) 80%,rgba(0,0,0,.15) 100%);z-index:1;pointer-events:none}
   .hero-left{max-width:100%;padding:0 1.5rem 4.5rem;z-index:2;position:relative}
+  /* light text over the dark mobile hero photo */
+  .hero h1{color:#fff}
+  .hero-label{color:rgba(255,255,255,.8)}
+  .hero-sub{color:rgba(255,255,255,.78)}
+  .hero-buttons .btn:not(.btn-filled){color:#fff;border-color:rgba(255,255,255,.45)}
   .hero-buttons{flex-direction:column;gap:.75rem}
   .hero-buttons .btn{justify-content:center;width:100%}
   .hero-scroll{display:none}
+  /* nav sits over the dark photo until scrolled */
+  nav .logo{color:#fff;transition:color .4s ease}
+  nav.scrolled .logo,nav.menu-open .logo{color:var(--black)}
+  .menu-toggle span{background:#fff}
+  nav.scrolled .menu-toggle span,.menu-toggle.active span{background:var(--black)}
 
   section{padding:5rem 1.5rem}
   .about-grid{grid-template-columns:1fr;gap:2rem}
+  /* mobile about photo is dark — scrim + light text for readability */
+  .about::before{content:'';position:absolute;inset:0;background:rgba(6,8,14,.72);z-index:1}
+  .about .section-label{color:rgba(255,255,255,.7)}
+  .about .section-label::before{background:rgba(255,255,255,.4)}
+  .about h2{color:#fff}
+  .about-text{color:rgba(255,255,255,.78)}
+  .about .stat{border-top-color:rgba(255,255,255,.2)}
+  .about .stat-number{color:#fff}
+  .about .stat-label{color:rgba(255,255,255,.65)}
   .work-card{padding:2.5rem 2rem;min-height:220px}.cta{padding:6rem 1.5rem}
   footer{flex-direction:column;gap:1rem;text-align:center}
   .client-grid{grid-template-columns:repeat(2,1fr)}
-  .latest-work-header{padding:0 1.5rem}.latest-scroll{padding:0 1.5rem;gap:1.2rem}.latest-card{width:85vw}
   .category-section-header{padding:0 1.5rem}.category-scroll{padding:0 1.5rem;gap:1rem}.cat-card{width:80vw}
   .scroll-nav{display:none}
 }
 @media(max-width:480px){.client-grid{grid-template-columns:1fr 1fr}.hero-buttons{flex-direction:column}.hero-buttons .btn{justify-content:center}}
 
 /* FAQ SECTION */
-.faq-section{padding:8rem 3rem;background:var(--black)}
+.faq-section{padding:8rem 3rem;background:var(--surface-alt)}
 .faq-section h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);font-weight:400;letter-spacing:-.02em;margin-bottom:3.5rem;line-height:1.15;text-align:center}
 .faq-section h2 em{font-style:italic}
 .faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:.75rem}
-.faq-item{border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden}
-.faq-q{width:100%;background:transparent;border:none;color:var(--white);padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;cursor:pointer;font-family:var(--font-body);font-size:1rem;font-weight:500;text-align:left;transition:background .3s ease}
-.faq-q:hover{background:rgba(255,255,255,.04)}
-.faq-q[aria-expanded="true"]{background:rgba(255,255,255,.05)}
+.faq-item{border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.faq-q{width:100%;background:transparent;border:none;color:var(--black);padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;cursor:pointer;font-family:var(--font-body);font-size:1rem;font-weight:500;text-align:left;transition:background .3s ease}
+.faq-q:hover{background:var(--surface)}
+.faq-q[aria-expanded="true"]{background:rgba(15,23,42,.05)}
 .faq-q svg{width:18px;height:18px;stroke:var(--grey);stroke-width:2;fill:none;flex-shrink:0;transition:transform .35s ease}
-.faq-q[aria-expanded="true"] svg{transform:rotate(180deg);stroke:var(--white)}
+.faq-q[aria-expanded="true"] svg{transform:rotate(180deg);stroke:var(--black)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .35s ease}
-.faq-a.open{max-height:300px}
+.faq-a.open{max-height:600px}
 .faq-a p{padding:.2rem 1.8rem 1.4rem;color:var(--grey-light);font-size:.92rem;line-height:1.75;font-weight:300}
 @media(max-width:768px){.faq-section{padding:5rem 1.5rem}.faq-q{padding:1.2rem 1.4rem;font-size:.92rem}}
 
 /* BLOG SECTION */
-.blog-section{padding:8rem 3rem;border-top:1px solid rgba(255,255,255,.06)}
+.blog-section{padding:8rem 3rem;border-top:1px solid var(--border)}
 .blog-section h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);font-weight:400;letter-spacing:-.02em;margin-bottom:3.5rem;line-height:1.15}
 .blog-section h2 em{font-style:italic}
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.blog-card{border:1px solid rgba(255,255,255,.06);border-radius:8px;overflow:hidden;transition:all .4s ease;text-decoration:none;color:var(--white);display:flex;flex-direction:column}
-.blog-card:hover{border-color:rgba(255,255,255,.15);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.blog-card{border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:all .4s ease;text-decoration:none;color:var(--black);display:flex;flex-direction:column}
+.blog-card:hover{border-color:var(--border-hover);transform:translateY(-4px);box-shadow:var(--shadow-soft)}
 .blog-card-img{aspect-ratio:16/9;position:relative;overflow:hidden}
 .blog-card-img .blog-img-bg{position:absolute;inset:0;transition:transform .6s ease}
 .blog-card:hover .blog-img-bg{transform:scale(1.05)}
@@ -512,7 +526,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .blog-card-footer{display:flex;align-items:center;justify-content:space-between;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-top:auto}
 .blog-read-more{display:inline-flex;align-items:center;gap:.4rem;transition:color .3s ease}
 .blog-read-more svg{stroke:currentColor;stroke-width:2;fill:none}
-.blog-card:hover .blog-read-more{color:var(--white)}
+.blog-card:hover .blog-read-more{color:var(--black)}
 .blog-card[data-accent="amber"]:hover{border-color:rgba(245,158,11,.2)}.blog-card[data-accent="amber"] .blog-card-tag{color:#f59e0b}
 .blog-card[data-accent="teal"]:hover{border-color:rgba(45,212,191,.2)}.blog-card[data-accent="teal"] .blog-card-tag{color:#2dd4bf}
 .blog-card[data-accent="rose"]:hover{border-color:rgba(251,113,133,.2)}.blog-card[data-accent="rose"] .blog-card-tag{color:#fb7185}
@@ -537,7 +551,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 /* Grain texture overlay */
 .cat-card-thumb::before{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.28;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");background-size:128px 128px;mix-blend-mode:overlay}
 /* Linen micro-texture */
-.cat-card-thumb::after{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.012;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.5) 0px,transparent 1px,transparent 3px);background-size:100% 3px}
+.cat-card-thumb::after{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.012;background-image:repeating-linear-gradient(0deg,rgba(15,23,42,.5) 0px,transparent 1px,transparent 3px);background-size:100% 3px}
 /* Corner brackets */
 .cat-thumb-content::before,.cat-thumb-content::after{content:'';position:absolute;width:18px;height:18px;z-index:4;pointer-events:none;opacity:.18}
 .cat-thumb-content::before{top:16px;left:16px;border-top:1px solid currentColor;border-left:1px solid currentColor}
@@ -548,8 +562,8 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 /* Premium typography override */
 .cat-thumb-content{color:#fff}
 .cat-thumb-content h3{font-family:'Playfair Display',Georgia,serif !important;font-size:clamp(1.6rem,3vw,2.4rem) !important;font-weight:500 !important;letter-spacing:.04em !important;text-shadow:0 2px 30px rgba(0,0,0,.4) !important}
-.cat-thumb-content .cat-badge{font-size:.5rem !important;letter-spacing:.18em !important;color:rgba(255,255,255,.5) !important;border:1px solid rgba(255,255,255,.12);padding:.25rem .7rem;border-radius:0;backdrop-filter:blur(4px);background:rgba(0,0,0,.15)}
-.cat-thumb-content .cat-sub{font-family:'Playfair Display',Georgia,serif !important;font-style:italic !important;font-weight:400 !important;font-size:.72rem !important;letter-spacing:.02em !important;color:rgba(255,255,255,.55) !important}
+.cat-thumb-content .cat-badge{font-size:.5rem !important;letter-spacing:.18em !important;color:rgba(255,255,255,.85) !important;border:1px solid rgba(255,255,255,.25);padding:.25rem .7rem;border-radius:0;backdrop-filter:blur(4px);background:rgba(0,0,0,.15)}
+.cat-thumb-content .cat-sub{font-family:'Playfair Display',Georgia,serif !important;font-style:italic !important;font-weight:400 !important;font-size:.72rem !important;letter-spacing:.02em !important;color:rgba(255,255,255,.75) !important}
 
 /* ── BRAND-SPECIFIC BACKGROUNDS ── */
 .cat-card[href*="nomme"] .cat-thumb-bg{background:#0a120a !important;background:radial-gradient(ellipse 55% 50% at 50% 45%,rgba(30,66,40,.35),transparent) !important;box-shadow:inset 0 0 120px rgba(200,168,100,.06)}
@@ -569,6 +583,10 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .cat-card.has-thumb .cat-card-thumb::before,.cat-card.has-thumb .cat-card-thumb::after{opacity:0!important}
 .cat-card.has-thumb .cat-thumb-content{display:none}
 .cat-card[href*="bathstore"] .cat-thumb-bg{background:radial-gradient(ellipse 55% 55% at 50% 45%,rgba(26,58,74,.3),transparent),radial-gradient(ellipse 40% 40% at 70% 65%,rgba(90,163,196,.08),transparent),linear-gradient(165deg,#0a1418 0%,#060e12 100%) !important}
+.cat-card[href*="gourmet-baklava"] .cat-thumb-bg{background:radial-gradient(ellipse 55% 55% at 50% 45%,rgba(201,162,39,.22),transparent),radial-gradient(ellipse 40% 40% at 65% 65%,rgba(212,184,74,.08),transparent),linear-gradient(165deg,#171204 0%,#0c0a04 100%) !important}
+.cat-card[href*="dr-foot"] .cat-thumb-bg{background:radial-gradient(ellipse 55% 55% at 50% 45%,rgba(8,145,178,.2),transparent),radial-gradient(ellipse 40% 40% at 35% 65%,rgba(6,182,212,.08),transparent),linear-gradient(165deg,#0a1416 0%,#060e10 100%) !important}
+.cat-card[href*="the-bath-store"] .cat-thumb-bg{background:radial-gradient(ellipse 55% 55% at 50% 45%,rgba(219,39,119,.18),transparent),radial-gradient(ellipse 40% 40% at 65% 60%,rgba(244,114,182,.07),transparent),linear-gradient(165deg,#170a10 0%,#0e060a 100%) !important}
+.cat-card[href*="misc-ads"] .cat-thumb-bg{background:radial-gradient(ellipse 55% 55% at 50% 45%,rgba(107,114,128,.25),transparent),radial-gradient(ellipse 40% 40% at 60% 65%,rgba(156,163,175,.08),transparent),linear-gradient(165deg,#111318 0%,#080a0e 100%) !important}
 .cat-card[href*="better-home"] .cat-thumb-bg{background:radial-gradient(ellipse 55% 55% at 50% 45%,rgba(44,95,46,.25),transparent),radial-gradient(ellipse 40% 40% at 30% 70%,rgba(143,188,94,.06),transparent),linear-gradient(165deg,#0a140a 0%,#060e06 100%) !important}
 .cat-card[href*="candes"] .cat-thumb-bg{background:radial-gradient(ellipse 55% 55% at 50% 45%,rgba(26,35,126,.25),transparent),radial-gradient(ellipse 40% 40% at 60% 65%,rgba(63,81,181,.08),transparent),linear-gradient(165deg,#0a0a1a 0%,#06060e 100%) !important}
 .cat-card[href*="cheston"] .cat-thumb-bg{background:radial-gradient(ellipse 55% 55% at 50% 45%,rgba(183,28,28,.18),transparent),radial-gradient(ellipse 40% 40% at 65% 65%,rgba(198,40,40,.08),transparent),linear-gradient(165deg,#1a0a0a 0%,#0e0606 100%) !important}
@@ -589,17 +607,25 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .cat-card:hover .cat-thumb-bg{transform:scale(1.03) !important}
 .cat-card:hover .cat-thumb-bg::after{background:radial-gradient(ellipse 85% 85% at 50% 50%,transparent 25%,rgba(0,0,0,.45) 100%)}
 .cat-card:hover .cat-thumb-content h3{letter-spacing:.06em !important;transition:letter-spacing .5s ease}
-.cat-card:hover .cat-thumb-content .cat-badge{border-color:rgba(255,255,255,.2)}
+.cat-card:hover .cat-thumb-content .cat-badge{border-color:rgba(255,255,255,.4)}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  .reveal,.hero-label,.hero-sub,.hero-buttons,.hero-scroll,.hero h1 .line .word{opacity:1 !important;transform:none !important}
+  .marquee-track{animation:none;flex-wrap:wrap;white-space:normal}
+}
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}.hero-label,.hero-sub,.hero-buttons,.hero h1 .line .word{opacity:1;transform:none;animation:none}</style></noscript>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
-<div class="loader" id="loader"><div class="loader-name">Himanshu Narwaria</div><div class="loader-line"></div></div>
 
 <nav id="navbar">
-  <a href="/" class="logo">Himanshu Narwaria</a>
+  <a href="index.html" class="logo">Himanshu Narwaria</a>
   <div class="nav-links"><a href="#work">Work</a><a href="#about">About</a><a href="#blog">Blog</a><a href="#contact" class="nav-contact-btn">Contact</a></div>
-  <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-menu" id="mobileMenu"><a href="#work" class="mobile-link">Work</a><a href="#about" class="mobile-link">About</a><a href="#blog" class="mobile-link">Blog</a><a href="#contact" class="mobile-link">Contact</a></div>
 
@@ -621,12 +647,8 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   <div class="hero-image">
     <div class="hero-img-wrap">
       <picture class="hero-img hero-img-a">
-        <source media="(max-width:768px)" srcset="images/hero/mobile/Hero (11).png">
-        <img src="images/hero/Hero (11).png" alt="Himanshu Narwaria" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
-      </picture>
-      <picture class="hero-img hero-img-b">
-        <source media="(max-width:768px)" srcset="images/hero/mobile/Hero (9).png">
-        <img src="images/hero/Hero (9).png" alt="Himanshu Narwaria" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+        <source media="(max-width:768px)" srcset="images/hero/mobile/hero-11.webp">
+        <img src="images/hero/hero-11.webp" alt="Himanshu Narwaria, graphic designer" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block" width="1920" height="1080" decoding="async">
       </picture>
     </div>
   </div>
@@ -637,73 +659,36 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   <span class="marquee-item">Social Media <span class="marquee-dot"></span></span><span class="marquee-item">E-Commerce <span class="marquee-dot"></span></span><span class="marquee-item">Brand Identity <span class="marquee-dot"></span></span><span class="marquee-item">Meta Ads <span class="marquee-dot"></span></span><span class="marquee-item">Amazon Listings <span class="marquee-dot"></span></span><span class="marquee-item">Banners <span class="marquee-dot"></span></span><span class="marquee-item">Campaign Creatives <span class="marquee-dot"></span></span><span class="marquee-item">Shopify Design <span class="marquee-dot"></span></span>
 </div></div>
 
-<!-- CASE STUDIES -->
-<div class="latest-work" style="display:none">
-  <div class="latest-work-header"><h2>Case Studies</h2><div class="scroll-nav"><button id="latestPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button><button id="latestNext" aria-label="Next"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button></div></div>
-  <div class="latest-scroll" id="latestScroll">
-    <a href="nomme.html" class="latest-card">
-      <div class="latest-card-thumb"><div class="thumb-bg" style="background:linear-gradient(145deg,#d6c9b0,#bba88a,#9a8468)"></div><div class="thumb-overlay"><div class="overlay-tag"><span class="level-badge">01</span> — Branding + Social</div><div class="overlay-title">Designing<br>Quiet Luxury.</div></div></div>
-      <div class="latest-card-status">Case Study | Luxury</div>
-      <div class="latest-card-meta"><div class="meta-info"><h3>Brand / Nomme<br>Type / Branding + Social<br>Style / Minimal + Premium</h3></div><div class="latest-card-cta">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    </a>
-    <a href="pista.html" class="latest-card">
-      <div class="latest-card-thumb"><div class="thumb-bg" style="background:linear-gradient(145deg,#2d6a4f,#40916c,#c9a227)"></div><div class="thumb-overlay"><div class="overlay-tag"><span class="level-badge">02</span> — Social + Branding</div><div class="overlay-title">Rich heritage food<br>storytelling.</div></div></div>
-      <div class="latest-card-status">Case Study | Branding</div>
-      <div class="latest-card-meta"><div class="meta-info"><h3>Brand / Pista House<br>Type / Social + Branding<br>Style / Heritage + Premium</h3></div><div class="latest-card-cta">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    </a>
-    <a href="dub.html" class="latest-card">
-      <div class="latest-card-thumb"><div class="thumb-bg" style="background:linear-gradient(145deg,#1a1a1a,#ff3333,#cc0000)"></div><div class="thumb-overlay"><div class="overlay-tag"><span class="level-badge">03</span> — Social + Campaign</div><div class="overlay-title">Bold streetwear<br>visual identity.</div></div></div>
-      <div class="latest-card-status">Case Study | Campaign</div>
-      <div class="latest-card-meta"><div class="meta-info"><h3>Brand / DUB<br>Type / Social + Campaign<br>Style / Bold + High Contrast</h3></div><div class="latest-card-cta">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    </a>
-    <a href="butternut.html" class="latest-card">
-      <div class="latest-card-thumb"><div class="thumb-bg" style="background:linear-gradient(145deg,#f5c563,#e8a030,#d4820a)"></div><div class="thumb-overlay"><div class="overlay-tag"><span class="level-badge">04</span> — Social + Ads</div><div class="overlay-title">Fresh and friendly<br>product design.</div></div></div>
-      <div class="latest-card-status">Case Study | Social + Ads</div>
-      <div class="latest-card-meta"><div class="meta-info"><h3>Brand / Butternut<br>Type / Social + Ads<br>Style / Warm + Appetizing</h3></div><div class="latest-card-cta">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    </a>
-    <a href="navodayan.html" class="latest-card">
-      <div class="latest-card-thumb"><div class="thumb-bg" style="background:linear-gradient(145deg,#1565c0,#0d47a1,#0a3070)"></div><div class="thumb-overlay"><div class="overlay-tag"><span class="level-badge">05</span> — Social + Ads</div><div class="overlay-title">Structured modern<br>education visuals.</div></div></div>
-      <div class="latest-card-status">Case Study | Education</div>
-      <div class="latest-card-meta"><div class="meta-info"><h3>Brand / Navodayan Academy<br>Type / Social + Ads<br>Style / Clean + Structured</h3></div><div class="latest-card-cta">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    </a>
-    <a href="tradejini.html" class="latest-card">
-      <div class="latest-card-thumb"><div class="thumb-bg" style="background:linear-gradient(145deg,#2563eb,#1d4ed8,#1e40af)"></div><div class="thumb-overlay"><div class="overlay-tag"><span class="level-badge">06</span> — UI + Social</div><div class="overlay-title">Clean data-driven<br>financial design.</div></div></div>
-      <div class="latest-card-status">Case Study | Finance</div>
-      <div class="latest-card-meta"><div class="meta-info"><h3>Brand / Tradejini<br>Type / UI + Social<br>Style / Precise + Trustworthy</h3></div><div class="latest-card-cta">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
-    </a>
-  </div>
-</div>
-
 <!-- SOCIAL MEDIA CATEGORY -->
 <div class="category-section">
-  <div class="category-section-header"><h2>Social Media</h2><div class="scroll-nav"><button onclick="document.getElementById('smScroll').scrollBy({left:-380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" stroke-width="1.5" fill="none"/></svg></button><button onclick="document.getElementById('smScroll').scrollBy({left:380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" stroke-width="1.5" fill="none"/></svg></button></div></div>
+  <div class="category-section-header"><h2>Social Media</h2><div class="scroll-nav"><button aria-label="Scroll left" onclick="document.getElementById('smScroll').scrollBy({left:-380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" stroke-width="1.5" fill="none"/></svg></button><button aria-label="Scroll right" onclick="document.getElementById('smScroll').scrollBy({left:380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" stroke-width="1.5" fill="none"/></svg></button></div></div>
   <div class="category-scroll" id="smScroll">
-    <a href="social-media/social-nomme.html" class="cat-card has-thumb"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/thumbnail/social-media/nomme.jpg" alt="Nomme social media design by Himanshu Narwaria" loading="lazy"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Fashion</div><h3>Nomme</h3><p class="cat-sub">Designing Quiet Luxury</p></div></div><div class="cat-card-info"><h4>Social Media — Minimal Premium</h4><p>Minimal, premium creatives with warm neutrals and editorial precision.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-    <a href="social-media/social-pista-house.html" class="cat-card has-thumb"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/thumbnail/social-media/pistahouse.jpg" alt="Pista House social media design by Himanshu Narwaria" loading="lazy"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Food &amp; Beverage</div><h3>Pista House</h3><p class="cat-sub">Rich Heritage Food Storytelling</p></div></div><div class="cat-card-info"><h4>Social Media — Heritage Premium</h4><p>Premium creatives showcasing authentic flavors, festive campaigns, and cultural brand legacy.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-    <a href="social-media/social-dub.html" class="cat-card has-thumb"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/thumbnail/social-media/dub.jpg" alt="DUB streetwear social media design by Himanshu Narwaria" loading="lazy"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Streetwear</div><h3>DUB</h3><p class="cat-sub">Bold Streetwear Visual Identity</p></div></div><div class="cat-card-info"><h4>Social Media — Bold Campaign</h4><p>High-energy campaign creatives with bold typography and high-contrast visuals.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-    <a href="social-media/social-navodayan.html" class="cat-card has-thumb"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/thumbnail/social-media/Navodayan%20Academy.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Education</div><h3>Navodayan Academy</h3><p class="cat-sub">Structured Education Visuals</p></div></div><div class="cat-card-info"><h4>Social Media — Institutional</h4><p>Institutional-grade social media building parental trust through structured design.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-    <a href="social-media/social-tradejini.html" class="cat-card has-thumb"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/thumbnail/social-media/tradeJini.jpg" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Finance</div><h3>Tradejini</h3><p class="cat-sub">Data-Driven Financial Design</p></div></div><div class="cat-card-info"><h4>Social Media — Clean Precision</h4><p>UI-focused social creatives and data visualization posts for trading platform.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="social-media/social-nomme.html" class="cat-card has-thumb"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/thumbnail/social-media/nomme.webp" alt="Nomme social media design by Himanshu Narwaria" loading="lazy" width="750" height="750" decoding="async"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Dining</div><h3>Nomme</h3><p class="cat-sub">Designing Quiet Luxury</p></div></div><div class="cat-card-info"><h4>Social Media — Minimal Premium</h4><p>Minimal, premium creatives with warm neutrals and editorial precision.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="social-media/social-pista-house.html" class="cat-card has-thumb"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/thumbnail/social-media/pistahouse.webp" alt="Pista House social media design by Himanshu Narwaria" loading="lazy" width="750" height="750" decoding="async"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Food &amp; Beverage</div><h3>Pista House</h3><p class="cat-sub">Rich Heritage Food Storytelling</p></div></div><div class="cat-card-info"><h4>Social Media — Heritage Premium</h4><p>Premium creatives showcasing authentic flavors, festive campaigns, and cultural brand legacy.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="social-media/social-dub.html" class="cat-card has-thumb"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/thumbnail/social-media/dub.webp" alt="DUB restaurant social media design by Himanshu Narwaria" loading="lazy" width="750" height="750" decoding="async"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Food &amp; Culture</div><h3>DUB</h3><p class="cat-sub">Bold Heritage Food Identity</p></div></div><div class="cat-card-info"><h4>Social Media — Bold Campaign</h4><p>High-energy campaign creatives with bold typography and high-contrast visuals.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="social-media/social-navodayan.html" class="cat-card has-thumb"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/thumbnail/social-media/Navodayan%20Academy.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="750" height="750" decoding="async"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Education</div><h3>Navodayan Academy</h3><p class="cat-sub">Structured Education Visuals</p></div></div><div class="cat-card-info"><h4>Social Media — Institutional</h4><p>Institutional-grade social media building parental trust through structured design.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="social-media/social-tradejini.html" class="cat-card has-thumb"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/thumbnail/social-media/tradeJini.webp" alt="TradeJini social media design by Himanshu Narwaria" loading="lazy" width="750" height="750" decoding="async"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Finance</div><h3>Tradejini</h3><p class="cat-sub">Data-Driven Financial Design</p></div></div><div class="cat-card-info"><h4>Social Media — Clean Precision</h4><p>UI-focused social creatives and data visualization posts for trading platform.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
   </div>
   <div class="category-view-all"><a href="social-media.html" class="cat-view-all-btn">View All Social Media <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
 </div>
 
 <!-- META ADS CATEGORY -->
 <div class="category-section">
-  <div class="category-section-header"><h2>Meta Ads</h2><div class="scroll-nav"><button onclick="document.getElementById('adsScroll').scrollBy({left:-380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" stroke-width="1.5" fill="none"/></svg></button><button onclick="document.getElementById('adsScroll').scrollBy({left:380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" stroke-width="1.5" fill="none"/></svg></button></div></div>
+  <div class="category-section-header"><h2>Meta Ads</h2><div class="scroll-nav"><button aria-label="Scroll left" onclick="document.getElementById('adsScroll').scrollBy({left:-380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" stroke-width="1.5" fill="none"/></svg></button><button aria-label="Scroll right" onclick="document.getElementById('adsScroll').scrollBy({left:380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" stroke-width="1.5" fill="none"/></svg></button></div></div>
   <div class="category-scroll" id="adsScroll">
-    <a href="meta-ads/meta-nomme.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Fashion</div><h3>Nomme</h3><p class="cat-sub">Collection Launch Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — Editorial Luxury</h4><p>Elegant ads for luxury fashion launches with soft editorial tones.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-    <a href="meta-ads/meta-pista.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Food &amp; Beverage</div><h3>Pista House</h3><p class="cat-sub">Festive Campaign Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — Heritage Conversion</h4><p>Conversion-focused ads for seasonal food campaigns with heritage storytelling.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-    <a href="meta-ads/meta-dub.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Streetwear</div><h3>DUB</h3><p class="cat-sub">Launch Campaign Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — High Impact</h4><p>High-impact ads for streetwear drops and collection launches.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-    <a href="meta-ads/meta-butternut.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">FMCG</div><h3>Butternut</h3><p class="cat-sub">Sale Campaign Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — Conversion Focused</h4><p>High-performing creatives for seasonal sales with urgency triggers.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-    <a href="meta-ads/meta-navodayan.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Education</div><h3>Navodayan Academy</h3><p class="cat-sub">Admission Lead Gen Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — Parent Targeted</h4><p>Parent-targeted admission ads driving enrollment inquiries.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-    <a href="meta-ads/meta-tradejini.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Finance</div><h3>Tradejini</h3><p class="cat-sub">Platform Acquisition Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — Data-Driven</h4><p>Clean data-driven ads for trader acquisition with market insights.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="meta-ads/meta-nomme.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Restaurant</div><h3>Nomme</h3><p class="cat-sub">Dining Campaign Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — Editorial Luxury</h4><p>Elegant, atmosphere-led ads for a premium dining destination.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="meta-ads/meta-gourmet-baklava.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Gourmet Food</div><h3>Gourmet Baklava</h3><p class="cat-sub">Luxury Gifting Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — Premium Gifting</h4><p>Golden artisan visuals and gifting campaign creatives for a premium dessert brand.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="meta-ads/meta-dub.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Food &amp; Culture</div><h3>DUB</h3><p class="cat-sub">Cultural Campaign Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — High Impact</h4><p>High-impact, event-driven ads for a heritage restaurant brand.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="meta-ads/meta-dr-foot.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Health &amp; Beauty</div><h3>Dr. Foot</h3><p class="cat-sub">Foot Care Conversion Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — Benefit Forward</h4><p>Benefit-forward layouts and before-after creatives optimized for conversion.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="meta-ads/meta-the-bath-store.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Skincare</div><h3>The Bath Store</h3><p class="cat-sub">Sensory Product Ads</p></div></div><div class="cat-card-info"><h4>Meta Ads — Sensory Lifestyle</h4><p>Soft lifestyle aesthetics and ingredient-hero visuals that drive purchase intent.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="meta-ads/meta-misc-ads.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Multi-Industry</div><h3>Miscellaneous Ads</h3><p class="cat-sub">Cross-Industry Ad Creatives</p></div></div><div class="cat-card-info"><h4>Meta Ads — Varied Formats</h4><p>A curated collection of high-converting ad creatives across diverse industries.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
   </div>
   <div class="category-view-all"><a href="meta-ads.html" class="cat-view-all-btn">View All Meta Ads <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
 </div>
 
 <!-- LISTINGS CATEGORY -->
 <div class="category-section">
-  <div class="category-section-header"><h2>Amazon Listings</h2><div class="scroll-nav"><button onclick="document.getElementById('listScroll').scrollBy({left:-380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" stroke-width="1.5" fill="none"/></svg></button><button onclick="document.getElementById('listScroll').scrollBy({left:380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" stroke-width="1.5" fill="none"/></svg></button></div></div>
+  <div class="category-section-header"><h2>Amazon Listings</h2><div class="scroll-nav"><button aria-label="Scroll left" onclick="document.getElementById('listScroll').scrollBy({left:-380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" stroke-width="1.5" fill="none"/></svg></button><button aria-label="Scroll right" onclick="document.getElementById('listScroll').scrollBy({left:380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" stroke-width="1.5" fill="none"/></svg></button></div></div>
   <div class="category-scroll" id="listScroll">
     <a href="listing/listing-bathstore.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Home &amp; Kitchen</div><h3>The Bath Store</h3><p class="cat-sub">Premium Bath Accessories</p></div></div><div class="cat-card-info"><h4>Amazon Listing — Lifestyle</h4><p>Premium bath product listings with lifestyle imagery and A+ content.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
     <a href="listing/listing-better-home.html" class="cat-card"><div class="cat-card-thumb"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Home &amp; Kitchen</div><h3>The Better Home</h3><p class="cat-sub">Insulated Stainless Bottles</p></div></div><div class="cat-card-info"><h4>Amazon Listing — A+ Content</h4><p>Vacuum insulated bottle listings with comparison tables and feature callouts.</p><div class="cat-view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
@@ -755,9 +740,27 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   <h2 class="reveal">Projects by category</h2>
   <div class="work-grid">
     <a href="social-media.html" class="work-card reveal"><div class="card-top"><span class="card-number">01</span><div class="card-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div><div class="card-content"><div class="card-title">Social Media Designs</div><div class="card-desc">Scroll-stopping creatives for Instagram, Facebook, YouTube &amp; LinkedIn.</div></div></a>
-    <a href="ads.html" class="work-card reveal reveal-delay-1"><div class="card-top"><span class="card-number">02</span><div class="card-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div><div class="card-content"><div class="card-title">Meta Ads Creatives</div><div class="card-desc">High-converting ad designs for Facebook &amp; Instagram campaigns.</div></div></a>
+    <a href="meta-ads.html" class="work-card reveal reveal-delay-1"><div class="card-top"><span class="card-number">02</span><div class="card-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div><div class="card-content"><div class="card-title">Meta Ads Creatives</div><div class="card-desc">High-converting ad designs for Facebook &amp; Instagram campaigns.</div></div></a>
     <a href="listings.html" class="work-card reveal"><div class="card-top"><span class="card-number">03</span><div class="card-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div><div class="card-content"><div class="card-title">Amazon Listings</div><div class="card-desc">Conversion-optimized A+ content &amp; product images.</div></div></a>
     <a href="banners.html" class="work-card reveal reveal-delay-1"><div class="card-top"><span class="card-number">04</span><div class="card-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div><div class="card-content"><div class="card-title">Banner Designs</div><div class="card-desc">Website banners, promotional graphics &amp; campaign visuals.</div></div></a>
+    <a href="websites.html" class="work-card wide reveal"><div class="card-top"><span class="card-number">05</span><div class="card-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div><div class="card-content"><div class="card-title">Website Case Studies</div><div class="card-desc">Websites designed &amp; built end to end — travel booking, D2C e-commerce, and studio brands. Live and in the wild.</div></div></a>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CASE STUDIES -->
+<section class="case-studies" id="case-studies">
+  <div class="section-label reveal">Case Studies</div>
+  <h2 class="reveal">Six brands, <em>in depth</em></h2>
+  <p class="cs-intro reveal">Short reads on the thinking behind each identity — the challenge, the creative direction, and the system that came out of it.</p>
+  <div class="cs-grid">
+    <a href="nomme.html" class="cs-link reveal"><span class="cs-num">01</span><div class="cs-body"><h3>Nomme</h3><p>Quiet luxury for a coffee theatre</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    <a href="pista.html" class="cs-link reveal"><span class="cs-num">02</span><div class="cs-body"><h3>Pista House</h3><p>Heritage food storytelling</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    <a href="dub.html" class="cs-link reveal"><span class="cs-num">03</span><div class="cs-body"><h3>DUB</h3><p>Bold heritage food identity</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    <a href="butternut.html" class="cs-link reveal"><span class="cs-num">04</span><div class="cs-body"><h3>Butternut</h3><p>Fresh, appetizing product design</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    <a href="navodayan.html" class="cs-link reveal"><span class="cs-num">05</span><div class="cs-body"><h3>Navodayan Academy</h3><p>Trust-building education design</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    <a href="tradejini.html" class="cs-link reveal"><span class="cs-num">06</span><div class="cs-body"><h3>Tradejini</h3><p>Clean, data-driven finance design</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
   </div>
 </section>
 
@@ -765,8 +768,8 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 
 <section class="about" id="about">
   <div class="about-img"><picture>
-    <source media="(max-width:768px)" srcset="images/hero/mobile/Hero (22).png">
-    <img src="images/hero/Hero (22).png" alt="Himanshu Narwaria" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+    <source media="(max-width:768px)" srcset="images/hero/mobile/hero-22.webp">
+    <img src="images/hero/hero-22.webp" alt="Himanshu Narwaria" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block" width="1920" height="1080" decoding="async">
   </picture></div>
   <div class="section-label reveal">About</div>
   <div class="about-grid">
@@ -906,37 +909,34 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   <p class="reveal reveal-delay-1">Have a project in mind? I'd love to help bring your brand vision to life.</p>
   <div class="cta-buttons reveal reveal-delay-2">
     <a href="mailto:himanshunarwaria@gmail.com" class="btn btn-filled"><span>Get in Touch</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    <a href="https://wa.me/917089271701" class="btn" target="_blank"><span>WhatsApp</span></a>
+    <a href="https://wa.me/917089271701" class="btn" target="_blank" rel="noopener"><span>WhatsApp</span></a>
   </div>
 </section>
 
 <footer>
-  <span>&copy; 2025 Himanshu Narwaria. All rights reserved.</span>
+  <span>&copy; 2025 Himanshu Narwaria. All rights reserved. &middot; <a href="ads.html">Case Studies</a></span>
   <span><a href="mailto:himanshunarwaria@gmail.com">himanshunarwaria@gmail.com</a> &middot; <a href="https://wa.me/917089271701">+91 7089271701</a></span>
 </footer>
 
 <a href="https://wa.me/917089271701" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 
 <script>
-window.addEventListener('load',()=>{setTimeout(()=>{document.getElementById('loader').classList.add('out');setTimeout(()=>document.getElementById('loader').style.display='none',900)},1200)});
 const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;
 document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
-function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();
-document.querySelectorAll('a,button,.work-card,.client-card,.btn,.marquee-item,.latest-card,.cat-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});
+function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}if(matchMedia('(pointer:fine)').matches)ac();
+document.querySelectorAll('a,button,.work-card,.client-card,.btn,.marquee-item,.cat-card,.cs-link').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});
 const navbar=document.getElementById('navbar');
 window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>80)},{passive:true});
 const mt=document.getElementById('menuToggle'),mm=document.getElementById('mobileMenu');
-mt.addEventListener('click',()=>{mt.classList.toggle('active');mm.classList.toggle('open');document.body.style.overflow=mm.classList.contains('open')?'hidden':''});
+mt.addEventListener('click',()=>{mt.classList.toggle('active');mm.classList.toggle('open');const open=mm.classList.contains('open');mt.setAttribute('aria-expanded',open);mt.setAttribute('aria-label',open?'Close menu':'Open menu');navbar.classList.toggle('menu-open',open);document.body.style.overflow=open?'hidden':''});
 document.querySelectorAll('.mobile-link').forEach(l=>{l.addEventListener('click',()=>{mt.classList.remove('active');mm.classList.remove('open');document.body.style.overflow=''})});
 const reveals=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 reveals.forEach(r=>obs.observe(r));
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t){const off=navbar.offsetHeight+20;window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-off,behavior:'smooth'})}})});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const sel=a.getAttribute('href');if(sel.length<2)return;e.preventDefault();const t=document.querySelector(sel);if(t){const off=navbar.offsetHeight+20;window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-off,behavior:'smooth'})}})});
 const statNums=document.querySelectorAll('.stat-number');
 const so=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target,text=el.textContent,num=parseInt(text),suffix=text.replace(/[0-9]/g,'');let c=0;const step=Math.max(1,Math.floor(num/40));const iv=setInterval(()=>{c+=step;if(c>=num){c=num;clearInterval(iv)}el.textContent=c+suffix},30);so.unobserve(el)}})},{threshold:.5});
 statNums.forEach(n=>so.observe(n));
-document.getElementById('latestPrev').addEventListener('click',()=>{document.getElementById('latestScroll').scrollBy({left:-400,behavior:'smooth'})});
-document.getElementById('latestNext').addEventListener('click',()=>{document.getElementById('latestScroll').scrollBy({left:400,behavior:'smooth'})});
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const expanded=btn.getAttribute('aria-expanded')==='true';document.querySelectorAll('.faq-q').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open')});if(!expanded){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.classList.add('open')}})});
 </script>

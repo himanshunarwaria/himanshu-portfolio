@@ -1,17 +1,37 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" type="image/png" href="/images/Icons/fav.png"><link rel="apple-touch-icon" href="/images/Icons/fav.png">
+<link rel="icon" type="image/png" href="images/Icons/fav.png"><link rel="apple-touch-icon" href="images/Icons/fav.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Navodayan Academy — Case Study — Himanshu Narwaria</title>
+<meta name="description" content="Case study: trust-building education design for Navodayan Academy — admission campaigns and a structured social media system by Himanshu Narwaria.">
+<link rel="canonical" href="https://himanshunarwaria.in/navodayan.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://himanshunarwaria.in/navodayan.html">
+<meta property="og:title" content="Navodayan Academy — Case Study — Himanshu Narwaria">
+<meta property="og:description" content="Case study: trust-building education design for Navodayan Academy — admission campaigns and a structured social media system by Himanshu Narwaria.">
+<meta property="og:image" content="https://himanshunarwaria.in/images/hero/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Navodayan Academy — Case Study — Himanshu Narwaria">
+<meta name="twitter:description" content="Case study: trust-building education design for Navodayan Academy — admission campaigns and a structured social media system by Himanshu Narwaria.">
+<meta name="twitter:image" content="https://himanshunarwaria.in/images/hero/og-cover.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media=&#39;all&#39;">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></noscript>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --black:#08080a;--white:#f0efe9;--grey:#6b6b6b;--grey-light:#999;--accent:#c8c8bc;
+  --surface:#ffffff;
+  --surface-alt:#f1f5f9;
+  --surface-glass:rgba(250,249,246,0.88);
+  --border:rgba(15,23,42,0.08);
+  --border-hover:rgba(15,23,42,0.15);
+  --shadow-soft:0 12px 40px rgba(15,23,42,0.06);
+  --shadow-hover:0 20px 50px rgba(15,23,42,0.1);
+  --black:#0f172a;--white:#faf9f6;--grey:#475569;--grey-light:#64748b;--accent:#c8c8bc;
   --font-display:'Playfair Display',Georgia,serif;
   --font-body:'Outfit',sans-serif;
   --font-mono:'Space Mono',monospace;
@@ -21,19 +41,19 @@
   --brand-1:#1565c0;--brand-2:#0d47a1;--brand-3:#0a3070;--brand-bg:#e8f0fa;--brand-text:#0a2040;
 }
 html{scroll-behavior:smooth;font-size:16px}
-body{background:var(--black);color:var(--white);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-::selection{background:var(--white);color:var(--black)}
+body{background:var(--white);color:var(--black);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--black);color:var(--white)}
 a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.6}
 
 /* Cursor */
-.cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.5);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,background .3s;transform:translate(-50%,-50%)}.cursor.hover{width:60px;height:60px;border-color:var(--white);background:rgba(255,255,255,.06)}@media(pointer:coarse){.cursor{display:none}}
+.cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(15,23,42,.3);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,background .3s;transform:translate(-50%,-50%)}.cursor.hover{width:60px;height:60px;border-color:var(--black);background:rgba(15,23,42,.06)}@media(pointer:coarse){.cursor{display:none}}
 
 /* Nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,10,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;background:var(--surface-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
 nav .logo{font-family:var(--font-display);font-weight:500;font-size:1.15rem;letter-spacing:.02em}
 nav .back-link{font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;position:relative;padding:.3rem 0}
-nav .back-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--white);transition:width .5s var(--ease-out-expo)}
+nav .back-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--black);transition:width .5s var(--ease-out-expo)}
 nav .back-link:hover::after{width:100%}
 
 /* ═══════════ 1. HERO ═══════════ */
@@ -41,24 +61,24 @@ nav .back-link:hover::after{width:100%}
 .cs-hero .hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,var(--brand-1),var(--brand-2),var(--brand-3));opacity:.12;transition:transform 1.2s var(--ease-out-expo)}
 .cs-hero .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--black) 0%,transparent 60%)}
 .cs-hero .cs-label{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .3s forwards;position:relative;z-index:2}
-.cs-hero .cs-label::before{content:'';width:30px;height:1px;background:rgba(255,255,255,.2)}
+.cs-hero .cs-label::before{content:'';width:30px;height:1px;background:var(--grey-light)}
 .cs-hero h1{font-family:var(--font-display);font-size:clamp(3.5rem,9vw,8rem);line-height:.9;letter-spacing:-.04em;font-weight:400;opacity:0;animation:fadeUp 1s var(--ease-out-expo) .4s forwards;position:relative;z-index:2}
 .cs-hero h1 em{font-style:italic}
 .cs-hero .hero-tagline{font-size:clamp(1rem,2vw,1.3rem);color:var(--grey-light);font-weight:300;margin-top:1.5rem;max-width:40ch;line-height:1.6;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .6s forwards;position:relative;z-index:2}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{opacity:0;transform:translateY(30px)}}
 
 /* ═══════════ 2. INTRO STRIP ═══════════ */
-.intro-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
-.intro-strip .strip-item{padding:2.5rem 3rem;border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:.4rem}
+.intro-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.intro-strip .strip-item{padding:2.5rem 3rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.4rem}
 .intro-strip .strip-item:last-child{border-right:none}
 .intro-strip .strip-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey)}
 .intro-strip .strip-value{font-family:var(--font-display);font-size:1.1rem;font-weight:400;letter-spacing:-.01em}
 
 /* ═══════════ SHARED SECTION ═══════════ */
 .cs-section{padding:7rem 3rem}
-.section-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 20%,rgba(255,255,255,.06) 80%,transparent)}
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border) 20%,var(--border) 80%,transparent)}
 .cs-section .sec-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:3rem;display:flex;align-items:center;gap:1rem}
-.cs-section .sec-label::before{content:'';width:24px;height:1px;background:rgba(255,255,255,.15)}
+.cs-section .sec-label::before{content:'';width:24px;height:1px;background:var(--grey-light)}
 
 /* ═══════════ 3. THE CHALLENGE ═══════════ */
 .challenge-text{font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.8rem);line-height:1.25;letter-spacing:-.02em;font-weight:400;max-width:28ch}
@@ -68,7 +88,7 @@ nav .back-link:hover::after{width:100%}
 /* ═══════════ 4. THE INSIGHT ═══════════ */
 .insight-section{text-align:center;padding:8rem 3rem}
 .insight-quote{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.2;letter-spacing:-.03em;font-weight:400;max-width:22ch;margin:0 auto;font-style:italic;position:relative}
-.insight-quote::before{content:'"';position:absolute;top:-.8em;left:-.4em;font-size:5rem;color:rgba(255,255,255,.06);font-family:var(--font-display);line-height:1}
+.insight-quote::before{content:'"';position:absolute;top:-.8em;left:-.4em;font-size:5rem;color:rgba(15,23,42,.08);font-family:var(--font-display);line-height:1}
 .insight-attr{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey);margin-top:2rem}
 
 /* ═══════════ 5. CREATIVE DIRECTION ═══════════ */
@@ -85,23 +105,23 @@ nav .back-link:hover::after{width:100%}
 .palette .swatch:hover .swatch-label{opacity:1}
 
 /* Typography preview */
-.type-preview{margin-top:2.5rem;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:2.5rem;background:rgba(255,255,255,.02)}
+.type-preview{margin-top:2.5rem;border:1px solid var(--border);border-radius:12px;padding:2.5rem;background:var(--surface)}
 .type-preview .type-sample{font-family:var(--font-display);font-size:2.2rem;font-weight:400;letter-spacing:-.02em;margin-bottom:.5rem;line-height:1.2}
 .type-preview .type-body{font-family:var(--font-body);font-size:.9rem;color:var(--grey-light);font-weight:300;line-height:1.7;margin-bottom:1.5rem}
 .type-preview .type-meta{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
 
 /* Moodboard placeholder */
-.moodboard{border:1px solid rgba(255,255,255,.06);border-radius:14px;overflow:hidden;background:rgba(255,255,255,.02);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative}
+.moodboard{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative}
 .moodboard .mood-bg{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}
 .moodboard:hover .mood-bg{transform:scale(1.03)}
 .moodboard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
-.moodboard .mood-hint{position:relative;z-index:2;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.2)}
+.moodboard .mood-hint{position:relative;z-index:2;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(15,23,42,.3)}
 
 /* ═══════════ 6. VISUAL EXPLORATION ═══════════ */
 .visual-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 .visual-grid.three-col{grid-template-columns:repeat(3,1fr)}
-.visual-item{border-radius:12px;overflow:hidden;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);position:relative;transition:all .5s var(--ease-smooth)}
-.visual-item:hover{border-color:rgba(255,255,255,.12);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,0,0,.3)}
+.visual-item{border-radius:12px;overflow:hidden;background:var(--surface);border:1px solid var(--border);position:relative;transition:all .5s var(--ease-smooth)}
+.visual-item:hover{border-color:var(--border-hover);transform:translateY(-4px);box-shadow:var(--shadow-hover)}
 .visual-item .vis-bg{aspect-ratio:4/3;position:relative;overflow:hidden}
 .visual-item .vis-bg .bg-fill{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}
 .visual-item:hover .bg-fill{transform:scale(1.06)}
@@ -110,7 +130,7 @@ nav .back-link:hover::after{width:100%}
 .visual-item .vis-label{padding:1.2rem 1.5rem;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
 
 /* ═══════════ 7. FINAL DESIGN EXECUTION ═══════════ */
-.final-hero{border-radius:16px;overflow:hidden;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);margin-bottom:2rem}
+.final-hero{border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:2rem}
 .final-hero .final-bg{aspect-ratio:16/9;position:relative;overflow:hidden}
 .final-hero .final-bg .bg-fill{position:absolute;inset:0;transition:transform 1s var(--ease-out-expo)}
 .final-hero:hover .bg-fill{transform:scale(1.03)}
@@ -120,22 +140,22 @@ nav .back-link:hover::after{width:100%}
 .final-alt .alt-text h4{font-family:var(--font-display);font-size:1.5rem;font-weight:400;margin-bottom:1rem;letter-spacing:-.01em}
 .final-alt .alt-text h4 em{font-style:italic}
 .final-alt .alt-text p{font-size:.9rem;color:var(--grey-light);line-height:1.7;font-weight:300}
-.final-alt .alt-visual{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02)}
+.final-alt .alt-visual{border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--surface)}
 .final-alt .alt-visual .vis-bg{aspect-ratio:4/3;position:relative;overflow:hidden}
 .final-alt .alt-visual .vis-bg .bg-fill{position:absolute;inset:0}
 .final-alt .alt-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
 
 /* ═══════════ 8. DETAIL HIGHLIGHTS ═══════════ */
 .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.detail-card{border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:2.5rem 2rem;background:rgba(255,255,255,.02);transition:all .5s ease}
-.detail-card:hover{border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.04);transform:translateY(-3px)}
+.detail-card{border:1px solid var(--border);border-radius:12px;padding:2.5rem 2rem;background:var(--surface);transition:all .5s ease}
+.detail-card:hover{border-color:var(--border-hover);background:var(--surface-alt);transform:translateY(-3px)}
 .detail-card .detail-icon{font-family:var(--font-display);font-size:2rem;margin-bottom:1.2rem;color:var(--brand-1)}
 .detail-card h4{font-family:var(--font-display);font-size:1.1rem;font-weight:400;margin-bottom:.6rem}
 .detail-card p{font-size:.82rem;color:var(--grey-light);line-height:1.6;font-weight:300}
 
 /* ═══════════ 9. BEFORE VS AFTER ═══════════ */
 .bva-grid{display:grid;grid-template-columns:1fr 60px 1fr;gap:0;align-items:center}
-.bva-side{border:1px solid rgba(255,255,255,.06);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.02)}
+.bva-side{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface)}
 .bva-side .bva-img{aspect-ratio:4/3;position:relative;overflow:hidden}
 .bva-side .bva-img .bg-fill{position:absolute;inset:0}
 .bva-side .bva-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
@@ -144,9 +164,10 @@ nav .back-link:hover::after{width:100%}
 
 /* ═══════════ 10. RESULTS ═══════════ */
 .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-.result-card{border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:3.5rem 2.5rem;text-align:center;background:rgba(255,255,255,.02);transition:all .5s ease}
-.result-card:hover{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.04);transform:translateY(-4px)}
+.result-card{border:1px solid var(--border);border-radius:14px;padding:3.5rem 2.5rem;text-align:center;background:var(--surface);transition:all .5s ease}
+.result-card:hover{border-color:var(--border-hover);background:var(--surface-alt);transform:translateY(-4px)}
 .result-card .r-num{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,3.5rem);letter-spacing:-.03em;line-height:1;margin-bottom:.6rem}
+.result-card .r-word{font-family:var(--font-display);font-size:clamp(1.4rem,2.6vw,1.9rem);letter-spacing:-.01em;line-height:1.2;margin-bottom:.9rem}
 .result-card .r-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey);margin-bottom:.8rem}
 .result-card p{font-size:.85rem;color:var(--grey-light);line-height:1.6;font-weight:300}
 
@@ -157,18 +178,18 @@ nav .back-link:hover::after{width:100%}
 .closing h2 em{font-style:italic}
 .closing p{color:var(--grey-light);font-size:1rem;margin-bottom:3rem;max-width:38ch;margin-left:auto;margin-right:auto;font-weight:300;line-height:1.7}
 .cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2.4rem;border:1px solid rgba(255,255,255,.3);border-radius:100px;font-family:var(--font-body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--white);transition:all .45s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
-.btn::before{content:'';position:absolute;inset:0;background:var(--white);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2.4rem;border:1px solid rgba(15,23,42,.3);border-radius:100px;font-family:var(--font-body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--black);transition:all .45s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:'';position:absolute;inset:0;background:var(--black);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}
 .btn:hover::before{transform:scaleX(1);transform-origin:left}
-.btn span{position:relative;z-index:1;transition:color .4s ease}.btn:hover span{color:var(--black)}
-.btn svg{position:relative;z-index:1;transition:all .4s ease}.btn:hover svg{stroke:var(--black)}
-.btn-filled{background:var(--white);color:var(--black);border-color:var(--white)}.btn-filled::before{background:var(--black)}.btn-filled:hover span{color:var(--white)}.btn-filled:hover svg{stroke:var(--white)}
+.btn span{position:relative;z-index:1;transition:color .4s ease}.btn:hover span{color:var(--white)}
+.btn svg{position:relative;z-index:1;transition:all .4s ease}.btn:hover svg{stroke:var(--white)}
+.btn-filled{background:var(--black);color:var(--white);border-color:var(--black)}.btn-filled::before{background:var(--white)}.btn-filled:hover span{color:var(--black)}.btn-filled:hover svg{stroke:var(--black)}
 
 /* Reveal */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
 .r-d1{transition-delay:.1s}.r-d2{transition-delay:.2s}.r-d3{transition-delay:.3s}
 
-footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--white)}
+footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--black)}
 
 /* Responsive */
 @media(max-width:1024px){.creative-grid{grid-template-columns:1fr;gap:3rem}.final-alt{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr 1fr}.results-grid{grid-template-columns:1fr 1fr}.visual-grid.three-col{grid-template-columns:1fr 1fr}}
@@ -182,14 +203,22 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
   .closing{padding:6rem 1.5rem}.cta-buttons{flex-direction:column;align-items:center}
   footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}
 }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0ms !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1 !important;transform:none !important}
+}
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
 
 <nav>
-  <a href="/" class="logo">Himanshu Narwaria</a>
-  <a href="/#work" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Work</a>
+  <a href="index.html" class="logo">Himanshu Narwaria</a>
+  <a href="ads.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Case Studies</a>
 </nav>
 
 <!-- ═══ 1. HERO ═══ -->
@@ -211,7 +240,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
 <!-- ═══ 3. THE CHALLENGE ═══ -->
 <section class="cs-section">
   <div class="sec-label reveal">The Challenge</div>
-  <h2 class="challenge-text reveal">Nomme needed a visual identity that communicated <em>academic excellence</em> — structured, trustworthy, and parent-approved at first glance.</h2>
+  <h2 class="challenge-text reveal">Navodayan Academy needed a visual identity that communicated <em>academic excellence</em> — structured, trustworthy, and parent-approved at first glance.</h2>
   <p class="challenge-sub reveal">The existing brand presence felt too informal for a serious educational institution. Social media lacked consistency and the visual language didn't communicate the institutional credibility the brand deserved. We needed to bridge that gap without losing authenticity.</p>
 </section>
 
@@ -233,7 +262,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
     <div class="creative-text reveal">
       <h3>Structured clarity with <em>institutional</em> precision</h3>
       <p>We developed a visual system rooted in clean blues, grid systems, and data-driven layouts, and typographic hierarchy. Every element serves a purpose — nothing is decorative, everything communicates.</p>
-      <p>The palette draws from natural materials: sky blue, navy, and clean white. Typography pairs a refined serif for headlines with a clean sans-serif for body text.</p>
+      <p>The palette draws from sky blue, navy, and clean white. Typography pairs a refined serif for headlines with a clean sans-serif for body text.</p>
 
       <!-- Color Palette -->
       <div class="palette">
@@ -255,8 +284,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
     <div class="reveal r-d1">
       <div class="moodboard">
         <div class="mood-bg" style="background:linear-gradient(135deg,#e8f0fa,#1565c0,#0d47a1)"></div>
-        <!-- Replace with: <img src="images/case-studies/nomme-moodboard.jpg" alt="Nomme Moodboard"> -->
-        <span class="mood-hint">Upload moodboard</span>
+        <img src="images/social-media/navodayan/image-1.webp" alt="Navodayan Academy social media creatives by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async">
       </div>
     </div>
   </div>
@@ -268,10 +296,10 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
 <section class="cs-section">
   <div class="sec-label reveal">Visual Exploration</div>
   <div class="visual-grid reveal">
-    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#e8f0fa,#1565c0)"></div></div><div class="vis-label">Early concept — Info grid</div></div>
-    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#c8ddf5,#1050a0)"></div></div><div class="vis-label">Variation — Trust palette</div></div>
-    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#1565c0,#0a3070)"></div></div><div class="vis-label">Style exploration — Stats-driven</div></div>
-    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#0a2040,#0a3060)"></div></div><div class="vis-label">Admission variant — Lead gen</div></div>
+    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#e8f0fa,#1565c0)"></div><img src="images/social-media/navodayan/image-48.webp" alt="Navodayan Academy social media creative by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div><div class="vis-label">Instagram feed creative</div></div>
+    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#c8ddf5,#1050a0)"></div><img src="images/social-media/navodayan/image-131.webp" alt="Navodayan Academy social media creative by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div><div class="vis-label">Campaign creative</div></div>
+    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#1565c0,#0a3070)"></div><img src="images/social-media/navodayan/image-206.webp" alt="Navodayan Academy social media creative by Himanshu Narwaria" loading="lazy" width="900" height="1274" decoding="async"></div><div class="vis-label">Promotional creative</div></div>
+    <div class="visual-item"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#0a2040,#0a3060)"></div><img src="images/social-media/navodayan/image-262.webp" alt="Navodayan Academy social media creative by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div><div class="vis-label">Story-format creative</div></div>
   </div>
 </section>
 
@@ -283,7 +311,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
 
   <!-- Full-width hero mockup -->
   <div class="final-hero reveal">
-    <div class="final-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#e8f0fa,#1565c0,#0d47a1)"></div></div>
+    <div class="final-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#e8f0fa,#1565c0,#0d47a1)"></div><img src="images/social-media/navodayan/image-276.webp" alt="Navodayan Academy social media creative by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div>
   </div>
 
   <!-- Alternating layout -->
@@ -292,11 +320,11 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
       <h4>Admission <em>Campaign System</em></h4>
       <p>A complete Instagram grid system with feed posts, carousels, and story templates — all sharing the same typographic rhythm and color language. Designed for structured trust across every parent touchpoint.</p>
     </div>
-    <div class="alt-visual"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#c8ddf5,#1050a0)"></div></div></div>
+    <div class="alt-visual"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#c8ddf5,#1050a0)"></div><img src="images/social-media/navodayan/image-240.webp" alt="Navodayan Academy social media creative by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div></div>
   </div>
 
   <div class="final-alt reveal" style="margin-top:2rem">
-    <div class="alt-visual"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#1565c0,#0a3070)"></div></div></div>
+    <div class="alt-visual"><div class="vis-bg"><div class="bg-fill" style="background:linear-gradient(135deg,#1565c0,#0a3070)"></div><img src="images/social-media/navodayan/image-246.webp" alt="Navodayan Academy social media creative by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div></div>
     <div class="alt-text">
       <h4>Lead Gen <em>Ads</em></h4>
       <p>Extended the visual language to admission ads, brochure design, landing pages, and promotional banners. Every customer touchpoint reinforces the trustworthy educational positioning.</p>
@@ -350,11 +378,11 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
 
 <!-- ═══ 10. RESULTS ═══ -->
 <section class="cs-section">
-  <div class="sec-label reveal">Results &amp; Impact</div>
+  <div class="sec-label reveal">Outcome</div>
   <div class="results-grid">
-    <div class="result-card reveal"><div class="r-num">+65%</div><div class="r-label">Lead Conversion</div><p>Post engagement rates surged within the first month of launching the new visual direction.</p></div>
-    <div class="result-card reveal r-d1"><div class="r-num">2.8x</div><div class="r-label">Ad ROAS</div><p>Unified visual identity created a recognizable, premium brand presence across all touchpoints.</p></div>
-    <div class="result-card reveal r-d2"><div class="r-num">+50%</div><div class="r-label">Admission Inquiries</div><p>Instagram profile visits increased significantly, driving more discovery and brand awareness.</p></div>
+    <div class="result-card reveal"><div class="r-word">Parent trust</div><p>Structured, information-clear creatives that communicate credibility to parents making serious decisions.</p></div>
+    <div class="result-card reveal r-d1"><div class="r-word">Results, presented well</div><p>Student achievements and faculty credentials shown with clarity and pride — not clutter.</p></div>
+    <div class="result-card reveal r-d2"><div class="r-word">Institutional consistency</div><p>Admission campaigns, posts, and ads share one dependable design language.</p></div>
   </div>
 </section>
 
@@ -365,17 +393,17 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
   <h2 class="reveal">Building brands through<br><em>thoughtful design.</em></h2>
   <p class="reveal r-d1">Every project is a chance to create something that matters.</p>
   <div class="cta-buttons reveal r-d2">
-    <a href="/#work" class="btn btn-filled"><span>View More Work</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    <a href="/#contact" class="btn"><span>Get in Touch</span></a>
+    <a href="index.html#work" class="btn btn-filled"><span>View More Work</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="index.html#contact" class="btn"><span>Get in Touch</span></a>
   </div>
 </section>
 
-<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="/">Back to Home</a></footer>
+<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="index.html">Back to Home</a></footer>
 
 <script>
 const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;
 document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
-function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();
+function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}if(matchMedia('(pointer:fine)').matches)ac();
 document.querySelectorAll('a,button,.btn,.visual-item,.moodboard,.detail-card,.result-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});
 const reveals=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});

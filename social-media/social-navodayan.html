@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" type="image/png" href="/images/Icons/fav.png"><link rel="apple-touch-icon" href="/images/Icons/fav.png">
+<link rel="icon" type="image/png" href="../images/Icons/fav.png"><link rel="apple-touch-icon" href="../images/Icons/fav.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Navodayan Academy Social Media Design — Himanshu Narwaria</title>
 <meta name="description" content="Social media design for Navodayan Academy — Indore's premier IIT-JEE & NEET coaching institute. Parent-targeted Facebook creatives and admission campaigns by Himanshu Narwaria.">
@@ -25,38 +25,55 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media=&#39;all&#39;">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></noscript>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--black:#08080a;--white:#f0efe9;--grey:#6b6b6b;--grey-light:#999;--font-display:'Playfair Display',Georgia,serif;--font-body:'Outfit',sans-serif;--font-mono:'Space Mono',monospace;--ease-out-expo:cubic-bezier(.16,1,.3,1);--ease-smooth:cubic-bezier(.25,.46,.45,.94)}
-html{scroll-behavior:smooth;font-size:16px}body{background:var(--black);color:var(--white);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--white);color:var(--black)}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+:root{
+  --surface:#ffffff;
+  --surface-alt:#f1f5f9;
+  --surface-glass:rgba(250,249,246,0.88);
+  --border:rgba(15,23,42,0.08);
+  --border-hover:rgba(15,23,42,0.15);
+  --shadow-soft:0 12px 40px rgba(15,23,42,0.06);
+  --shadow-hover:0 20px 50px rgba(15,23,42,0.1);--black:#0f172a;--white:#faf9f6;--grey:#475569;--grey-light:#64748b;--font-display:'Playfair Display',Georgia,serif;--font-body:'Outfit',sans-serif;--font-mono:'Space Mono',monospace;--ease-out-expo:cubic-bezier(.16,1,.3,1);--ease-smooth:cubic-bezier(.25,.46,.45,.94)}
+html{scroll-behavior:smooth;font-size:16px}body{background:var(--white);color:var(--black);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--black);color:var(--white)}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.6}
-.cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.5);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,background .3s;transform:translate(-50%,-50%)}.cursor.hover{width:60px;height:60px;border-color:var(--white);background:rgba(255,255,255,.06)}@media(pointer:coarse){.cursor{display:none}}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,10,.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}nav .logo{font-family:var(--font-display);font-weight:500;font-size:1.15rem}nav .back-link{font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;position:relative;padding:.3rem 0}nav .back-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--white);transition:width .5s var(--ease-out-expo)}nav .back-link:hover::after{width:100%}
-.hero{padding:10rem 3rem 4rem;position:relative}.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 20%,rgba(255,255,255,.06) 80%,transparent)}
-.hero .label{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .1s forwards}.hero .label::before{content:'';width:30px;height:1px;background:rgba(255,255,255,.2)}
+.cursor{position:fixed;width:16px;height:16px;border:1.5px solid rgba(15,23,42,.3);border-radius:50%;pointer-events:none;z-index:9999;transition:width .3s,height .3s,border-color .3s,background .3s;transform:translate(-50%,-50%)}.cursor.hover{width:60px;height:60px;border-color:var(--black);background:rgba(15,23,42,.06)}@media(pointer:coarse){.cursor{display:none}}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;background:var(--surface-glass);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}nav .logo{font-family:var(--font-display);font-weight:500;font-size:1.15rem}nav .back-link{font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;position:relative;padding:.3rem 0}nav .back-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--black);transition:width .5s var(--ease-out-expo)}nav .back-link:hover::after{width:100%}
+.hero{padding:10rem 3rem 4rem;position:relative}.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--border) 20%,var(--border) 80%,transparent)}
+.hero .label{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .1s forwards}.hero .label::before{content:'';width:30px;height:1px;background:rgba(15,23,42,.2)}
 .hero h1{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5rem);line-height:.95;letter-spacing:-.04em;font-weight:400;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .2s forwards}.hero h1 em{font-style:italic}
 .hero .desc{margin-top:1.5rem;color:var(--grey-light);font-size:1rem;max-width:55ch;line-height:1.7;font-weight:300;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .35s forwards}
 .hero .meta-row{display:flex;gap:3rem;margin-top:2rem;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .45s forwards}.meta-item{display:flex;flex-direction:column;gap:.2rem}.meta-item .mv{font-family:var(--font-display);font-size:1rem}.meta-item .ml{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{transform:translateY(30px)}}
 .gallery{padding:2rem 3rem 4rem;columns:5;column-gap:.75rem}
-.gallery-item{break-inside:avoid;border-radius:8px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.06);box-shadow:0 4px 20px rgba(0,0,0,.35);margin-bottom:.75rem;transition:transform .5s var(--ease-smooth),box-shadow .5s var(--ease-smooth),border-color .5s}
-.gallery-item:hover{border-color:rgba(255,255,255,.18);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.55)}
+.gallery-item{break-inside:avoid;border-radius:8px;overflow:hidden;background:var(--surface);border:1px solid var(--border);box-shadow:0 4px 20px rgba(0,0,0,.35);margin-bottom:.75rem;transition:transform .5s var(--ease-smooth),box-shadow .5s var(--ease-smooth),border-color .5s}
+.gallery-item:hover{border-color:var(--border-hover);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.55)}
 .gallery-item img{width:100%;height:auto;display:block}
 .reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.js-loaded .reveal{opacity:0;transform:translateY(40px)}.js-loaded .reveal.visible{opacity:1;transform:translateY(0)}
 .cta-sec{text-align:center;padding:5rem 3rem 6rem}.cta-sec h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;margin-bottom:1rem}.cta-sec h2 em{font-style:italic}.cta-sec p{color:var(--grey-light);font-size:.9rem;margin-bottom:2rem;font-weight:300}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2rem;border:1px solid rgba(255,255,255,.3);border-radius:100px;font-family:var(--font-body);font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--white);transition:all .4s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
-.btn::before{content:'';position:absolute;inset:0;background:var(--white);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}.btn:hover::before{transform:scaleX(1);transform-origin:left}.btn:hover{color:var(--black)}
-footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--white)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2rem;border:1px solid rgba(15,23,42,.3);border-radius:100px;font-family:var(--font-body);font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--black);transition:all .4s var(--ease-smooth);position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:'';position:absolute;inset:0;background:var(--black);border-radius:100px;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out-expo);z-index:-1}.btn:hover::before{transform:scaleX(1);transform-origin:left}.btn:hover{color:var(--white)}
+footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--black)}
 @media(max-width:1024px){.gallery{columns:4}}
 @media(max-width:768px){nav{padding:1.2rem 1.5rem}.hero{padding:8rem 1.5rem 3rem}.gallery{padding:1.5rem 1.5rem 3rem;columns:2;column-gap:.5rem}.gallery-item{margin-bottom:.5rem}.cta-sec{padding:3rem 1.5rem 4rem}.hero .meta-row{gap:1.5rem;flex-wrap:wrap}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}}
 @media(max-width:480px){.gallery{columns:2}}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0ms !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1 !important;transform:none !important}
+}
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
-<nav><a href="/" class="logo">Himanshu Narwaria</a><a href="../social-media.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Social Media</a></nav>
+<nav><a href="../index.html" class="logo">Himanshu Narwaria</a><a href="../social-media.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Social Media</a></nav>
 
 <div class="hero">
   <div class="label">Social Media Design</div>
@@ -70,307 +87,222 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
 </div>
 
 <div class="gallery">
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-1.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-2.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-3.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-4.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-5.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-6.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-7.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-8.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-9.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-10.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-11.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-12.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-13.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-14.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-15.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-16.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-17.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-18.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-19.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-21.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-22.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-23.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-24.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-25.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-26.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-27.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-28.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-29.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-30.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-31.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-32.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-33.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-35.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-36.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-37.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-38.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-39.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-40.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-41.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-42.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-43.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-44.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-45.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-46.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-47.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-48.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-49.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-50.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-51.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-52.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-53.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-54.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-55.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-56.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-57.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-58.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-59.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-60.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-61.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-62.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-64.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-65.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-66.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-67.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-68.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-69.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-70.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-71.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-72.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-73.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-74.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-75.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-76.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-77.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-78.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-79.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-80.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-82.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-93.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-94.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-95.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-96.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-99.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-100.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-101.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-102.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-103.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-104.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-105.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-106.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-107.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-108.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-109.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-110.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-111.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-112.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-113.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-114.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-115.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-116.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-117.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-118.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-119.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-120.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-121.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-122.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-123.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-124.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-125.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-126.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-127.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-128.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-129.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-130.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-131.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-132.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-133.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-134.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-135.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-136.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-137.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-138.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-139.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-140.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-141.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-142.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-143.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-144.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-145.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-146.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-147.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-148.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-149.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-150.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-151.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-152.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-153.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-154.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-155.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-156.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-157.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-158.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-159.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-160.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-161.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-162.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-163.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-164.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-165.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-166.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-167.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-168.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-169.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-170.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-171.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-172.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-173.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-174.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-175.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-176.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-177.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-178.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-179.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-180.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-181.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-182.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-183.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-184.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-185.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-186.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-187.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-188.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-189.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-190.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-191.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-192.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-193.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-194.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-195.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-196.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-197.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-198.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-199.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-200.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-201.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-202.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-203.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-204.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-205.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-206.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-207.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-208.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-209.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-210.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-211.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-214.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-215.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-217.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-218.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-219.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-221.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-222.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-223.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-224.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-225.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-226.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-228.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-229.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-230.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-231.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-232.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-233.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-234.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-235.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-236.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-237.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-238.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-239.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-240.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-241.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-242.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-243.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-244.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-245.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-246.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-247.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-248.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-249.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-250.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-251.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-252.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-253.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-254.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-255.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-256.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-257.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-258.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-259.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-260.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-261.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-262.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-263.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-264.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-265.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-266.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-267.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-268.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-269.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-270.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-271.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-272.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-273.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-274.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-275.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-276.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-277.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-278.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-279.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-280.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-281.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-282.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-283.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-284.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-285.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-286.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-287.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-288.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-289.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-290.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-291.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-292.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-293.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-294.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-295.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-296.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-297.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-298.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-299.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-300.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-301.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-302.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-303.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-304.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-305.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-306.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-307.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-308.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-309.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-310.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-311.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-312.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-313.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-314.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-315.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-316.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-317.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-318.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-319.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-320.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-321.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
-  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-322.jpg" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-1.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-4.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-6.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-8.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-9.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-10.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-11.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-12.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-13.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-14.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-15.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-16.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-17.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-18.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-19.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-21.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-30.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-31.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-35.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-38.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-41.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-43.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-44.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-45.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-46.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-47.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-48.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-50.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-52.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-54.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-55.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-56.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-57.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-58.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-59.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-60.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-61.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-66.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-68.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-69.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-70.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-71.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-73.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-74.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-75.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-76.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-78.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-80.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-93.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-95.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-96.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-99.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-100.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-101.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-102.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-103.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-104.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-105.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-106.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-116.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="520" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-117.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-118.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-122.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="800" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-123.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-125.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-126.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-128.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-129.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-130.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-131.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-148.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-149.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-150.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-151.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-152.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-153.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-154.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-155.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="898" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-156.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="316" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-157.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="316" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-160.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="644" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-162.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="316" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-163.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="316" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-168.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-169.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-170.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-171.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-172.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-176.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-177.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-179.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-180.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-182.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="906" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-183.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-186.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-187.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-188.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-189.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="906" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-191.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-192.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-193.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-194.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-195.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-196.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-197.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="906" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-198.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1066" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-199.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="906" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-200.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1066" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-202.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="426" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-203.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="906" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-204.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="426" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-205.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1066" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-206.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="900" height="1274" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-207.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="480" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-208.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="906" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-209.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-215.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-221.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1920" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-222.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1920" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-223.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="320" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-224.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="320" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-228.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-229.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-230.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-231.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-232.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-233.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-234.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="800" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-235.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="960" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-236.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="960" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-237.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="960" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-238.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="960" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-239.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="364" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-240.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-241.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-242.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="906" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-243.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="906" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-244.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="906" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-245.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-246.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-247.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-248.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-249.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-250.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-251.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-252.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-253.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-254.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-255.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-256.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-257.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="410" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-258.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-259.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-260.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-261.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-262.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-263.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-264.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-265.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-266.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-267.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-268.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-269.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-270.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-271.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-272.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-273.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-274.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-275.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-276.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="900" height="900" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-277.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-278.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-279.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-280.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-281.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-282.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-283.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-284.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-285.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-286.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-287.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-288.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-289.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-290.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-291.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-292.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="800" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-293.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="800" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-294.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-295.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-296.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-297.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="800" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-298.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-299.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="1138" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-300.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-301.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-302.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-303.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-304.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-305.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="800" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-306.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-307.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-308.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-309.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-310.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-311.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-312.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-313.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="800" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-314.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-315.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-316.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-317.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-318.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-319.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-320.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-321.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
+  <div class="gallery-item reveal"><img src="../images/social-media/navodayan/image-322.webp" alt="Navodayan Academy social media design by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"></div>
 </div>
 
 <section class="cta-sec reveal" style="text-align:left;max-width:760px;margin:0 auto;padding-bottom:0">
@@ -412,6 +344,6 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:3rem;display:flex;just
 </section>
 
 <footer><span>&copy; 2026 Himanshu Narwaria</span><a href="../social-media.html">Back to Social Media</a></footer>
-<script>document.documentElement.classList.add('js-loaded');const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();document.querySelectorAll('a,.gallery-item,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
+<script>document.documentElement.classList.add('js-loaded');const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}if(matchMedia('(pointer:fine)').matches)ac();document.querySelectorAll('a,.gallery-item,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
 <script src="../protect.js"></script></body>
 </html>
