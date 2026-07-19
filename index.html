@@ -400,6 +400,9 @@ section{padding:8rem 3rem}
 .card-title{font-family:var(--font-display);font-size:clamp(1.6rem,2.5vw,2.4rem);line-height:1.1;letter-spacing:-.015em;margin-bottom:.8rem}
 .card-desc{font-size:.85rem;color:var(--grey-light);max-width:32ch;line-height:1.6;font-weight:300}
 
+/* WEBSITES strip — landscape screenshot thumbs */
+.cat-card.site-shot .cat-card-thumb{aspect-ratio:16/10}
+
 /* CASE STUDIES — compact strip */
 .case-studies h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;letter-spacing:-.02em;font-weight:400;margin-bottom:1rem}
 .case-studies h2 em{font-style:italic}
@@ -659,6 +662,34 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   <span class="marquee-item">Social Media <span class="marquee-dot"></span></span><span class="marquee-item">E-Commerce <span class="marquee-dot"></span></span><span class="marquee-item">Brand Identity <span class="marquee-dot"></span></span><span class="marquee-item">Meta Ads <span class="marquee-dot"></span></span><span class="marquee-item">Amazon Listings <span class="marquee-dot"></span></span><span class="marquee-item">Banners <span class="marquee-dot"></span></span><span class="marquee-item">Campaign Creatives <span class="marquee-dot"></span></span><span class="marquee-item">Shopify Design <span class="marquee-dot"></span></span>
 </div></div>
 
+<!-- WEBSITES CATEGORY -->
+<div class="category-section">
+  <div class="category-section-header"><h2>Websites</h2><div class="scroll-nav"><button aria-label="Scroll left" onclick="document.getElementById(&#39;webScroll&#39;).scrollBy({left:-380,behavior:&#39;smooth&#39;})"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" stroke-width="1.5" fill="none"/></svg></button><button aria-label="Scroll right" onclick="document.getElementById(&#39;webScroll&#39;).scrollBy({left:380,behavior:&#39;smooth&#39;})"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" stroke-width="1.5" fill="none"/></svg></button></div></div>
+  <div class="category-scroll" id="webScroll">
+    <a href="padma-shree-travels.html" class="cat-card has-thumb site-shot"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/web/padma-shree-travels.webp" alt="Padma Shree Travels fixed-fare taxi booking website" width="1280" height="800" loading="lazy" decoding="async"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Travel</div><h3>Padma Shree Travels</h3><p class="cat-sub">Fixed-Fare Booking Website</p></div></div><div class="cat-card-info"><h4>Website — Design to Deploy</h4><p>Booking system with Razorpay, 27 SEO route pages, WhatsApp-first flow.</p><div class="cat-view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="nafume.html" class="cat-card has-thumb site-shot"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/web/nafume.webp" alt="NAFUME premium perfume e-commerce website" width="1280" height="800" loading="lazy" decoding="async"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">E-commerce</div><h3>NAFUME</h3><p class="cat-sub">Premium D2C Perfume Store</p></div></div><div class="cat-card-info"><h4>Website — E-commerce Build</h4><p>Custom storefront with cart, mood collections, WhatsApp checkout.</p><div class="cat-view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="xavik-labs.html" class="cat-card has-thumb site-shot"><div class="cat-card-thumb"><img class="cat-thumb-img" src="images/web/xavik-labs.webp" alt="Xavik Labs studio website" width="1280" height="800" loading="lazy" decoding="async"><div class="cat-thumb-bg"></div><div class="cat-thumb-content"><div class="cat-badge">Studio</div><h3>Xavik Labs</h3><p class="cat-sub">Dark Immersive Studio Site</p></div></div><div class="cat-card-info"><h4>Website — Next.js Build</h4><p>Three-lab architecture, work showcase, insights — one immersive system.</p><div class="cat-view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="pankhuri.html" class="cat-card site-shot"><div class="cat-card-thumb"><div class="cat-thumb-bg" style="background:radial-gradient(ellipse 60% 55% at 50% 42%,rgba(190,80,50,.35),transparent),linear-gradient(160deg,#2a120c 0%,#160a06 100%)"></div><div class="cat-thumb-content"><div class="cat-badge">Restaurant</div><h3>Pankhuri</h3><p class="cat-sub">Menu-First Restaurant Site</p></div></div><div class="cat-card-info"><h4>Website — In Development</h4><p>Warm, appetite-led restaurant website. Case study at launch.</p><div class="cat-view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+    <a href="upsc-quiz-app.html" class="cat-card site-shot"><div class="cat-card-thumb"><div class="cat-thumb-bg" style="background:radial-gradient(ellipse 60% 55% at 50% 42%,rgba(30,80,160,.4),transparent),linear-gradient(160deg,#0a1226 0%,#060a16 100%)"></div><div class="cat-thumb-content"><div class="cat-badge">EdTech</div><h3>UPSC Quiz App</h3><p class="cat-sub">Daily Practice Product</p></div></div><div class="cat-card-info"><h4>Product — In Development</h4><p>Distraction-free quiz product for UPSC aspirants. Case study at launch.</p><div class="cat-view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+  </div>
+  <div class="category-view-all"><a href="websites.html" class="cat-view-all-btn">View All Website Case Studies <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+</div>
+
+<!-- CASE STUDIES -->
+<section class="case-studies" id="case-studies">
+  <div class="section-label reveal">Case Studies</div>
+  <h2 class="reveal">Six brands, <em>in depth</em></h2>
+  <p class="cs-intro reveal">Short reads on the thinking behind each identity — the challenge, the creative direction, and the system that came out of it.</p>
+  <div class="cs-grid">
+    <a href="nomme.html" class="cs-link reveal"><span class="cs-num">01</span><div class="cs-body"><h3>Nomme</h3><p>Quiet luxury for a coffee theatre</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    <a href="pista.html" class="cs-link reveal"><span class="cs-num">02</span><div class="cs-body"><h3>Pista House</h3><p>Heritage food storytelling</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    <a href="dub.html" class="cs-link reveal"><span class="cs-num">03</span><div class="cs-body"><h3>DUB</h3><p>Bold heritage food identity</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    <a href="butternut.html" class="cs-link reveal"><span class="cs-num">04</span><div class="cs-body"><h3>Butternut</h3><p>Fresh, appetizing product design</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    <a href="navodayan.html" class="cs-link reveal"><span class="cs-num">05</span><div class="cs-body"><h3>Navodayan Academy</h3><p>Trust-building education design</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    <a href="tradejini.html" class="cs-link reveal"><span class="cs-num">06</span><div class="cs-body"><h3>Tradejini</h3><p>Clean, data-driven finance design</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+  </div>
+</section>
+
 <!-- SOCIAL MEDIA CATEGORY -->
 <div class="category-section">
   <div class="category-section-header"><h2>Social Media</h2><div class="scroll-nav"><button aria-label="Scroll left" onclick="document.getElementById('smScroll').scrollBy({left:-380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" stroke-width="1.5" fill="none"/></svg></button><button aria-label="Scroll right" onclick="document.getElementById('smScroll').scrollBy({left:380,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" stroke-width="1.5" fill="none"/></svg></button></div></div>
@@ -744,23 +775,6 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
     <a href="listings.html" class="work-card reveal"><div class="card-top"><span class="card-number">03</span><div class="card-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div><div class="card-content"><div class="card-title">Amazon Listings</div><div class="card-desc">Conversion-optimized A+ content &amp; product images.</div></div></a>
     <a href="banners.html" class="work-card reveal reveal-delay-1"><div class="card-top"><span class="card-number">04</span><div class="card-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div><div class="card-content"><div class="card-title">Banner Designs</div><div class="card-desc">Website banners, promotional graphics &amp; campaign visuals.</div></div></a>
     <a href="websites.html" class="work-card wide reveal"><div class="card-top"><span class="card-number">05</span><div class="card-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div><div class="card-content"><div class="card-title">Website Case Studies</div><div class="card-desc">Websites designed &amp; built end to end — travel booking, D2C e-commerce, and studio brands. Live and in the wild.</div></div></a>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- CASE STUDIES -->
-<section class="case-studies" id="case-studies">
-  <div class="section-label reveal">Case Studies</div>
-  <h2 class="reveal">Six brands, <em>in depth</em></h2>
-  <p class="cs-intro reveal">Short reads on the thinking behind each identity — the challenge, the creative direction, and the system that came out of it.</p>
-  <div class="cs-grid">
-    <a href="nomme.html" class="cs-link reveal"><span class="cs-num">01</span><div class="cs-body"><h3>Nomme</h3><p>Quiet luxury for a coffee theatre</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
-    <a href="pista.html" class="cs-link reveal"><span class="cs-num">02</span><div class="cs-body"><h3>Pista House</h3><p>Heritage food storytelling</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
-    <a href="dub.html" class="cs-link reveal"><span class="cs-num">03</span><div class="cs-body"><h3>DUB</h3><p>Bold heritage food identity</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
-    <a href="butternut.html" class="cs-link reveal"><span class="cs-num">04</span><div class="cs-body"><h3>Butternut</h3><p>Fresh, appetizing product design</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
-    <a href="navodayan.html" class="cs-link reveal"><span class="cs-num">05</span><div class="cs-body"><h3>Navodayan Academy</h3><p>Trust-building education design</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
-    <a href="tradejini.html" class="cs-link reveal"><span class="cs-num">06</span><div class="cs-body"><h3>Tradejini</h3><p>Clean, data-driven finance design</p></div><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
   </div>
 </section>
 
