@@ -71,10 +71,12 @@ nav .back-link:hover::after{width:100%}
 
 .shot{margin:0}
 .shot-img{border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--surface-alt);box-shadow:var(--shadow-soft)}
-.shot-img img{width:100%;height:auto}
+.shot-img img{width:100%;height:auto;image-rendering:auto}
 .shot figcaption{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);padding:1rem .2rem 0}
 .shot-main{margin-bottom:2rem}
 .shot-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.shot-grid .shot{width:100%;max-width:640px;margin-inline:auto}
+.shot-grid .shot-mobile{max-width:390px}
 .dev-panel{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:21/9;display:flex;align-items:center;justify-content:center;border:1px solid var(--border)}
 .dev-panel .panel-bg{position:absolute;inset:0}
 .dev-panel .panel-name{position:relative;z-index:2;font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);color:#fff;letter-spacing:.02em;text-shadow:0 2px 30px rgba(0,0,0,.35)}
@@ -207,7 +209,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 <section class="cs-section">
   <div class="sec-label reveal">The Work, Live</div>
   <figure class="shot shot-main reveal">
-    <div class="shot-img"><img src="images/web/pankhuri.webp" alt="Pankhuri restaurant website — emerald and gold hero with live open status" loading="lazy" width="1280" height="800" decoding="async"></div>
+    <div class="shot-img"><img src="images/web/pankhuri-hd.png" alt="Pankhuri restaurant website — emerald and gold hero with live open status" loading="lazy" width="1585" height="900" decoding="async"></div>
     <figcaption>Homepage — “Agra’s warm family table.”</figcaption>
   </figure>
   <div class="shot-grid">
@@ -215,7 +217,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
       <div class="shot-img"><img src="images/web/pankhuri-menu.webp" alt="Pankhuri menu category cards with food photography" loading="lazy" width="1280" height="800" decoding="async"></div>
       <figcaption>Menu-first: six categories, photography-led</figcaption>
     </figure>
-    <figure class="shot reveal">
+    <figure class="shot shot-mobile reveal">
       <div class="shot-img"><img src="images/web/pankhuri-mobile.webp" alt="Pankhuri mobile view" loading="lazy" width="780" height="1688" decoding="async"></div>
       <figcaption>Phone-first ordering and booking</figcaption>
     </figure>
