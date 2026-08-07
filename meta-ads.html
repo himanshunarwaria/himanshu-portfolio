@@ -50,7 +50,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display
 .project-card .card-img{aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--surface)}.project-card .card-img .img-bg{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}.project-card:hover .card-img .img-bg{transform:scale(1.08)}.project-card .card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .8s var(--ease-out-expo)}.project-card:hover .card-img img{transform:scale(1.08)}
 .project-card .card-img .badge{position:absolute;top:1rem;left:1rem;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .8rem;border:1px solid rgba(255,255,255,.25);border-radius:100px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.4);backdrop-filter:blur(10px);z-index:3}
 .project-card .card-body{padding:1.6rem 1.8rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
-.project-card .card-body h3{font-family:var(--font-display);font-size:1.15rem;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.project-card .card-body h2{font-family:var(--font-display);font-size:1.15rem;font-weight:500;letter-spacing:-.01em;line-height:1.3}
 .project-card .card-body p{font-size:.78rem;color:var(--grey-light);line-height:1.5;font-weight:300}
 .view-btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-light);padding:.6rem 1.2rem;border:1px solid rgba(15,23,42,.15);background:transparent;transition:all .3s var(--ease-smooth);align-self:flex-start;cursor:pointer;margin-top:.6rem}
 .project-card:hover .view-btn{background:var(--black);color:#fff;border-color:var(--black)}
@@ -71,10 +71,13 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 }
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<link rel="stylesheet" href="styles/accessibility-baseline.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="cursor" id="cursor"></div>
 <nav><a href="index.html" class="logo">Himanshu Narwaria</a><a href="index.html#work" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Work</a></nav>
+<main id="main-content" tabindex="-1">
 
 <div class="page-header">
   <div class="label">02 / Category</div>
@@ -90,36 +93,37 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 <div class="project-grid">
   <a href="meta-ads/meta-nomme.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#bba88a,#d6c9b0,#9a8468)"></div><img src="images/thumbnail/meta-ads/nomme.webp" alt="Nomme Kitchen Meta ad creative by Himanshu Narwaria" loading="lazy" width="640" height="800" decoding="async"><span class="badge">Restaurant</span></div>
-    <div class="card-body"><h3>Nomme</h3><p>Meta ads for Nomme Kitchen &amp; Coffee Theatre — Hyderabad's premier fusion dining destination in Banjara Hills. Atmosphere-led creatives driving table reservations and footfall.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>Nomme</h2><p>Meta ads for Nomme Kitchen &amp; Coffee Theatre — Hyderabad's premier fusion dining destination in Banjara Hills. Atmosphere-led creatives driving table reservations and footfall.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Instagram</span><span class="tag">Restaurant</span><span class="tag">Awareness</span></div>
   </a>
   <a href="meta-ads/meta-dub.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#cc0000,#1a1a1a,#ff3333)"></div><img src="images/thumbnail/meta-ads/dub.webp" alt="DUB restaurant Meta ad creative by Himanshu Narwaria" loading="lazy" width="640" height="800" decoding="async"><span class="badge">Food &amp; Culture</span></div>
-    <div class="card-body"><h3>DUB</h3><p>Meta ads for Hyderabad's authentic Odishan &amp; Bengali restaurant. Cultural storytelling, regional flavor showcases, and event-driven creatives that drive discovery and dining visits.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>DUB</h2><p>Meta ads for Hyderabad's authentic Odishan &amp; Bengali restaurant. Cultural storytelling, regional flavor showcases, and event-driven creatives that drive discovery and dining visits.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Instagram</span><span class="tag">Regional Cuisine</span><span class="tag">Awareness</span></div>
   </a>
   <a href="meta-ads/meta-gourmet-baklava.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#8b6914,#c9a227,#d4b84a)"></div><img src="images/thumbnail/meta-ads/gourmet-baklava.webp" alt="Gourmet Baklava Meta ad creative by Himanshu Narwaria" loading="lazy" width="640" height="854" decoding="async"><span class="badge">Gourmet Food</span></div>
-    <div class="card-body"><h3>Gourmet Baklava</h3><p>Luxury Meta ads for India's first FSSC 22000 &amp; Sattvik-certified Mediterranean dessert brand. Golden artisan visuals and gifting campaign creatives that convert premium buyers.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>Gourmet Baklava</h2><p>Luxury Meta ads for India's first FSSC 22000 &amp; Sattvik-certified Mediterranean dessert brand. Golden artisan visuals and gifting campaign creatives that convert premium buyers.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Instagram</span><span class="tag">Food</span><span class="tag">Gifting</span></div>
   </a>
   <a href="meta-ads/meta-dr-foot.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#0e7490,#0891b2,#06b6d4)"></div><img src="images/thumbnail/meta-ads/dr-foot.webp" alt="Dr. Foot Meta ad creative by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"><span class="badge">Health &amp; Beauty</span></div>
-    <div class="card-body"><h3>Dr. Foot</h3><p>Performance-driven Meta ads for a specialized foot care brand. Benefit-forward layouts, before-after creatives, and multi-format ad sets optimized for conversion campaigns.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>Dr. Foot</h2><p>Performance-driven Meta ads for a specialized foot care brand. Benefit-forward layouts, before-after creatives, and multi-format ad sets optimized for conversion campaigns.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Facebook</span><span class="tag">Health</span><span class="tag">Conversion</span></div>
   </a>
   <a href="meta-ads/meta-the-bath-store.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#be185d,#db2777,#f472b6)"></div><img src="images/thumbnail/meta-ads/the-bath-store.webp" alt="The Bath Store Meta ad creative by Himanshu Narwaria" loading="lazy" width="640" height="854" decoding="async"><span class="badge">Skincare</span></div>
-    <div class="card-body"><h3>The Bath Store</h3><p>Sensory-led Meta ads for a premium skincare and bath brand. Soft lifestyle aesthetics, ingredient-hero visuals, and product-led creatives that drive discovery and purchase intent.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>The Bath Store</h2><p>Sensory-led Meta ads for a premium skincare and bath brand. Soft lifestyle aesthetics, ingredient-hero visuals, and product-led creatives that drive discovery and purchase intent.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Instagram</span><span class="tag">Beauty</span><span class="tag">Awareness</span></div>
   </a>
   <a href="meta-ads/meta-misc-ads.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#374151,#6b7280,#9ca3af)"></div><img src="images/thumbnail/meta-ads/misc-ads.webp" alt="Multi-industry Meta ad creative by Himanshu Narwaria" loading="lazy" width="640" height="640" decoding="async"><span class="badge">Multi-Industry</span></div>
-    <div class="card-body"><h3>Miscellaneous Ads</h3><p>A curated collection of high-converting Meta ad creatives across diverse industries — each scroll-stopping, benefit-focused, and built to drive measurable action on Facebook and Instagram.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>Miscellaneous Ads</h2><p>A curated collection of high-converting Meta ad creatives across diverse industries — each scroll-stopping, benefit-focused, and built to drive measurable action on Facebook and Instagram.</p><div class="view-btn">View Now <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Facebook</span><span class="tag">Various</span><span class="tag">Conversion</span></div>
   </a>
 </div>
 
+</main>
 <footer><span>&copy; 2025 Himanshu Narwaria</span><a href="index.html">Back to Home</a></footer>
 <script>const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}if(matchMedia('(pointer:fine)').matches)ac();document.querySelectorAll('a,.project-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
 <script src="protect.js"></script></body>

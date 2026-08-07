@@ -1,2 +1,5 @@
 broken-links-report.csv
 broken-links-report.txt
+
+# Local QA output (screenshots from audit runs) — not part of the deployed site
+artifacts/

@@ -68,7 +68,7 @@ nav .back-link:hover::after{width:100%}
 .scope-card{border:1px solid var(--border);border-radius:12px;padding:2.2rem 1.9rem;background:var(--surface);transition:all .5s ease}
 .scope-card:hover{border-color:var(--border-hover);transform:translateY(-3px);box-shadow:var(--shadow-soft)}
 .scope-num{font-family:var(--font-mono);font-size:.6rem;color:var(--grey-light);letter-spacing:.12em;margin-bottom:1rem}
-.scope-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:500;margin-bottom:.7rem;letter-spacing:-.01em}
+.scope-card h2{font-family:var(--font-display);font-size:1.2rem;font-weight:500;margin-bottom:.7rem;letter-spacing:-.01em}
 .scope-card p{font-size:.85rem;color:var(--grey-light);line-height:1.65;font-weight:300}
 
 .shot{margin:0}
@@ -118,6 +118,8 @@ nav .back-link:hover::after{width:100%}
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
 .r-d1{transition-delay:.1s}.r-d2{transition-delay:.2s}
 footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--black)}
+.skip-link{position:fixed;z-index:3000;left:1rem;top:1rem;transform:translateY(-180%);background:var(--black);color:#fff;padding:.75rem 1rem;border-radius:.25rem}.skip-link:focus{transform:translateY(0)}
+:focus-visible{outline:3px solid #0b63ce;outline-offset:4px}
 
 @media(max-width:1024px){.scope-grid{grid-template-columns:1fr 1fr}.results-grid{grid-template-columns:1fr}.build-wrap{grid-template-columns:1fr;gap:2rem}}
 @media(max-width:768px){
@@ -138,14 +140,16 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 }
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}.cs-label,.cs-hero h1,.hero-tagline,.hero-actions{opacity:1;animation:none}</style></noscript>
+<link rel="stylesheet" href="styles/accessibility-baseline.css">
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <nav>
   <a href="index.html" class="logo">Himanshu Narwaria</a>
   <a href="websites.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Websites</a>
 </nav>
+<main id="main-content" tabindex="-1">
 
 <section class="cs-hero">
   <div class="cs-label">Product Case Study — In Development</div>
@@ -173,32 +177,32 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
   <div class="scope-grid">
     <div class="scope-card reveal">
       <div class="scope-num">01</div>
-      <h3>Product Design</h3>
+      <h2>Product Design</h2>
       <p>A calm, distraction-free interface for a high-stress subject — question-first screens, readable type, and zero clutter.</p>
     </div>
     <div class="scope-card reveal r-d1">
       <div class="scope-num">02</div>
-      <h3>Development</h3>
+      <h2>Development</h2>
       <p>Built end to end as a working product, not a prototype.</p>
     </div>
     <div class="scope-card reveal r-d2">
       <div class="scope-num">03</div>
-      <h3>Content Design</h3>
+      <h2>Content Design</h2>
       <p>Question presentation, explanations, and progress states designed for daily repetition without fatigue.</p>
     </div>
     <div class="scope-card reveal">
       <div class="scope-num">04</div>
-      <h3>UX</h3>
+      <h2>UX</h2>
       <p>Session flows shaped around real study habits — short bursts, streaks, and honest progress.</p>
     </div>
     <div class="scope-card reveal r-d1">
       <div class="scope-num">05</div>
-      <h3>Responsive</h3>
+      <h2>Responsive</h2>
       <p>Phone-first by definition: this is a product that lives in study breaks.</p>
     </div>
     <div class="scope-card reveal r-d2">
       <div class="scope-num">06</div>
-      <h3>Launch</h3>
+      <h2>Launch</h2>
       <p>Ship, iterate, and publish the full story here.</p>
     </div>
   </div>
@@ -252,14 +256,11 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
   <a href="pankhuri.html"><span class="pn-label">&larr; Previous Project</span><span class="pn-name">Pankhuri</span></a>
   <a href="padma-shree-travels.html"><span class="pn-label">Next Project &rarr;</span><span class="pn-name">Padma Shree Travels</span></a>
 </div>
+</main>
 
-<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="websites.html">All Website Case Studies</a></footer>
+<footer><span>&copy; 2026 Himanshu Narwaria</span><a href="websites.html">All Website Case Studies</a></footer>
 
 <script>
-const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;
-document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
-function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}if(matchMedia('(pointer:fine)').matches)ac();
-document.querySelectorAll('a,.btn,.scope-card,.result-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});
 const reveals=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 reveals.forEach(r=>obs.observe(r));

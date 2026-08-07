@@ -47,6 +47,7 @@ nav .back-link:hover::after{width:100%}
 .cs-hero .hero-tagline{font-size:clamp(1rem,2vw,1.25rem);color:var(--grey-light);font-weight:300;margin-top:1.5rem;max-width:52ch;line-height:1.65;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .35s forwards}
 .cs-hero .hero-actions{display:flex;gap:1rem;align-items:center;margin-top:2.2rem;flex-wrap:wrap;opacity:0;animation:fadeUp .8s var(--ease-out-expo) .5s forwards}
 .hero-domain{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;color:var(--grey-light)}
+.cs-hero .cs-label,.cs-hero h1,.cs-hero .hero-tagline,.cs-hero .hero-actions{opacity:1;animation:none}
 .status-chip{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);padding:.7rem 1.4rem;border:1px dashed rgba(15,23,42,.25);border-radius:100px}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{opacity:0;transform:translateY(30px)}}
 
@@ -66,15 +67,17 @@ nav .back-link:hover::after{width:100%}
 .scope-card{border:1px solid var(--border);border-radius:12px;padding:2.2rem 1.9rem;background:var(--surface);transition:all .5s ease}
 .scope-card:hover{border-color:var(--border-hover);transform:translateY(-3px);box-shadow:var(--shadow-soft)}
 .scope-num{font-family:var(--font-mono);font-size:.6rem;color:var(--grey-light);letter-spacing:.12em;margin-bottom:1rem}
-.scope-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:500;margin-bottom:.7rem;letter-spacing:-.01em}
+.scope-card h2{font-family:var(--font-display);font-size:1.2rem;font-weight:500;margin-bottom:.7rem;letter-spacing:-.01em}
 .scope-card p{font-size:.85rem;color:var(--grey-light);line-height:1.65;font-weight:300}
 
 .shot{margin:0}
 .shot-img{border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--surface-alt);box-shadow:var(--shadow-soft)}
-.shot-img img{width:100%;height:auto}
+.shot-img img{width:100%;height:auto;image-rendering:auto}
 .shot figcaption{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);padding:1rem .2rem 0}
 .shot-main{margin-bottom:2rem}
 .shot-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.shot-grid .shot{width:100%;max-width:640px;margin-inline:auto}
+.shot-grid .shot-mobile{max-width:390px}
 .dev-panel{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:21/9;display:flex;align-items:center;justify-content:center;border:1px solid var(--border)}
 .dev-panel .panel-bg{position:absolute;inset:0}
 .dev-panel .panel-name{position:relative;z-index:2;font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);color:#fff;letter-spacing:.02em;text-shadow:0 2px 30px rgba(0,0,0,.35)}
@@ -116,6 +119,8 @@ nav .back-link:hover::after{width:100%}
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
 .r-d1{transition-delay:.1s}.r-d2{transition-delay:.2s}
 footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--black)}
+.skip-link{position:fixed;z-index:3000;left:1rem;top:1rem;transform:translateY(-180%);background:var(--black);color:#fff;padding:.75rem 1rem;border-radius:.25rem}.skip-link:focus{transform:translateY(0)}
+:focus-visible{outline:3px solid #0b63ce;outline-offset:4px}
 
 @media(max-width:1024px){.scope-grid{grid-template-columns:1fr 1fr}.results-grid{grid-template-columns:1fr}.build-wrap{grid-template-columns:1fr;gap:2rem}}
 @media(max-width:768px){
@@ -136,20 +141,22 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 }
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}.cs-label,.cs-hero h1,.hero-tagline,.hero-actions{opacity:1;animation:none}</style></noscript>
+<link rel="stylesheet" href="styles/accessibility-baseline.css">
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <nav>
   <a href="index.html" class="logo">Himanshu Narwaria</a>
-  <a href="websites.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Websites</a>
+  <a href="websites.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>View All Work</a>
 </nav>
+<main id="main-content" tabindex="-1">
 
 <section class="cs-hero">
   <div class="cs-label">Website Case Study — Live</div>
   <h1>Pankhuri</h1>
   <p class="hero-tagline">A warm, menu-first website for Agra’s pure-veg family restaurant — designed to turn a hungry scroll into an order or a table.</p>
-  <div class="hero-actions"><a class="btn btn-filled" href="https://pankhuri-mu.vercel.app/" target="_blank" rel="noopener"><span>Visit Live Site</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a><span class="hero-domain">pankhuri-mu.vercel.app</span></div>
+  <div class="hero-actions"><a class="btn btn-filled" href="https://pankhuri-mu.vercel.app/" target="_blank" rel="noopener"><span>Visit Live Website</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a><span class="hero-domain">pankhuri-mu.vercel.app</span></div>
 </section>
 
 <div class="intro-strip reveal">
@@ -171,32 +178,32 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
   <div class="scope-grid">
     <div class="scope-card reveal">
       <div class="scope-num">01</div>
-      <h3>Design</h3>
+      <h2>Design</h2>
       <p>A deep-emerald and gold identity with warm food photography — family-restaurant hospitality, not fine-dining coldness. The hero sells the feeling: “Agra’s warm family table.”</p>
     </div>
     <div class="scope-card reveal r-d1">
       <div class="scope-num">02</div>
-      <h3>Development</h3>
+      <h2>Development</h2>
       <p>Hand-built front end with a menu-and-order flow: browse categories, build an order, then hand off to WhatsApp, phone, or Zomato. A live open/closed status chip is wired to the real kitchen hours.</p>
     </div>
     <div class="scope-card reveal r-d2">
       <div class="scope-num">03</div>
-      <h3>Copywriting</h3>
+      <h2>Copywriting</h2>
       <p>Menu category copy written to sell dishes — “Paneer favourites: butter masala, kadai, shahi and more” — plus the brand line “Rooted in warmth. Served with grace.”</p>
     </div>
     <div class="scope-card reveal">
       <div class="scope-num">04</div>
-      <h3>SEO</h3>
+      <h2>SEO</h2>
       <p>Local-intent structure from the title down: “Pure Veg Family Restaurant in Agra” — the exact search that fills tables — with location, hours, and pricing surfaced on-page.</p>
     </div>
     <div class="scope-card reveal r-d1">
       <div class="scope-num">05</div>
-      <h3>Responsive</h3>
+      <h2>Responsive</h2>
       <p>Phone-first, because dinner decisions happen on phones: tap-to-call, tap-to-WhatsApp, and directions one thumb away.</p>
     </div>
     <div class="scope-card reveal r-d2">
       <div class="scope-num">06</div>
-      <h3>Deployment</h3>
+      <h2>Deployment</h2>
       <p>Live on Vercel with the ordering hand-offs (WhatsApp, phone, Zomato) working in production.</p>
     </div>
   </div>
@@ -207,7 +214,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 <section class="cs-section">
   <div class="sec-label reveal">The Work, Live</div>
   <figure class="shot shot-main reveal">
-    <div class="shot-img"><img src="images/web/pankhuri.webp" alt="Pankhuri restaurant website — emerald and gold hero with live open status" loading="lazy" width="1280" height="800" decoding="async"></div>
+    <div class="shot-img"><img src="images/web/pankhuri-hd.png" alt="Pankhuri restaurant website — emerald and gold hero with live open status" loading="lazy" width="1585" height="900" decoding="async"></div>
     <figcaption>Homepage — “Agra’s warm family table.”</figcaption>
   </figure>
   <div class="shot-grid">
@@ -215,7 +222,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
       <div class="shot-img"><img src="images/web/pankhuri-menu.webp" alt="Pankhuri menu category cards with food photography" loading="lazy" width="1280" height="800" decoding="async"></div>
       <figcaption>Menu-first: six categories, photography-led</figcaption>
     </figure>
-    <figure class="shot reveal">
+    <figure class="shot shot-mobile reveal">
       <div class="shot-img"><img src="images/web/pankhuri-mobile.webp" alt="Pankhuri mobile view" loading="lazy" width="780" height="1688" decoding="async"></div>
       <figcaption>Phone-first ordering and booking</figcaption>
     </figure>
@@ -259,17 +266,14 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 </section>
 
 <div class="project-nav">
-  <a href="xavik-labs.html"><span class="pn-label">&larr; Previous Project</span><span class="pn-name">Xavik Labs</span></a>
-  <a href="upsc-quiz-app.html"><span class="pn-label">Next Project &rarr;</span><span class="pn-name">UPSC Quiz App</span></a>
+  <a href="padma-shree-travels.html"><span class="pn-label">&larr; Previous Project</span><span class="pn-name">Padma Shree Travels</span></a>
+  <a href="xavik-labs.html"><span class="pn-label">Next Project &rarr;</span><span class="pn-name">Xavik Labs</span></a>
 </div>
+</main>
 
-<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="websites.html">All Website Case Studies</a></footer>
+<footer><span>&copy; 2026 Himanshu Narwaria</span><a href="websites.html">All Website Case Studies</a></footer>
 
 <script>
-const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;
-document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
-function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}ac();
-document.querySelectorAll('a,.btn,.scope-card,.result-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});
 const reveals=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 reveals.forEach(r=>obs.observe(r));

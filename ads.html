@@ -54,7 +54,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display
 .project-card .card-img{aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--surface)}.project-card .card-img .img-bg{position:absolute;inset:0;transition:transform .8s var(--ease-out-expo)}.project-card:hover .card-img .img-bg{transform:scale(1.08)}.project-card .card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .8s var(--ease-out-expo)}.project-card:hover .card-img img{transform:scale(1.08)}
 .project-card .card-img .badge{position:absolute;top:1rem;left:1rem;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .8rem;border:1px solid rgba(255,255,255,.25);border-radius:100px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.4);backdrop-filter:blur(10px);z-index:3}
 .project-card .card-body{padding:1.6rem 1.8rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
-.project-card .card-body h3{font-family:var(--font-display);font-size:1.15rem;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.project-card .card-body h2{font-family:var(--font-display);font-size:1.15rem;font-weight:500;letter-spacing:-.01em;line-height:1.3}
 .project-card .card-body p{font-size:.78rem;color:var(--grey-light);line-height:1.5;font-weight:300}
 .view-btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-light);padding:.6rem 1.2rem;border:1px solid rgba(15,23,42,.12);background:transparent;transition:all .3s var(--ease-smooth);align-self:flex-start;cursor:pointer;margin-top:.6rem}
 .project-card:hover .view-btn{background:var(--black);color:#fff;border-color:var(--black)}
@@ -75,10 +75,13 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 }
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<link rel="stylesheet" href="styles/accessibility-baseline.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="cursor" id="cursor"></div>
 <nav><a href="index.html" class="logo">Himanshu Narwaria</a><a href="index.html#work" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Work</a></nav>
+<main id="main-content" tabindex="-1">
 
 <div class="page-header">
   <div class="label">Case Studies</div>
@@ -94,36 +97,37 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 <div class="project-grid">
   <a href="nomme.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#bba88a,#d6c9b0,#9a8468)"></div><span class="badge">Dining</span></div>
-    <div class="card-body"><h3>Nomme</h3><p>How a quiet-luxury visual identity was built for Nomme Kitchen &amp; Coffee Theatre — warm neutrals, editorial layouts, and a consistent social and ad system.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>Nomme</h2><p>How a quiet-luxury visual identity was built for Nomme Kitchen &amp; Coffee Theatre — warm neutrals, editorial layouts, and a consistent social and ad system.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Branding</span><span class="tag">Social Media</span><span class="tag">Dining</span></div>
   </a>
   <a href="pista.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#1a3c2a,#2d6a4f,#c9a227)"></div><span class="badge">Food &amp; Beverage</span></div>
-    <div class="card-body"><h3>Pista House</h3><p>Heritage food storytelling for a legendary Hyderabadi brand — festive campaigns and social creatives that honour tradition while driving seasonal sales.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>Pista House</h2><p>Heritage food storytelling for a legendary Hyderabadi brand — festive campaigns and social creatives that honour tradition while driving seasonal sales.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Social Media</span><span class="tag">Campaigns</span><span class="tag">Food</span></div>
   </a>
   <a href="dub.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#cc0000,#1a1a1a,#ff3333)"></div><span class="badge">Food &amp; Culture</span></div>
-    <div class="card-body"><h3>DUB</h3><p>A bold, high-contrast identity for Hyderabad's Odia &amp; Bengali restaurant — cultural campaigns and social creatives with real attitude.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>DUB</h2><p>A bold, high-contrast identity for Hyderabad's Odia &amp; Bengali restaurant — cultural campaigns and social creatives with real attitude.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Branding</span><span class="tag">Campaigns</span><span class="tag">Food &amp; Culture</span></div>
   </a>
   <a href="butternut.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#e8a030,#f5c563,#d4820a)"></div><span class="badge">Conversion</span></div>
-    <div class="card-body"><h3>Butternut</h3><p>A fresh, appetizing design language for a D2C food brand — warm palettes and product-first layouts across social posts and sale campaigns.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>Butternut</h2><p>A fresh, appetizing design language for a D2C food brand — warm palettes and product-first layouts across social posts and sale campaigns.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Social Media</span><span class="tag">Ads</span><span class="tag">FMCG</span></div>
   </a>
   <a href="navodayan.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#0d47a1,#1565c0,#0a3070)"></div><span class="badge">Lead Gen</span></div>
-    <div class="card-body"><h3>Navodayan Academy</h3><p>Structured, trust-building design for an IIT-JEE &amp; NEET institute — admission campaigns and social content that speak to parents and students alike.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>Navodayan Academy</h2><p>Structured, trust-building design for an IIT-JEE &amp; NEET institute — admission campaigns and social content that speak to parents and students alike.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Social Media</span><span class="tag">Campaigns</span><span class="tag">Education</span></div>
   </a>
   <a href="tradejini.html" class="project-card reveal">
     <div class="card-img"><div class="img-bg" style="background:linear-gradient(135deg,#1d4ed8,#2563eb,#1e40af)"></div><span class="badge">Finance</span></div>
-    <div class="card-body"><h3>Tradejini</h3><p>Clean, data-driven design for a trading platform — social creatives and campaign visuals that make market content clear and credible.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
+    <div class="card-body"><h2>Tradejini</h2><p>Clean, data-driven design for a trading platform — social creatives and campaign visuals that make market content clear and credible.</p><div class="view-btn">View Case Study <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
     <div class="card-tags"><span class="tag">Social Media</span><span class="tag">UI Content</span><span class="tag">Finance</span></div>
   </a>
 </div>
 
+</main>
 <footer><span>&copy; 2025 Himanshu Narwaria</span><a href="index.html">Back to Home</a></footer>
 <script>const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}if(matchMedia('(pointer:fine)').matches)ac();document.querySelectorAll('a,.project-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
 <script src="protect.js"></script></body>

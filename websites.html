@@ -53,8 +53,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display
 .web-card.feature{grid-column:1/-1}
 .web-shot{aspect-ratio:16/10;overflow:hidden;position:relative;background:var(--surface-alt);border-bottom:1px solid var(--border)}
 .web-card.feature .web-shot{aspect-ratio:21/9}
-.web-shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s var(--ease-out-expo)}
-.web-card:hover .web-shot img{transform:scale(1.03)}
+.web-shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;image-rendering:auto;transition:filter .6s var(--ease-out-expo)}
+.web-card:hover .web-shot img{filter:saturate(1.03) contrast(1.015)}
 .web-shot .badge{position:absolute;top:1rem;left:1rem;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .8rem;border:1px solid rgba(255,255,255,.25);border-radius:100px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.4);backdrop-filter:blur(10px);z-index:3}
 /* in-development brand panel */
 .web-shot.panel{display:flex;align-items:center;justify-content:center}
@@ -76,6 +76,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.8rem 3rem;display
 
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s var(--ease-out-expo)}.reveal.visible{opacity:1;transform:translateY(0)}
 footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--grey);font-weight:300}footer a{transition:color .3s}footer a:hover{color:var(--black)}
+.skip-link{position:fixed;z-index:3000;left:1rem;top:1rem;transform:translateY(-180%);background:var(--black);color:#fff;padding:.75rem 1rem;border-radius:.25rem}.skip-link:focus{transform:translateY(0)}
+:focus-visible{outline:3px solid #0b63ce;outline-offset:4px}
 @media(max-width:1024px){.web-grid{grid-template-columns:1fr}}
 @media(max-width:768px){nav{padding:1.2rem 1.5rem}.page-header{padding:8rem 1.5rem 3rem}.page-header .stats-row{gap:2rem;flex-wrap:wrap}.web-grid{padding:2rem 1.5rem 5rem;gap:1.2rem}.web-body{padding:1.4rem 1.5rem}.web-card.feature .web-shot{aspect-ratio:16/10}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}}
 
@@ -87,10 +89,12 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 }
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<link rel="stylesheet" href="styles/accessibility-baseline.css">
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <nav><a href="index.html" class="logo">Himanshu Narwaria</a><a href="index.html#work" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Work</a></nav>
+<main id="main-content" tabindex="-1">
 
 <div class="page-header">
   <div class="label">05 / Category</div>
@@ -107,7 +111,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 
   <!-- PADMA SHREE TRAVELS — feature -->
   <article class="web-card feature reveal">
-    <div class="web-shot"><img src="images/web/padma-shree-travels.webp" alt="Padma Shree Travels website — fixed-fare Agra taxi booking homepage" loading="eager" width="1280" height="800" decoding="async"><span class="badge">Travel</span></div>
+    <div class="web-shot"><img src="images/web/padma-shree-travels-hd.png" alt="Padma Shree Travels website — fixed-fare Agra taxi booking homepage" loading="eager" width="2545" height="1354" decoding="async"><span class="badge">Travel</span></div>
     <div class="web-body">
       <h2>Padma Shree Travels</h2>
       <p>Fixed-fare taxi booking website for an Agra travel operator — pilgrimage, sightseeing, and outstation route pages built for local search, with a WhatsApp-first booking flow and no app required. Designed and developed end to end.</p>
@@ -122,7 +126,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 
   <!-- NAFUME -->
   <article class="web-card reveal">
-    <div class="web-shot"><img src="images/web/nafume.webp" alt="NAFUME website — premium perfume e-commerce homepage" loading="lazy" width="1280" height="800" decoding="async"><span class="badge">E-commerce</span></div>
+    <div class="web-shot"><img src="images/web/nafume-hd.png" alt="NAFUME website — premium perfume e-commerce homepage" loading="lazy" width="2545" height="1354" decoding="async"><span class="badge">E-commerce</span></div>
     <div class="web-body">
       <h2>NAFUME</h2>
       <p>E-commerce website for a premium Indian perfume brand — product storytelling, mood-based collections, and a WhatsApp-confirmed checkout built for D2C selling.</p>
@@ -137,7 +141,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 
   <!-- XAVIK LABS -->
   <article class="web-card reveal">
-    <div class="web-shot"><img src="images/web/xavik-labs.webp" alt="Xavik Labs website — dark immersive studio homepage" loading="lazy" width="1280" height="800" decoding="async"><span class="badge">Studio</span></div>
+    <div class="web-shot"><img src="images/web/xavik-labs-hd.png" alt="Xavik Labs website — dark immersive studio homepage" loading="lazy" width="2556" height="1360" decoding="async"><span class="badge">Studio</span></div>
     <div class="web-body">
       <h2>Xavik Labs</h2>
       <p>Studio website for a media, design, and tech lab — a dark, immersive identity that presents three labs, a work showcase, and an insights section under one system.</p>
@@ -152,7 +156,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 
   <!-- PANKHURI — in development -->
   <article class="web-card reveal">
-    <div class="web-shot"><img src="images/web/pankhuri.webp" alt="Pankhuri restaurant website — emerald and gold homepage with live open status" width="1280" height="800" loading="lazy" decoding="async"><span class="badge">Restaurant</span></div>
+    <div class="web-shot"><img src="images/web/pankhuri-hd.png" alt="Pankhuri restaurant website — emerald and gold homepage with live open status" width="1585" height="900" loading="lazy" decoding="async"><span class="badge">Restaurant</span></div>
     <div class="web-body">
       <h2>Pankhuri</h2>
       <p>Menu-first website for Agra’s pure-veg family restaurant — order flow, live open/closed status, and WhatsApp, phone and Zomato hand-offs.</p>
@@ -178,8 +182,9 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
   </article>
 
 </div>
+</main>
 
-<footer><span>&copy; 2025 Himanshu Narwaria</span><a href="index.html">Back to Home</a></footer>
-<script>const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}if(matchMedia('(pointer:fine)').matches)ac();document.querySelectorAll('a,.web-card').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
+<footer><span>&copy; 2026 Himanshu Narwaria</span><a href="index.html">Back to Home</a></footer>
+<script>const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
 <script src="protect.js"></script></body>
 </html>

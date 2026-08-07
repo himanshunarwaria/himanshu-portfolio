@@ -16,6 +16,7 @@ $brokenLinks = @()
 
 foreach ($file in $files) {
     $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
+    $content = [regex]::Replace($content, '<!--.*?-->', '', [System.Text.RegularExpressions.RegexOptions]::Singleline)
 
     $matches = [regex]::Matches($content, '(?:href|src)="([^"]+)"')
 
@@ -62,5 +63,9 @@ if ($brokenLinks.Count -gt 0) {
     $brokenLinks | Export-Csv -Path $reportPath -NoTypeInformation -Encoding utf8
     Write-Host "Found $($brokenLinks.Count) broken links. Report saved to $reportPath"
 } else {
+    $reportPath = Join-Path $baseDir "broken-links-report.csv"
+    if (Test-Path -LiteralPath $reportPath) {
+        Remove-Item -LiteralPath $reportPath -Force
+    }
     Write-Host "No broken links found!"
 }

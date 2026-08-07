@@ -1,0 +1,82 @@
+(function () {
+  'use strict';
+
+  window.PROJECT_WORLDS = Object.freeze([
+    {
+      number: '01',
+      slug: 'xavik-labs',
+      title: 'Xavik Labs',
+      world: 'Digital Foundry',
+      kicker: 'Media · Design · Technology',
+      description: 'A dark, immersive studio site that makes three distinct labs feel like one clear creative-technology system.',
+      roles: ['Brand system', 'UX/UI design', 'Next.js development'],
+      outcome: 'Clarified a three-lab offer and created a direct path to project enquiries.',
+      caseStudy: 'xavik-labs.html',
+      live: 'https://xaviklabs.com/',
+      poster: 'images/web/xavik-labs-hd.png',
+      posterWidth: 2556,
+      posterHeight: 1360,
+      posterAlt: 'Xavik Labs homepage with a dark pixel-field hero and studio navigation',
+      posterPosition: '55% 0%',
+      theme: 'foundry',
+      status: 'published'
+    },
+    {
+      number: '02',
+      slug: 'nafume',
+      title: 'NAFUME',
+      world: 'Scent Chamber',
+      kicker: 'Premium D2C fragrance',
+      description: 'A warm, editorial perfume storefront built around mood-led discovery and a low-friction buying journey.',
+      roles: ['Brand expression', 'E-commerce UX', 'Frontend development'],
+      outcome: 'Turned five fragrances into a calm, story-led product discovery experience.',
+      caseStudy: 'nafume.html',
+      live: 'https://www.nafume.com/',
+      poster: 'images/web/nafume-hd.png',
+      posterWidth: 2545,
+      posterHeight: 1354,
+      posterAlt: 'NAFUME perfume storefront with warm editorial photography and product navigation',
+      posterPosition: '50% 0%',
+      theme: 'scent',
+      status: 'published'
+    },
+    {
+      number: '03',
+      slug: 'padma-shree-travels',
+      title: 'Padma Shree Travels',
+      world: 'Living Journey',
+      kicker: 'Travel booking platform',
+      description: 'A fixed-fare travel website that combines route discovery, booking, payment, and WhatsApp support.',
+      roles: ['UX architecture', 'Visual design', 'Full-stack delivery'],
+      outcome: 'Made fares, routes, and booking actions understandable within one visit.',
+      caseStudy: 'padma-shree-travels.html',
+      live: 'https://padmashreetravels.in/',
+      poster: 'images/web/padma-shree-travels-hd.png',
+      posterWidth: 2545,
+      posterHeight: 1354,
+      posterAlt: 'Padma Shree Travels fixed-fare taxi booking homepage at sunrise',
+      posterPosition: '50% 0%',
+      theme: 'journey',
+      status: 'published'
+    },
+    {
+      number: '04',
+      slug: 'pankhuri',
+      title: 'Pankhuri',
+      world: 'Table of Agra',
+      kicker: 'Pure-veg family restaurant',
+      description: 'A menu-first restaurant experience shaped around appetite, local warmth, and one-tap ordering choices.',
+      roles: ['Experience direction', 'UI design', 'Frontend development'],
+      outcome: 'Connected menu discovery with WhatsApp, phone, directions, and delivery hand-offs.',
+      caseStudy: 'pankhuri.html',
+      live: 'https://pankhuri-mu.vercel.app/',
+      poster: 'images/web/pankhuri-hd.png',
+      posterWidth: 1585,
+      posterHeight: 900,
+      posterAlt: 'Pankhuri restaurant homepage in emerald green and gold with an open-status message',
+      posterPosition: '25% 0%',
+      theme: 'table',
+      status: 'published'
+    }
+  ]);
+}());

@@ -63,10 +63,13 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
 }
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<link rel="stylesheet" href="../styles/accessibility-baseline.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="cursor" id="cursor"></div>
 <nav><a href="../index.html" class="logo">Himanshu Narwaria</a><a href="../listings.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All Listings</a></nav>
+<main id="main-content" tabindex="-1">
 <div class="hero">
   <div class="label">Amazon Listing Design</div>
   <h1>UMAI</h1>
@@ -109,6 +112,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
     <a href="mailto:himanshunarwaria@gmail.com" class="btn"><span>Get in Touch</span></a>
   </div>
 </div>
+</main>
 <footer><span>&copy; 2025 Himanshu Narwaria</span><a href="../listings.html">Back to Listings</a></footer>
 <script>document.documentElement.classList.add('js-loaded');const cursor=document.getElementById('cursor');let cx=0,cy=0,tx=0,ty=0;document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});function ac(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(ac)}if(matchMedia('(pointer:fine)').matches)ac();document.querySelectorAll('a,.listing-img,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);io.unobserve(e.target)}})},{threshold:.08});reveals.forEach(r=>io.observe(r));</script>
 <script src="../protect.js"></script></body>
