@@ -1,0 +1,1654 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!--
+  ============================================================================
+  HIMANSHU NARWARIA — AI CLIPS / VISUAL EXPERIMENTS
+  ============================================================================
+  A sub-page of the AI-FILM portfolio. Shares assets/css/site.css and the same
+  brand language; only the grid, the nav and the lightbox ratio rules live in
+  the <style> block below.
+
+  CONTENT RULES — please keep them:
+    * These are self-initiated tests, not client work. The page says so, in the
+      lede and again in the footer. Do not attach a client, a brief or a result
+      to any of them.
+    * Every card shows the WHOLE clips folder, in the folder's own order.
+      Titles and descriptions state only what is visibly in the frame.
+    * Several clips are AI-generated depictions that resemble public figures or
+      show third-party brand marks. The footer says plainly that none of it is
+      real footage, real endorsement or client work. Keep that line.
+
+  ORDER: assets/videos/clips/ in Windows natural sort — A, A (1..27), B (1..26),
+  Beetle_…, D (…). Posters are clip-01 … clip-63 in that same order. If files
+  are added or renamed, regenerate posters and re-emit these cards in order.
+
+  BEFORE LAUNCH — the SITE ORIGIN block below is the only place a domain
+  appears in this file.
+  ============================================================================
+-->
+
+<title>AI Clips — Himanshu Narwaria | Visual Experiments</title>
+<meta name="description" content="Self-initiated AI film tests by Himanshu Narwaria — product concepts, hardware, drones, medical visualisation and atmosphere. The complete set of experiments." />
+<meta name="author" content="Himanshu Narwaria" />
+<meta name="theme-color" content="#08090A" />
+<meta name="robots" content="index, follow" />
+
+<!-- ============================================================================
+     SITE ORIGIN — THE ONLY PLACE A DOMAIN APPEARS IN THIS FILE
+     Replace every https://www.himanshunarwaria.in below with the live origin.
+     Everything else on this page is a relative path.
+     ============================================================================ -->
+<link rel="canonical" href="https://www.himanshunarwaria.in/AI-FILM/clips/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.himanshunarwaria.in/AI-FILM/clips/" />
+<meta property="og:site_name" content="Himanshu Narwaria" />
+<meta property="og:title" content="AI Clips — visual experiments" />
+<meta property="og:description" content="The complete set of self-initiated AI film tests: product, hardware, drones, medical visualisation and atmosphere." />
+<meta property="og:image" content="https://www.himanshunarwaria.in/AI-FILM/assets/posters/clips/clip-45.jpg" />
+<meta property="og:image:alt" content="A human torso rendered in luminous water and particles against black — a frame from Himanshu Narwaria's AI clip tests." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI Clips — visual experiments" />
+<meta name="twitter:image" content="https://www.himanshunarwaria.in/AI-FILM/assets/posters/clips/clip-45.jpg" />
+
+<link rel="icon" type="image/png" href="../assets/brand/h-mark.png" />
+<link rel="apple-touch-icon" href="../assets/brand/h-mark-180.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+<link rel="preload" as="image" href="../assets/posters/clips/clip-01-sm.jpg" fetchpriority="high" />
+<link rel="stylesheet" href="../assets/css/site.css" />
+
+<style>
+  .clip-head{ padding-top: clamp(96px, 12vw, 150px); }
+  .clip-grid{
+    margin-top: clamp(34px, 4.4vw, 64px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: clamp(12px, 1.5vw, 22px);
+    align-items: start;
+  }
+  @media (min-width: 720px){ .clip-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } }
+  @media (min-width: 1180px){ .clip-grid{ grid-template-columns: repeat(4, minmax(0,1fr)); } }
+
+  .clip{ display: block; min-width: 0; }
+  .clip__media{
+    position: relative; margin: 0; overflow: hidden;
+    background: #000;
+    border: 1px solid var(--line-2);
+    transition: border-color 220ms ease;
+  }
+  /* each card carries the clip's own ratio, so nothing is cropped or padded */
+  .clip--portrait  .clip__media{ aspect-ratio: 9 / 16; }
+  .clip--tall      .clip__media{ aspect-ratio: 4 / 5; }
+  .clip--square    .clip__media{ aspect-ratio: 1 / 1; }
+  .clip--landscape .clip__media{ aspect-ratio: 16 / 9; }
+  .clip__media > img{ position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .clip__media > video{
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    opacity: 0; transition: opacity 320ms ease;
+  }
+  .clip__media > video.is-live{ opacity: 1; }
+  .clip:hover .clip__media,
+  .clip:focus-visible .clip__media{ border-color: var(--accent); }
+
+  .clip__dur{
+    position: absolute; top: 0; left: 0; z-index: 3;
+    background: #000; color: var(--accent);
+    font-family: var(--mono); font-size: var(--t-mono); font-weight: 700; letter-spacing: .12em;
+    padding: 5px 8px;
+    border-right: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2);
+  }
+  .clip__play{
+    position: absolute; right: 9px; bottom: 9px; z-index: 3;
+    width: 34px; height: 34px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: rgba(0,0,0,.5); border: 1px solid rgba(255,255,255,.5);
+    transition: background-color 200ms ease, border-color 200ms ease;
+  }
+  .clip__play svg{ width: 10px; height: 10px; fill: #fff; margin-left: 2px; transition: fill 200ms ease; }
+  .clip:hover .clip__play{ background: var(--accent); border-color: var(--accent); }
+  .clip:hover .clip__play svg{ fill: #000; }
+
+  .clip__body{ padding-top: 10px; }
+  .clip__tag{ color: var(--fg-3); }
+  .clip__title{
+    margin-top: 5px;
+    font-size: clamp(0.875rem, 1vw, 0.9688rem); font-weight: 700;
+    letter-spacing: -0.02em; line-height: 1.3;
+  }
+  .clip:hover .clip__title{ color: var(--accent); }
+
+  .clip-link{ color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  .clip-link:hover{ text-decoration-thickness: 2px; }
+
+  .clip-note{
+    margin-top: clamp(44px, 5vw, 74px);
+    padding-top: clamp(20px, 2.4vw, 30px);
+    border-top: 1px solid var(--line);
+    max-width: 68ch;
+    color: var(--fg-3);
+    font-size: clamp(0.8125rem, 0.9vw, 0.875rem);
+    line-height: 1.6;
+  }
+  .clip-note + .clip-note{ margin-top: 14px; padding-top: 0; border-top: 0; }
+
+  /* this page's own nav — it does not share the portfolio's section anchors */
+  .clips-nav{ display: none; align-items: center; gap: clamp(18px, 2.2vw, 34px); }
+  @media (min-width: 900px){ .clips-nav{ display: flex; } }
+  .clips-nav a{
+    font-family: var(--mono); font-size: var(--t-mono);
+    letter-spacing: .16em; text-transform: uppercase; color: var(--fg-2);
+  }
+  .clips-nav a:hover{ color: var(--accent); }
+  .clips-nav a[aria-current="page"]{ color: var(--accent); }
+
+  /* the lightbox stage takes whichever ratio the clip declares */
+  .lightbox.is-portrait .lightbox__panel{ width: min(430px, 100%, calc((100vh - 190px) * 0.5625)); }
+  .lightbox.is-tall     .lightbox__panel{ width: min(560px, 100%, calc((100vh - 190px) * 0.8)); }
+  .lightbox.is-tall     .lightbox__stage{ aspect-ratio: 4 / 5; }
+  .lightbox.is-square   .lightbox__panel{ width: min(660px, 100%, calc((100vh - 190px) * 1)); }
+  .lightbox.is-square   .lightbox__stage{ aspect-ratio: 1 / 1; }
+</style>
+
+<script>
+(function (h) {
+  h.className += ' js';
+  setTimeout(function () { if (!window.__clipsReady) { h.classList.remove('js'); } }, 3000);
+})(document.documentElement);
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#clips">Skip to the clips</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brandmark" href="../index.html" aria-label="Himanshu Narwaria — AI Films">
+      <img class="brandmark__glyph" src="../assets/brand/hn-mark.png" width="166" height="121" alt="" aria-hidden="true" />
+      <span class="brandmark__text">
+        <span class="brandmark__name">Himanshu Narwaria</span>
+        <span class="brandmark__role">AI Film Production</span>
+      </span>
+    </a>
+
+    <nav class="clips-nav" aria-label="Sections">
+      <a href="../index.html">AI Films</a>
+      <a href="./index.html" aria-current="page">AI Clips</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+
+    <a class="btn btn--primary btn--sm" href="../index.html">Back to AI Films</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="band band--dark clip-head" id="clips" aria-labelledby="clips-title">
+    <div class="wrap">
+      <header class="sec-head sec-head--split" data-reveal>
+        <p class="sec-index"><b>&mdash;</b> / AI Clips</p>
+        <h1 class="sec-title" id="clips-title">Tests, not commissions.</h1>
+        <p class="sec-lede">
+          The complete set of self-initiated pieces — product concepts, hardware, drones,
+          medical visualisation and atmosphere. No client, no brief, no deadline. The
+          commissioned work is <a class="clip-link" href="../index.html#campaign">on the portfolio</a>.
+        </p>
+      </header>
+
+      <div class="clip-grid">
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(1).mp4"
+           data-video="../assets/videos/clips/A%20(1).mp4"
+           data-title="Sell Order"
+           data-tags="Editorial · Montage &middot; 0:06"
+           data-note="A red-toned montage of figures on a Wall Street set holding printed share placards."
+           data-reveal aria-label="Play clip 01: Sell Order">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-01-sm.jpg"
+                 srcset="../assets/posters/clips/clip-01-sm.jpg 320w, ../assets/posters/clips/clip-01.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="1080" height="1918" loading="lazy" decoding="async"
+                 alt="A red-toned montage of figures on a Wall Street set holding printed share placards." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Editorial &middot; Montage</p>
+            <h3 class="clip__title">Sell Order</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--tall" data-clip data-ratio="tall"
+           href="../assets/videos/clips/A%20(2).mp4"
+           data-video="../assets/videos/clips/A%20(2).mp4"
+           data-title="The Chip"
+           data-tags="Semiconductor · Portrait &middot; 0:05"
+           data-note="A man in a bright lab holding a small processor die between his fingers."
+           data-reveal aria-label="Play clip 02: The Chip">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-02-sm.jpg"
+                 srcset="../assets/posters/clips/clip-02-sm.jpg 320w, ../assets/posters/clips/clip-02.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="858" height="1072" loading="lazy" decoding="async"
+                 alt="A man in a bright lab holding a small processor die between his fingers." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Semiconductor &middot; Portrait</p>
+            <h3 class="clip__title">The Chip</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(3).mp4"
+           data-video="../assets/videos/clips/A%20(3).mp4"
+           data-title="Shares For Sale"
+           data-tags="Editorial · Poster &middot; 0:06"
+           data-note="A stylised red poster frame of a man holding two share certificates on a Wall Street corner."
+           data-reveal aria-label="Play clip 03: Shares For Sale">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-03-sm.jpg"
+                 srcset="../assets/posters/clips/clip-03-sm.jpg 320w, ../assets/posters/clips/clip-03.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="1080" height="1918" loading="lazy" decoding="async"
+                 alt="A stylised red poster frame of a man holding two share certificates on a Wall Street corner." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Editorial &middot; Poster</p>
+            <h3 class="clip__title">Shares For Sale</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(4).mp4"
+           data-video="../assets/videos/clips/A%20(4).mp4"
+           data-title="Summer Indoors"
+           data-tags="Interior · Family &middot; 0:10"
+           data-note="A family sitting together in a warm living room with a wall thermometer and an outdoor unit visible."
+           data-reveal aria-label="Play clip 04: Summer Indoors">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-04-sm.jpg"
+                 srcset="../assets/posters/clips/clip-04-sm.jpg 320w, ../assets/posters/clips/clip-04.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A family sitting together in a warm living room with a wall thermometer and an outdoor unit visible." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Interior &middot; Family</p>
+            <h3 class="clip__title">Summer Indoors</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(5).mp4"
+           data-video="../assets/videos/clips/A%20(5).mp4"
+           data-title="Heat Test"
+           data-tags="Product · Exterior &middot; 0:06"
+           data-note="A tiled house with flame graphics along the roofline and a coating bucket on the lawn."
+           data-reveal aria-label="Play clip 05: Heat Test">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-05-sm.jpg"
+                 srcset="../assets/posters/clips/clip-05-sm.jpg 320w, ../assets/posters/clips/clip-05.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A tiled house with flame graphics along the roofline and a coating bucket on the lawn." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Product &middot; Exterior</p>
+            <h3 class="clip__title">Heat Test</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(6).mp4"
+           data-video="../assets/videos/clips/A%20(6).mp4"
+           data-title="Roof Coat"
+           data-tags="Product · Exterior &middot; 0:06"
+           data-note="A house exterior at dusk with a coating bucket in the foreground."
+           data-reveal aria-label="Play clip 06: Roof Coat">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-06-sm.jpg"
+                 srcset="../assets/posters/clips/clip-06-sm.jpg 320w, ../assets/posters/clips/clip-06.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A house exterior at dusk with a coating bucket in the foreground." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Product &middot; Exterior</p>
+            <h3 class="clip__title">Roof Coat</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(7).mp4"
+           data-video="../assets/videos/clips/A%20(7).mp4"
+           data-title="Cooler Rooms"
+           data-tags="Product · Interior &middot; 0:10"
+           data-note="A family on a sofa with a remote in hand and a coating bucket in frame."
+           data-reveal aria-label="Play clip 07: Cooler Rooms">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-07-sm.jpg"
+                 srcset="../assets/posters/clips/clip-07-sm.jpg 320w, ../assets/posters/clips/clip-07.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A family on a sofa with a remote in hand and a coating bucket in frame." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Product &middot; Interior</p>
+            <h3 class="clip__title">Cooler Rooms</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(8).mp4"
+           data-video="../assets/videos/clips/A%20(8).mp4"
+           data-title="Build-Up"
+           data-tags="Technical · Diagram &middot; 0:08"
+           data-note="An animated cross-section of a roof build-up with labelled layers."
+           data-reveal aria-label="Play clip 08: Build-Up">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-08-sm.jpg"
+                 srcset="../assets/posters/clips/clip-08-sm.jpg 320w, ../assets/posters/clips/clip-08.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="An animated cross-section of a roof build-up with labelled layers." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Technical &middot; Diagram</p>
+            <h3 class="clip__title">Build-Up</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(9).mp4"
+           data-video="../assets/videos/clips/A%20(9).mp4"
+           data-title="Reflect and Emit"
+           data-tags="Technical · Diagram &middot; 0:08"
+           data-note="A thermal diagram showing sunlight reflected and heat emitted from a coated panel."
+           data-reveal aria-label="Play clip 09: Reflect and Emit">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-09-sm.jpg"
+                 srcset="../assets/posters/clips/clip-09-sm.jpg 320w, ../assets/posters/clips/clip-09.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A thermal diagram showing sunlight reflected and heat emitted from a coated panel." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Technical &middot; Diagram</p>
+            <h3 class="clip__title">Reflect and Emit</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(10).mp4"
+           data-video="../assets/videos/clips/A%20(10).mp4"
+           data-title="Inspection"
+           data-tags="Engineering · Interior &middot; 0:10"
+           data-note="An engineer in safety glasses measuring a machined metal assembly."
+           data-reveal aria-label="Play clip 10: Inspection">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-10-sm.jpg"
+                 srcset="../assets/posters/clips/clip-10-sm.jpg 320w, ../assets/posters/clips/clip-10.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="An engineer in safety glasses measuring a machined metal assembly." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Engineering &middot; Interior</p>
+            <h3 class="clip__title">Inspection</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(11).mp4"
+           data-video="../assets/videos/clips/A%20(11).mp4"
+           data-title="Five-Axis"
+           data-tags="Manufacturing · Macro &middot; 0:10"
+           data-note="A multi-axis cutting head machining a metal part under coolant."
+           data-reveal aria-label="Play clip 11: Five-Axis">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-11-sm.jpg"
+                 srcset="../assets/posters/clips/clip-11-sm.jpg 320w, ../assets/posters/clips/clip-11.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A multi-axis cutting head machining a metal part under coolant." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Manufacturing &middot; Macro</p>
+            <h3 class="clip__title">Five-Axis</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(12).mp4"
+           data-video="../assets/videos/clips/A%20(12).mp4"
+           data-title="Bench Build"
+           data-tags="Workshop · Interior &middot; 0:10"
+           data-note="A man assembling small components at a lit workbench."
+           data-reveal aria-label="Play clip 12: Bench Build">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-12-sm.jpg"
+                 srcset="../assets/posters/clips/clip-12-sm.jpg 320w, ../assets/posters/clips/clip-12.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A man assembling small components at a lit workbench." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Workshop &middot; Interior</p>
+            <h3 class="clip__title">Bench Build</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(13).mp4"
+           data-video="../assets/videos/clips/A%20(13).mp4"
+           data-title="Field Flight"
+           data-tags="Drone · Exterior &middot; 0:06"
+           data-note="A quadcopter hovering low over open grassland."
+           data-reveal aria-label="Play clip 13: Field Flight">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-13-sm.jpg"
+                 srcset="../assets/posters/clips/clip-13-sm.jpg 320w, ../assets/posters/clips/clip-13.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A quadcopter hovering low over open grassland." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Drone &middot; Exterior</p>
+            <h3 class="clip__title">Field Flight</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(14).mp4"
+           data-video="../assets/videos/clips/A%20(14).mp4"
+           data-title="Campus"
+           data-tags="Architecture · Exterior &middot; 0:04"
+           data-note="A low-rise corporate campus with a flagpole in the forecourt."
+           data-reveal aria-label="Play clip 14: Campus">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-14-sm.jpg"
+                 srcset="../assets/posters/clips/clip-14-sm.jpg 320w, ../assets/posters/clips/clip-14.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A low-rise corporate campus with a flagpole in the forecourt." />
+            <span class="clip__dur">0:04</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Architecture &middot; Exterior</p>
+            <h3 class="clip__title">Campus</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(15).mp4"
+           data-video="../assets/videos/clips/A%20(15).mp4"
+           data-title="Cold Aisle"
+           data-tags="Data centre · Interior &middot; 0:08"
+           data-note="A server aisle lit blue, racks receding into the distance."
+           data-reveal aria-label="Play clip 15: Cold Aisle">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-15-sm.jpg"
+                 srcset="../assets/posters/clips/clip-15-sm.jpg 320w, ../assets/posters/clips/clip-15.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A server aisle lit blue, racks receding into the distance." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Data centre &middot; Interior</p>
+            <h3 class="clip__title">Cold Aisle</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(16).mp4"
+           data-video="../assets/videos/clips/A%20(16).mp4"
+           data-title="Ascent"
+           data-tags="Drone · Sky &middot; 0:06"
+           data-note="A quadcopter climbing against a pale overcast sky."
+           data-reveal aria-label="Play clip 16: Ascent">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-16-sm.jpg"
+                 srcset="../assets/posters/clips/clip-16-sm.jpg 320w, ../assets/posters/clips/clip-16.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A quadcopter climbing against a pale overcast sky." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Drone &middot; Sky</p>
+            <h3 class="clip__title">Ascent</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(17).mp4"
+           data-video="../assets/videos/clips/A%20(17).mp4"
+           data-title="Airframe"
+           data-tags="Drone · Portrait &middot; 0:10"
+           data-note="A man in a lab holding a carbon-fibre drone airframe across his hands."
+           data-reveal aria-label="Play clip 17: Airframe">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-17-sm.jpg"
+                 srcset="../assets/posters/clips/clip-17-sm.jpg 320w, ../assets/posters/clips/clip-17.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A man in a lab holding a carbon-fibre drone airframe across his hands." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Drone &middot; Portrait</p>
+            <h3 class="clip__title">Airframe</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(18).mp4"
+           data-video="../assets/videos/clips/A%20(18).mp4"
+           data-title="Payload"
+           data-tags="Drone · Delivery &middot; 0:10"
+           data-note="A drone lowering a small package on a rooftop."
+           data-reveal aria-label="Play clip 18: Payload">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-18-sm.jpg"
+                 srcset="../assets/posters/clips/clip-18-sm.jpg 320w, ../assets/posters/clips/clip-18.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A drone lowering a small package on a rooftop." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Drone &middot; Delivery</p>
+            <h3 class="clip__title">Payload</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(19).mp4"
+           data-video="../assets/videos/clips/A%20(19).mp4"
+           data-title="Drone Line"
+           data-tags="Robotics · Factory &middot; 0:06"
+           data-note="Robotic arms working along an assembly line of drone frames."
+           data-reveal aria-label="Play clip 19: Drone Line">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-19-sm.jpg"
+                 srcset="../assets/posters/clips/clip-19-sm.jpg 320w, ../assets/posters/clips/clip-19.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="Robotic arms working along an assembly line of drone frames." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Robotics &middot; Factory</p>
+            <h3 class="clip__title">Drone Line</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(21).mp4"
+           data-video="../assets/videos/clips/A%20(21).mp4"
+           data-title="Assembly"
+           data-tags="Workshop · Interior &middot; 0:04"
+           data-note="A man working on drone parts at a workbench under a lamp."
+           data-reveal aria-label="Play clip 20: Assembly">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-20-sm.jpg"
+                 srcset="../assets/posters/clips/clip-20-sm.jpg 320w, ../assets/posters/clips/clip-20.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A man working on drone parts at a workbench under a lamp." />
+            <span class="clip__dur">0:04</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Workshop &middot; Interior</p>
+            <h3 class="clip__title">Assembly</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(22).mp4"
+           data-video="../assets/videos/clips/A%20(22).mp4"
+           data-title="Hyperscale"
+           data-tags="Data centre · Interior &middot; 0:10"
+           data-note="A data hall with operator signage above the racks."
+           data-reveal aria-label="Play clip 21: Hyperscale">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-21-sm.jpg"
+                 srcset="../assets/posters/clips/clip-21-sm.jpg 320w, ../assets/posters/clips/clip-21.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A data hall with operator signage above the racks." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Data centre &middot; Interior</p>
+            <h3 class="clip__title">Hyperscale</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(23).mp4"
+           data-video="../assets/videos/clips/A%20(23).mp4"
+           data-title="Carapace"
+           data-tags="Material · Macro &middot; 0:06"
+           data-note="A close-up of a woven carbon-fibre canopy catching light."
+           data-reveal aria-label="Play clip 22: Carapace">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-22-sm.jpg"
+                 srcset="../assets/posters/clips/clip-22-sm.jpg 320w, ../assets/posters/clips/clip-22.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A close-up of a woven carbon-fibre canopy catching light." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Material &middot; Macro</p>
+            <h3 class="clip__title">Carapace</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(24).mp4"
+           data-video="../assets/videos/clips/A%20(24).mp4"
+           data-title="Black Frame"
+           data-tags="Drone · Studio &middot; 0:06"
+           data-note="A carbon-fibre drone on a stand in a server hall."
+           data-reveal aria-label="Play clip 23: Black Frame">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-23-sm.jpg"
+                 srcset="../assets/posters/clips/clip-23-sm.jpg 320w, ../assets/posters/clips/clip-23.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A carbon-fibre drone on a stand in a server hall." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Drone &middot; Studio</p>
+            <h3 class="clip__title">Black Frame</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(25).mp4"
+           data-video="../assets/videos/clips/A%20(25).mp4"
+           data-title="The Letter"
+           data-tags="Hands · Close-up &middot; 0:06"
+           data-note="Hands opening a folded letter out of an envelope."
+           data-reveal aria-label="Play clip 24: The Letter">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-24-sm.jpg"
+                 srcset="../assets/posters/clips/clip-24-sm.jpg 320w, ../assets/posters/clips/clip-24.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="Hands opening a folded letter out of an envelope." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Hands &middot; Close-up</p>
+            <h3 class="clip__title">The Letter</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(26).mp4"
+           data-video="../assets/videos/clips/A%20(26).mp4"
+           data-title="The Letter II"
+           data-tags="Hands · Close-up &middot; 0:06"
+           data-note="A second take of hands opening a folded letter."
+           data-reveal aria-label="Play clip 25: The Letter II">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-25-sm.jpg"
+                 srcset="../assets/posters/clips/clip-25-sm.jpg 320w, ../assets/posters/clips/clip-25.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="1080" height="1920" loading="lazy" decoding="async"
+                 alt="A second take of hands opening a folded letter." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Hands &middot; Close-up</p>
+            <h3 class="clip__title">The Letter II</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A%20(27).mp4"
+           data-video="../assets/videos/clips/A%20(27).mp4"
+           data-title="Campus Portrait"
+           data-tags="Portrait · Exterior &middot; 0:06"
+           data-note="A young man standing outdoors on a university campus."
+           data-reveal aria-label="Play clip 26: Campus Portrait">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-26-sm.jpg"
+                 srcset="../assets/posters/clips/clip-26-sm.jpg 320w, ../assets/posters/clips/clip-26.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A young man standing outdoors on a university campus." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Portrait &middot; Exterior</p>
+            <h3 class="clip__title">Campus Portrait</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/A.mp4"
+           data-video="../assets/videos/clips/A.mp4"
+           data-title="GPU Bay"
+           data-tags="Hardware · Interior &middot; 0:08"
+           data-note="A green-lit server bay with a graphics module handled by machinery."
+           data-reveal aria-label="Play clip 27: GPU Bay">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-27-sm.jpg"
+                 srcset="../assets/posters/clips/clip-27-sm.jpg 320w, ../assets/posters/clips/clip-27.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A green-lit server bay with a graphics module handled by machinery." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Hardware &middot; Interior</p>
+            <h3 class="clip__title">GPU Bay</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(1).mp4"
+           data-video="../assets/videos/clips/B%20(1).mp4"
+           data-title="Die Shot"
+           data-tags="Hardware · Macro &middot; 0:08"
+           data-note="A macro of a processor die seated on a circuit board."
+           data-reveal aria-label="Play clip 28: Die Shot">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-28-sm.jpg"
+                 srcset="../assets/posters/clips/clip-28-sm.jpg 320w, ../assets/posters/clips/clip-28.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A macro of a processor die seated on a circuit board." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Hardware &middot; Macro</p>
+            <h3 class="clip__title">Die Shot</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(2).mp4"
+           data-video="../assets/videos/clips/B%20(2).mp4"
+           data-title="Processor"
+           data-tags="Hardware · Diagram &middot; 0:06"
+           data-note="A circuit board with processor and memory callouts drawn over it."
+           data-reveal aria-label="Play clip 29: Processor">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-29-sm.jpg"
+                 srcset="../assets/posters/clips/clip-29-sm.jpg 320w, ../assets/posters/clips/clip-29.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A circuit board with processor and memory callouts drawn over it." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Hardware &middot; Diagram</p>
+            <h3 class="clip__title">Processor</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(3).mp4"
+           data-video="../assets/videos/clips/B%20(3).mp4"
+           data-title="Board"
+           data-tags="Hardware · Macro &middot; 0:10"
+           data-note="A chip mounted on a server board, shallow depth of field."
+           data-reveal aria-label="Play clip 30: Board">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-30-sm.jpg"
+                 srcset="../assets/posters/clips/clip-30-sm.jpg 320w, ../assets/posters/clips/clip-30.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A chip mounted on a server board, shallow depth of field." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Hardware &middot; Macro</p>
+            <h3 class="clip__title">Board</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(4).mp4"
+           data-video="../assets/videos/clips/B%20(4).mp4"
+           data-title="Fab Line"
+           data-tags="Manufacturing · Cleanroom &middot; 0:08"
+           data-note="Technicians in cleanroom suits alongside a wafer handling line."
+           data-reveal aria-label="Play clip 31: Fab Line">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-31-sm.jpg"
+                 srcset="../assets/posters/clips/clip-31-sm.jpg 320w, ../assets/posters/clips/clip-31.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="1080" height="1920" loading="lazy" decoding="async"
+                 alt="Technicians in cleanroom suits alongside a wafer handling line." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Manufacturing &middot; Cleanroom</p>
+            <h3 class="clip__title">Fab Line</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(5).mp4"
+           data-video="../assets/videos/clips/B%20(5).mp4"
+           data-title="Terrace Install"
+           data-tags="Product · Exterior &middot; 0:06"
+           data-note="A white air unit on a planted terrace above a green city."
+           data-reveal aria-label="Play clip 32: Terrace Install">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-32-sm.jpg"
+                 srcset="../assets/posters/clips/clip-32-sm.jpg 320w, ../assets/posters/clips/clip-32.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A white air unit on a planted terrace above a green city." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Product &middot; Exterior</p>
+            <h3 class="clip__title">Terrace Install</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(6).mp4"
+           data-video="../assets/videos/clips/B%20(6).mp4"
+           data-title="Front Page"
+           data-tags="Editorial · Print &middot; 0:05"
+           data-note="A newspaper on a stand, its front page carrying a chip-export headline."
+           data-reveal aria-label="Play clip 33: Front Page">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-33-sm.jpg"
+                 srcset="../assets/posters/clips/clip-33-sm.jpg 320w, ../assets/posters/clips/clip-33.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="474" height="842" loading="lazy" decoding="async"
+                 alt="A newspaper on a stand, its front page carrying a chip-export headline." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Editorial &middot; Print</p>
+            <h3 class="clip__title">Front Page</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(7).mp4"
+           data-video="../assets/videos/clips/B%20(7).mp4"
+           data-title="Cash Burn"
+           data-tags="Editorial · Exterior &middot; 0:05"
+           data-note="A man on rocky ground holding banknotes as gold particles drift off them."
+           data-reveal aria-label="Play clip 34: Cash Burn">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-34-sm.jpg"
+                 srcset="../assets/posters/clips/clip-34-sm.jpg 320w, ../assets/posters/clips/clip-34.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="472" height="846" loading="lazy" decoding="async"
+                 alt="A man on rocky ground holding banknotes as gold particles drift off them." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Editorial &middot; Exterior</p>
+            <h3 class="clip__title">Cash Burn</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(8).mp4"
+           data-video="../assets/videos/clips/B%20(8).mp4"
+           data-title="Bad Yield"
+           data-tags="Portrait · Workshop &middot; 0:05"
+           data-note="A man at a bench of circuit boards with his head in his hands."
+           data-reveal aria-label="Play clip 35: Bad Yield">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-35-sm.jpg"
+                 srcset="../assets/posters/clips/clip-35-sm.jpg 320w, ../assets/posters/clips/clip-35.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="704" height="1280" loading="lazy" decoding="async"
+                 alt="A man at a bench of circuit boards with his head in his hands." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Portrait &middot; Workshop</p>
+            <h3 class="clip__title">Bad Yield</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(9).mp4"
+           data-video="../assets/videos/clips/B%20(9).mp4"
+           data-title="Office Panic"
+           data-tags="Editorial · Interior &middot; 0:05"
+           data-note="An open-plan office mid-chaos, paper in the air, one man standing still."
+           data-reveal aria-label="Play clip 36: Office Panic">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-36-sm.jpg"
+                 srcset="../assets/posters/clips/clip-36-sm.jpg 320w, ../assets/posters/clips/clip-36.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="704" height="1280" loading="lazy" decoding="async"
+                 alt="An open-plan office mid-chaos, paper in the air, one man standing still." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Editorial &middot; Interior</p>
+            <h3 class="clip__title">Office Panic</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(10).mp4"
+           data-video="../assets/videos/clips/B%20(10).mp4"
+           data-title="Code Wall"
+           data-tags="Portrait · Interface &middot; 0:05"
+           data-note="A man studying a translucent holographic code panel."
+           data-reveal aria-label="Play clip 37: Code Wall">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-37-sm.jpg"
+                 srcset="../assets/posters/clips/clip-37-sm.jpg 320w, ../assets/posters/clips/clip-37.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="704" height="1280" loading="lazy" decoding="async"
+                 alt="A man studying a translucent holographic code panel." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Portrait &middot; Interface</p>
+            <h3 class="clip__title">Code Wall</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(11).mp4"
+           data-video="../assets/videos/clips/B%20(11).mp4"
+           data-title="No Comment"
+           data-tags="Portrait · Interior &middot; 0:05"
+           data-note="A man standing in a server room looking straight to camera."
+           data-reveal aria-label="Play clip 38: No Comment">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-38-sm.jpg"
+                 srcset="../assets/posters/clips/clip-38-sm.jpg 320w, ../assets/posters/clips/clip-38.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="704" height="1280" loading="lazy" decoding="async"
+                 alt="A man standing in a server room looking straight to camera." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Portrait &middot; Interior</p>
+            <h3 class="clip__title">No Comment</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(12).mp4"
+           data-video="../assets/videos/clips/B%20(12).mp4"
+           data-title="Summit"
+           data-tags="Editorial · Portrait &middot; 0:05"
+           data-note="Two men in suits photographed in front of a corporate sign."
+           data-reveal aria-label="Play clip 39: Summit">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-39-sm.jpg"
+                 srcset="../assets/posters/clips/clip-39-sm.jpg 320w, ../assets/posters/clips/clip-39.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="Two men in suits photographed in front of a corporate sign." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Editorial &middot; Portrait</p>
+            <h3 class="clip__title">Summit</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(13).mp4"
+           data-video="../assets/videos/clips/B%20(13).mp4"
+           data-title="Keynote"
+           data-tags="Corporate · Stage &middot; 0:08"
+           data-note="A presenter on stage beside a robotics slide, audience in silhouette."
+           data-reveal aria-label="Play clip 40: Keynote">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-40-sm.jpg"
+                 srcset="../assets/posters/clips/clip-40-sm.jpg 320w, ../assets/posters/clips/clip-40.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A presenter on stage beside a robotics slide, audience in silhouette." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Corporate &middot; Stage</p>
+            <h3 class="clip__title">Keynote</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(14).mp4"
+           data-video="../assets/videos/clips/B%20(14).mp4"
+           data-title="Robotics Team"
+           data-tags="Corporate · Montage &middot; 0:08"
+           data-note="A stacked montage of a robotics team at work in a lab."
+           data-reveal aria-label="Play clip 41: Robotics Team">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-41-sm.jpg"
+                 srcset="../assets/posters/clips/clip-41-sm.jpg 320w, ../assets/posters/clips/clip-41.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A stacked montage of a robotics team at work in a lab." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Corporate &middot; Montage</p>
+            <h3 class="clip__title">Robotics Team</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(15).mp4"
+           data-video="../assets/videos/clips/B%20(15).mp4"
+           data-title="Diagnostics"
+           data-tags="Clinical · Procedure &middot; 0:08"
+           data-note="A blood draw in a modern pathology lab, sample racks in the foreground."
+           data-reveal aria-label="Play clip 42: Diagnostics">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-42-sm.jpg"
+                 srcset="../assets/posters/clips/clip-42-sm.jpg 320w, ../assets/posters/clips/clip-42.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A blood draw in a modern pathology lab, sample racks in the foreground." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Clinical &middot; Procedure</p>
+            <h3 class="clip__title">Diagnostics</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(16).mp4"
+           data-video="../assets/videos/clips/B%20(16).mp4"
+           data-title="Lab Team"
+           data-tags="Corporate · Montage &middot; 0:08"
+           data-note="A stacked montage of a clinical team and a health dashboard."
+           data-reveal aria-label="Play clip 43: Lab Team">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-43-sm.jpg"
+                 srcset="../assets/posters/clips/clip-43-sm.jpg 320w, ../assets/posters/clips/clip-43.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A stacked montage of a clinical team and a health dashboard." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Corporate &middot; Montage</p>
+            <h3 class="clip__title">Lab Team</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(17).mp4"
+           data-video="../assets/videos/clips/B%20(17).mp4"
+           data-title="Health Dashboard"
+           data-tags="Medical · Interface &middot; 0:08"
+           data-note="A clinician presenting a personalised health dashboard on a wall screen."
+           data-reveal aria-label="Play clip 44: Health Dashboard">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-44-sm.jpg"
+                 srcset="../assets/posters/clips/clip-44-sm.jpg 320w, ../assets/posters/clips/clip-44.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A clinician presenting a personalised health dashboard on a wall screen." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Medical &middot; Interface</p>
+            <h3 class="clip__title">Health Dashboard</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(18).mp4"
+           data-video="../assets/videos/clips/B%20(18).mp4"
+           data-title="Body of Water"
+           data-tags="Anatomy · Simulation &middot; 0:04"
+           data-note="A human torso rendered in luminous water and particles against black."
+           data-reveal aria-label="Play clip 45: Body of Water">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-45-sm.jpg"
+                 srcset="../assets/posters/clips/clip-45-sm.jpg 320w, ../assets/posters/clips/clip-45.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="1080" height="1920" loading="lazy" decoding="async"
+                 alt="A human torso rendered in luminous water and particles against black." />
+            <span class="clip__dur">0:04</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Anatomy &middot; Simulation</p>
+            <h3 class="clip__title">Body of Water</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(19).mp4"
+           data-video="../assets/videos/clips/B%20(19).mp4"
+           data-title="Ambient"
+           data-tags="Connected home · Low key &middot; 0:06"
+           data-note="A dim living room lit by a single glowing ring above a router."
+           data-reveal aria-label="Play clip 46: Ambient">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-46-sm.jpg"
+                 srcset="../assets/posters/clips/clip-46-sm.jpg 320w, ../assets/posters/clips/clip-46.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A dim living room lit by a single glowing ring above a router." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Connected home &middot; Low key</p>
+            <h3 class="clip__title">Ambient</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(20).mp4"
+           data-video="../assets/videos/clips/B%20(20).mp4"
+           data-title="Signal"
+           data-tags="Atmosphere · Low key &middot; 0:04"
+           data-note="A silhouette holding a phone with light rings radiating across a dark room."
+           data-reveal aria-label="Play clip 47: Signal">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-47-sm.jpg"
+                 srcset="../assets/posters/clips/clip-47-sm.jpg 320w, ../assets/posters/clips/clip-47.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A silhouette holding a phone with light rings radiating across a dark room." />
+            <span class="clip__dur">0:04</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Atmosphere &middot; Low key</p>
+            <h3 class="clip__title">Signal</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(21).mp4"
+           data-video="../assets/videos/clips/B%20(21).mp4"
+           data-title="AI Navigation"
+           data-tags="Wearable · Interface &middot; 0:08"
+           data-note="A man adjusting smart glasses on a street with a navigation prompt beside him."
+           data-reveal aria-label="Play clip 48: AI Navigation">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-48-sm.jpg"
+                 srcset="../assets/posters/clips/clip-48-sm.jpg 320w, ../assets/posters/clips/clip-48.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A man adjusting smart glasses on a street with a navigation prompt beside him." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Wearable &middot; Interface</p>
+            <h3 class="clip__title">AI Navigation</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(22).mp4"
+           data-video="../assets/videos/clips/B%20(22).mp4"
+           data-title="Neuro Lab"
+           data-tags="Research · Interior &middot; 0:10"
+           data-note="A subject in an EEG cap while a colleague reads brain activity off a monitor."
+           data-reveal aria-label="Play clip 49: Neuro Lab">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-49-sm.jpg"
+                 srcset="../assets/posters/clips/clip-49-sm.jpg 320w, ../assets/posters/clips/clip-49.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A subject in an EEG cap while a colleague reads brain activity off a monitor." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Research &middot; Interior</p>
+            <h3 class="clip__title">Neuro Lab</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(23).mp4"
+           data-video="../assets/videos/clips/B%20(23).mp4"
+           data-title="The Swarm"
+           data-tags="Atmosphere · Scale &middot; 0:05"
+           data-note="A man in a suit looking up at a dense insect swarm over a city."
+           data-reveal aria-label="Play clip 50: The Swarm">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-50-sm.jpg"
+                 srcset="../assets/posters/clips/clip-50-sm.jpg 320w, ../assets/posters/clips/clip-50.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A man in a suit looking up at a dense insect swarm over a city." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Atmosphere &middot; Scale</p>
+            <h3 class="clip__title">The Swarm</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(24).mp4"
+           data-video="../assets/videos/clips/B%20(24).mp4"
+           data-title="Live Impact"
+           data-tags="Product · UI &middot; 0:10"
+           data-note="A white air unit beside a floating dashboard showing carbon-saved figures."
+           data-reveal aria-label="Play clip 51: Live Impact">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-51-sm.jpg"
+                 srcset="../assets/posters/clips/clip-51-sm.jpg 320w, ../assets/posters/clips/clip-51.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A white air unit beside a floating dashboard showing carbon-saved figures." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Product &middot; UI</p>
+            <h3 class="clip__title">Live Impact</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(25).mp4"
+           data-video="../assets/videos/clips/B%20(25).mp4"
+           data-title="Assistant"
+           data-tags="App · Hands &middot; 0:06"
+           data-note="A hand holding a phone open on a chat assistant interface."
+           data-reveal aria-label="Play clip 52: Assistant">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-52-sm.jpg"
+                 srcset="../assets/posters/clips/clip-52-sm.jpg 320w, ../assets/posters/clips/clip-52.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A hand holding a phone open on a chat assistant interface." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">App &middot; Hands</p>
+            <h3 class="clip__title">Assistant</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/B%20(26).mp4"
+           data-video="../assets/videos/clips/B%20(26).mp4"
+           data-title="Good News"
+           data-tags="Portrait · Hands &middot; 0:06"
+           data-note="A man smiling at something on his phone screen."
+           data-reveal aria-label="Play clip 53: Good News">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-53-sm.jpg"
+                 srcset="../assets/posters/clips/clip-53-sm.jpg 320w, ../assets/posters/clips/clip-53.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A man smiling at something on his phone screen." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Portrait &middot; Hands</p>
+            <h3 class="clip__title">Good News</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/Beetle_with_carapace_backpack_re%E2%80%A6_202607251629.mp4"
+           data-video="../assets/videos/clips/Beetle_with_carapace_backpack_re%E2%80%A6_202607251629.mp4"
+           data-title="Carapace Backpack"
+           data-tags="Bio-robotics · Macro &middot; 0:10"
+           data-note="A beetle carrying a small electronic module on its back against white."
+           data-reveal aria-label="Play clip 54: Carapace Backpack">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-54-sm.jpg"
+                 srcset="../assets/posters/clips/clip-54-sm.jpg 320w, ../assets/posters/clips/clip-54.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A beetle carrying a small electronic module on its back against white." />
+            <span class="clip__dur">0:10</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Bio-robotics &middot; Macro</p>
+            <h3 class="clip__title">Carapace Backpack</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/D%20(3).mp4"
+           data-video="../assets/videos/clips/D%20(3).mp4"
+           data-title="The Meeting"
+           data-tags="Corporate · Interior &middot; 0:05"
+           data-note="Three men in a meeting room, a company mark on the wall behind them."
+           data-reveal aria-label="Play clip 55: The Meeting">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-55-sm.jpg"
+                 srcset="../assets/posters/clips/clip-55-sm.jpg 320w, ../assets/posters/clips/clip-55.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="1072" height="1928" loading="lazy" decoding="async"
+                 alt="Three men in a meeting room, a company mark on the wall behind them." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Corporate &middot; Interior</p>
+            <h3 class="clip__title">The Meeting</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/D%20(4).mp4"
+           data-video="../assets/videos/clips/D%20(4).mp4"
+           data-title="Face Off"
+           data-tags="Editorial · Composite &middot; 0:05"
+           data-note="Two men facing each other across a corridor of holographic brand marks."
+           data-reveal aria-label="Play clip 56: Face Off">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-56-sm.jpg"
+                 srcset="../assets/posters/clips/clip-56-sm.jpg 320w, ../assets/posters/clips/clip-56.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="1072" height="1928" loading="lazy" decoding="async"
+                 alt="Two men facing each other across a corridor of holographic brand marks." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Editorial &middot; Composite</p>
+            <h3 class="clip__title">Face Off</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--square" data-clip data-ratio="square"
+           href="../assets/videos/clips/D%20(6).mp4"
+           data-video="../assets/videos/clips/D%20(6).mp4"
+           data-title="Title Card"
+           data-tags="Title · Portrait &middot; 0:05"
+           data-note="A product title set over a dark portrait."
+           data-reveal aria-label="Play clip 57: Title Card">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-57-sm.jpg"
+                 srcset="../assets/posters/clips/clip-57-sm.jpg 320w, ../assets/posters/clips/clip-57.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="960" height="960" loading="lazy" decoding="async"
+                 alt="A product title set over a dark portrait." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Title &middot; Portrait</p>
+            <h3 class="clip__title">Title Card</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/D%20(8).mp4"
+           data-video="../assets/videos/clips/D%20(8).mp4"
+           data-title="The Run"
+           data-tags="Editorial · Crowd &middot; 0:05"
+           data-note="A man in a suit running through a crowd on a street."
+           data-reveal aria-label="Play clip 58: The Run">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-58-sm.jpg"
+                 srcset="../assets/posters/clips/clip-58-sm.jpg 320w, ../assets/posters/clips/clip-58.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="474" height="842" loading="lazy" decoding="async"
+                 alt="A man in a suit running through a crowd on a street." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Editorial &middot; Crowd</p>
+            <h3 class="clip__title">The Run</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/D%20(11).mp4"
+           data-video="../assets/videos/clips/D%20(11).mp4"
+           data-title="Server Floor"
+           data-tags="Portrait · Interior &middot; 0:08"
+           data-note="A man holding a hardware module on a data-centre floor."
+           data-reveal aria-label="Play clip 59: Server Floor">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-59-sm.jpg"
+                 srcset="../assets/posters/clips/clip-59-sm.jpg 320w, ../assets/posters/clips/clip-59.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A man holding a hardware module on a data-centre floor." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Portrait &middot; Interior</p>
+            <h3 class="clip__title">Server Floor</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/D%20(15).mp4"
+           data-video="../assets/videos/clips/D%20(15).mp4"
+           data-title="Parts Bin"
+           data-tags="Workshop · Interior &middot; 0:05"
+           data-note="A workshop bench stacked with circuit boards under a desk lamp."
+           data-reveal aria-label="Play clip 60: Parts Bin">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-60-sm.jpg"
+                 srcset="../assets/posters/clips/clip-60-sm.jpg 320w, ../assets/posters/clips/clip-60.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="704" height="1280" loading="lazy" decoding="async"
+                 alt="A workshop bench stacked with circuit boards under a desk lamp." />
+            <span class="clip__dur">0:05</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Workshop &middot; Interior</p>
+            <h3 class="clip__title">Parts Bin</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/D%20(18).mp4"
+           data-video="../assets/videos/clips/D%20(18).mp4"
+           data-title="Early Access"
+           data-tags="App · Family &middot; 0:06"
+           data-note="An older couple looking at a sign-up screen on a phone together."
+           data-reveal aria-label="Play clip 61: Early Access">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-61-sm.jpg"
+                 srcset="../assets/posters/clips/clip-61-sm.jpg 320w, ../assets/posters/clips/clip-61.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="An older couple looking at a sign-up screen on a phone together." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">App &middot; Family</p>
+            <h3 class="clip__title">Early Access</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/D%20(19).mp4"
+           data-video="../assets/videos/clips/D%20(19).mp4"
+           data-title="The Consult"
+           data-tags="Medical · Interface &middot; 0:08"
+           data-note="A doctor talking a patient through a DNA helix and a ring of organ panels."
+           data-reveal aria-label="Play clip 62: The Consult">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-62-sm.jpg"
+                 srcset="../assets/posters/clips/clip-62-sm.jpg 320w, ../assets/posters/clips/clip-62.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A doctor talking a patient through a DNA helix and a ring of organ panels." />
+            <span class="clip__dur">0:08</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Medical &middot; Interface</p>
+            <h3 class="clip__title">The Consult</h3>
+          </div>
+        </a>
+
+        <a class="clip clip--portrait" data-clip data-ratio="portrait"
+           href="../assets/videos/clips/D%20(25).mp4"
+           data-video="../assets/videos/clips/D%20(25).mp4"
+           data-title="Aperture"
+           data-tags="Product · Hero shot &middot; 0:06"
+           data-note="A tabletop device with a glowing aperture mark and an accuracy badge."
+           data-reveal aria-label="Play clip 63: Aperture">
+          <figure class="clip__media">
+            <img src="../assets/posters/clips/clip-63-sm.jpg"
+                 srcset="../assets/posters/clips/clip-63-sm.jpg 320w, ../assets/posters/clips/clip-63.jpg 640w"
+                 sizes="(min-width: 1180px) 23vw, (min-width: 720px) 31vw, 47vw"
+                 width="720" height="1280" loading="lazy" decoding="async"
+                 alt="A tabletop device with a glowing aperture mark and an accuracy badge." />
+            <span class="clip__dur">0:06</span>
+            <span class="clip__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </figure>
+          <div class="clip__body">
+            <p class="mono clip__tag">Product &middot; Hero shot</p>
+            <h3 class="clip__title">Aperture</h3>
+          </div>
+        </a>
+
+      </div>
+
+      <p class="clip-note">
+        Sixty-three clips, shown in full and in folder order. Every one is a self-initiated
+        test — nothing here was commissioned, and no brand or person shown is a client.
+      </p>
+      <p class="clip-note">
+        All of it is AI-generated. Where a clip resembles a public figure, a company or a
+        news event, it is a synthetic depiction made as a craft exercise — not real footage,
+        not a statement of fact, and not an endorsement by anyone shown.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <a class="brandmark" href="../index.html" aria-label="Himanshu Narwaria — AI Films">
+      <img class="brandmark__glyph" src="../assets/brand/hn-mark.png" width="166" height="121" alt="" aria-hidden="true" />
+      <span class="brandmark__text">
+        <span class="brandmark__name">Himanshu Narwaria</span>
+        <span class="brandmark__role">AI Film Production &middot; India</span>
+      </span>
+    </a>
+    <nav class="mono site-footer__links" aria-label="Footer">
+      <a href="../index.html">AI Films</a>
+      <a href="./index.html">AI Clips</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="https://wa.me/917089271701?text=Hi%20Himanshu%20%E2%80%94%20I%20came%20across%20your%20portfolio.%20We%27re%20planning%20video%20creative%20for%20our%20brand%20and%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+  <div class="wrap site-footer__legal">
+    <p>&copy; <span data-year></span> Himanshu Narwaria. All rights reserved. Every clip on this page was produced by Himanshu Narwaria.</p>
+    <p>Self-initiated tests, not client commissions. All footage is AI-generated; no brand or person appearing on this page is a client or an endorser.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Clip player" aria-hidden="true">
+  <button class="lightbox__close" type="button" data-lb-close aria-label="Close player">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <div class="lightbox__panel">
+    <div class="lightbox__stage" data-lb-stage></div>
+    <div class="lightbox__bar">
+      <div class="lightbox__meta">
+        <p class="mono lightbox__tags" data-lb-tags></p>
+        <h2 class="lightbox__title" data-lb-title></h2>
+        <p class="lightbox__note" data-lb-note></p>
+      </div>
+      <div class="lightbox__nav">
+        <button class="lb-btn" type="button" data-lb-prev aria-label="Previous clip">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <span class="lb-count" data-lb-count></span>
+        <button class="lb-btn" type="button" data-lb-next aria-label="Next clip">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/clips.js" defer></script>
+</body>
+</html>
