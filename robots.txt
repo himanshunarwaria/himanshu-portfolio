@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 
-# Block unneeded assets from crawl budget
-Disallow: /images/hero/mobile/
+# Public pages and rendering assets are available to search crawlers.
+# This policy includes Googlebot, bingbot, and OAI-SearchBot.
+# Crawl permission does not guarantee indexing or inclusion in AI answers.
 
-Sitemap: https://himanshunarwaria.in/sitemap.xml
+Sitemap: https://www.himanshunarwaria.in/sitemap.xml

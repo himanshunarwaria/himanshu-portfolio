@@ -1,0 +1,220 @@
+[
+  {
+    "slug": "graphic-design",
+    "name": "Graphic design",
+    "title": "Graphic Design & Brand Identity | Himanshu Narwaria",
+    "description": "Graphic design by Himanshu Narwaria in Agra: brand identity, social creatives, campaign design, and e-commerce visuals for businesses in India and worldwide.",
+    "headline": "Graphic design with a clear point of view.",
+    "intro": "I’m Himanshu Narwaria, a graphic designer based in Agra, India. I help businesses turn their message into a consistent visual identity, then carry it across campaigns, social media, and product listings.",
+    "summary": "Brand identity, campaign creative, and everyday design that feels like one brand.",
+    "fit": "For businesses launching a brand, refining an existing identity, or bringing consistency to a growing collection of marketing material.",
+    "deliverables": [
+      ["Brand identity", "Logo direction, typography, colour palettes, and practical visual guidelines built around your audience and positioning."],
+      ["Campaign and social creative", "Campaign concepts, Instagram posts, carousels, banners, and reusable templates adapted to your communication needs."],
+      ["E-commerce design", "Product image layouts, benefit-led graphics, and Amazon listing or A+ content that explains what a buyer needs to know."],
+      ["Production-ready handoff", "Organised exports in agreed formats, with editable source files and a usage guide when included in the project scope."]
+    ],
+    "approach": [
+      ["Understand the message", "We review your audience, competitors, existing assets, and the decisions your customer needs to make."],
+      ["Set the visual direction", "I develop a focused design direction and explain the choices behind the type, colour, imagery, and layout."],
+      ["Build the system", "The approved direction becomes a working set of assets, checked for consistency across the agreed formats."]
+    ],
+    "inputs": "Share your existing logo or guidelines, the content to communicate, required formats, reference work, and the date you need the assets. If you are starting from scratch, describe the business and its audience.",
+    "proofHeading": "Explore my design work",
+    "proofIntro": "These galleries show how I adapt visual systems to different brands and formats.",
+    "proof": [
+      {"label": "Brand identity and campaign case studies", "href": "ads.html"},
+      {"label": "Restaurant and lifestyle social media design", "href": "social-media.html"},
+      {"label": "Amazon listing and A+ content examples", "href": "listings.html"},
+      {"label": "Performance ad creative", "href": "meta-ads.html"}
+    ],
+    "faqs": [
+      ["Can you work with my existing brand guidelines?", "Yes. I can extend an existing identity across new formats or identify where the guidelines need more detail. A full rebrand is scoped separately from ongoing design production."],
+      ["Do you provide editable design files?", "Editable files can be included in the agreed handoff. We confirm source formats, font or stock licences, and how your team will reuse the designs before the project begins."],
+      ["How is graphic design priced?", "Pricing depends on the number of concepts, deliverables, formats, and review rounds. Send the asset list and timeline for a project-specific quote."],
+      ["Can I hire you outside Agra?", "Yes. I work remotely with businesses across India and worldwide, using a shared brief and scheduled design reviews."]
+    ],
+    "related": ["social-media-management", "web-design", "video-editing"]
+  },
+  {
+    "slug": "video-editing",
+    "name": "Video editing",
+    "title": "Video Editing Services | Himanshu Narwaria",
+    "description": "Video editing by Himanshu Narwaria in Agra for reels, YouTube, brand stories, and ads. Clear pacing, captions, sound, and platform-ready delivery.",
+    "headline": "Video editing that gets to the point.",
+    "intro": "I’m Himanshu Narwaria, a designer and video editor based in Agra, India. I turn supplied footage into focused stories for social media, YouTube, product launches, and brand campaigns.",
+    "summary": "Reels, brand stories, and longer edits shaped around the message and the viewer.",
+    "fit": "For creators and businesses with footage to edit, a story to clarify, or a longer recording that needs a useful set of shorter clips.",
+    "deliverables": [
+      ["Reels and short-form edits", "A focused opening, clear pacing, readable captions, and a closing action suited to the platform and the content."],
+      ["YouTube and brand videos", "A structured edit of supplied interviews, presentations, or brand footage, with supporting titles and transitions."],
+      ["Sound and visual consistency", "Basic audio cleanup, level balancing, colour correction, and music placement appropriate to the agreed scope."],
+      ["Versions and exports", "Agreed aspect ratios, caption treatments, and delivery formats. Cutdowns and alternate openings can be planned as a set."]
+    ],
+    "approach": [
+      ["Find the story", "We define the audience, platform, final length, key message, and what must stay in or out of the edit."],
+      ["Review the rough cut", "I assemble the story and pacing first. Your consolidated feedback helps resolve structural changes before finishing."],
+      ["Finish and deliver", "Titles, sound, colour, and exports follow the approved cut, with a final check of captions and on-screen information."]
+    ],
+    "inputs": "Send the footage, any script or transcript, brand assets, reference videos, target platform, desired duration, and deadline. Tell me whether captions, voiceover, music sourcing, or additional footage are required.",
+    "proofHeading": "Explore my film and design work",
+    "proofIntro": "My AI film portfolio shows generated footage shaped into finished sequences. The design galleries provide additional visual context; your supplied-footage edit is scoped around its own brief.",
+    "proof": [
+      {"label": "AI film production portfolio", "href": "AI-FILM/"},
+      {"label": "Social media design portfolio", "href": "social-media.html"},
+      {"label": "Campaign and advertising design", "href": "meta-ads.html"}
+    ],
+    "faqs": [
+      ["Do you edit reels and YouTube videos?", "Yes. The edit is planned for the format, audience, footage, and intended length. A short reel and a longer interview require different pacing and review time."],
+      ["Is filming included?", "This service focuses on editing supplied footage. If a project needs a shoot, voice recording, stock footage, or generated visuals, those needs are discussed separately in the brief."],
+      ["Can one video become several social clips?", "Yes. We can plan a main edit and a set of cutdowns, choosing moments that work as standalone stories and adapting captions and framing for each format."],
+      ["How long does an edit take?", "The schedule depends on footage length and condition, edit complexity, the number of versions, and review rounds. I confirm a timeline after reviewing the material."]
+    ],
+    "related": ["ai-video-production", "social-media-management", "graphic-design"]
+  },
+  {
+    "slug": "ai-video-production",
+    "name": "AI video production",
+    "title": "AI Video Production Services | Himanshu Narwaria",
+    "description": "AI video creation by Himanshu Narwaria: concepts, storyboards, generated scenes, and editing for brand campaigns, product stories, and social content.",
+    "headline": "AI videos with creative direction.",
+    "intro": "I’m Himanshu Narwaria, a creative designer based in Agra, India. I offer AI-assisted video creation for brands that need concept-led visuals, atmospheric scenes, or new ways to tell a product story.",
+    "summary": "From a visual concept to generated scenes, a considered edit, and a finished story.",
+    "fit": "For concept films, stylised campaign visuals, and social content where generated imagery supports the message. We assess the visual requirements before choosing this approach.",
+    "deliverables": [
+      ["Concept and storyboard", "A visual treatment, shot sequence, and reference direction to agree on the story before generating footage."],
+      ["Generated visual scenes", "Selected AI-assisted shots developed around the approved direction, with review for visual continuity and distracting artefacts."],
+      ["Editing and brand finishing", "A coherent sequence with pacing, titles, sound, and supplied brand assets. Exact logos and text are added in the finishing stage."],
+      ["Social and campaign versions", "Exports in agreed formats, with alternate lengths or crops planned around the usable scenes."]
+    ],
+    "approach": [
+      ["Check the creative fit", "We decide which scenes benefit from generation and which need real photography, supplied footage, or conventional motion design."],
+      ["Approve a visual direction", "We review a treatment and sample frames, then refine selected shots rather than generating an unstructured collection of clips."],
+      ["Edit and check the result", "I assemble the approved scenes and check continuity, product representation, captions, and brand consistency before delivery."]
+    ],
+    "inputs": "Share the concept, audience, brand assets, product references, intended use, length, and deadline. Include any elements that must be reproduced exactly, such as packaging, lettering, or a real location.",
+    "proofHeading": "Watch my AI film work",
+    "proofIntro": "Explore the AI film portfolio and its Kavya Pay campaign, alongside a separate collection of self-initiated visual experiments. The experiments are labelled separately from client work.",
+    "proof": [
+      {"label": "AI films and the Kavya Pay campaign", "href": "AI-FILM/"},
+      {"label": "Self-initiated AI visual experiments", "href": "AI-FILM/clips/"},
+      {"label": "Explore conventional video editing", "href": "video-editing.html"},
+      {"label": "Explore brand and graphic design", "href": "graphic-design.html"}
+    ],
+    "faqs": [
+      ["What kinds of AI videos can you help create?", "Concept-led brand videos, stylised product stories, atmospheric campaign scenes, and short social visuals. The suitability of each idea is checked against the level of realism, continuity, and control required."],
+      ["Can AI reproduce my product and logo exactly?", "Generated footage can vary between shots. For exact product details, logos, or text, I use supplied assets and conventional editing or compositing, and discuss any remaining limitations before production."],
+      ["Do AI videos replace a traditional shoot?", "They can support some ideas, but real products, demonstrations, interviews, and documentary claims may need real footage. A mixed approach is often appropriate when accuracy matters."],
+      ["What is included in an AI video quote?", "The quote defines the concept, scene count, intended length, generation and review scope, editing, and exports. We also agree on the assets and permissions needed for the intended use."]
+    ],
+    "related": ["video-editing", "graphic-design", "social-media-management"]
+  },
+  {
+    "slug": "social-media-management",
+    "name": "Social media management",
+    "title": "Social Media Management | Himanshu Narwaria",
+    "description": "Social media management by Himanshu Narwaria in Agra: content planning, design, captions, scheduling, and reporting for a consistent brand presence.",
+    "headline": "Social media with a plan behind every post.",
+    "intro": "I’m Himanshu Narwaria, a designer and social media manager based in Agra, India. I help businesses plan, create, and organise content so their social presence communicates a consistent message.",
+    "summary": "A practical content calendar, considered creative, and a repeatable publishing process.",
+    "fit": "For businesses that need ongoing content support and a clear approval process, rather than a disconnected collection of posts.",
+    "deliverables": [
+      ["Content planning", "Content themes and a publishing calendar connected to your audience, offers, launches, and available assets."],
+      ["Design and captions", "Brand-aligned posts, carousels, and captions, with reels or video editing included when specified in the scope."],
+      ["Approval and scheduling", "A shared review process and publishing schedule for the agreed channels. Content is approved before it goes live."],
+      ["Reporting and iteration", "A review of available platform metrics, such as reach, engagement, profile activity, and link clicks, to inform the next content cycle."]
+    ],
+    "approach": [
+      ["Audit the current presence", "We review the channels, audience, visual identity, recent content, and the business outcome the work should support."],
+      ["Plan and create in batches", "The calendar sets the direction for a reviewable batch of content. You provide factual checks and consolidated feedback before scheduling."],
+      ["Publish and learn", "Approved content follows the schedule. Reporting helps us decide what to repeat, revise, or test next."]
+    ],
+    "inputs": "Share your social profiles, brand guidelines, business goals, current offers, available photos or footage, and the person responsible for approvals. Publishing access and any response responsibilities are agreed during onboarding.",
+    "proofHeading": "See the creative work behind the service",
+    "proofIntro": "These projects demonstrate my social media design work. Management scope and reporting are agreed separately for each engagement.",
+    "proof": [
+      {"label": "Nomme restaurant social media design", "href": "social-media/social-nomme.html"},
+      {"label": "Dravida Utkala Banga social creative", "href": "social-media/social-dub.html"},
+      {"label": "How my social media design process works", "href": "blog/social-media-design-process-explained.html"}
+    ],
+    "faqs": [
+      ["How is social media management different from design?", "Design focuses on producing the visual assets. Management can also include content planning, captions, scheduling, and reporting. The channels and responsibilities are set out in the scope."],
+      ["Are ad spend and paid campaign management included?", "Ad spend is separate. Performance ad creative can be included, while media buying, campaign optimisation, and account management need an explicitly agreed scope."],
+      ["Will you reply to comments and direct messages?", "Community management is discussed separately so response times, escalation rules, and access are clear. It is not assumed to be part of a content-only engagement."],
+      ["Can you guarantee follower growth or sales?", "No. Results depend on the offer, audience, budget, platform behaviour, and other factors. We agree on useful metrics and use the available data to improve the work."]
+    ],
+    "related": ["graphic-design", "video-editing", "ai-video-production"]
+  },
+  {
+    "slug": "web-design",
+    "name": "Web design",
+    "title": "Web Design in Agra, India | Himanshu Narwaria",
+    "description": "Web design by Himanshu Narwaria in Agra: website strategy, UX, responsive UI, and design systems for business websites, landing pages, and digital products.",
+    "headline": "Web design that makes the next step clear.",
+    "intro": "I’m Himanshu Narwaria, a web designer based in Agra, India. I design responsive websites and product interfaces that bring your brand, information, and customer journey into one coherent experience.",
+    "summary": "Website structure, responsive interfaces, and a visual system built around real content.",
+    "fit": "For business websites, campaign landing pages, product interfaces, or an existing site whose structure and presentation need a rethink.",
+    "deliverables": [
+      ["Website structure and UX", "A sitemap, page priorities, and key user flows that make information easy to find and the next action easy to understand."],
+      ["Responsive UI design", "Layouts for mobile and desktop, built around real content, readable typography, and clear visual hierarchy."],
+      ["A reusable design system", "Shared components, colour and type choices, and interaction states that make the website feel consistent."],
+      ["Design handoff or implementation", "Organised design files and implementation guidance. I can also scope the frontend build if you want design and development handled together."]
+    ],
+    "approach": [
+      ["Map the purpose", "We identify the audience, business goal, pages, content, and the actions the website should make possible."],
+      ["Design around the content", "Wireframes establish structure before the visual direction is developed into responsive page layouts."],
+      ["Review the complete journey", "We check key paths, small-screen layouts, states, and handoff details before the design moves into production."]
+    ],
+    "inputs": "Share your current website if you have one, brand assets, the required pages, sample content, reference websites, and any technical or launch constraints. We can identify missing content during the discovery stage.",
+    "proofHeading": "Selected website design projects",
+    "proofIntro": "Explore the case studies for the visual direction, page structure, and final interfaces.",
+    "proof": [
+      {"label": "NAFUME perfume storefront", "href": "nafume.html"},
+      {"label": "Padma Shree Travels booking website", "href": "padma-shree-travels.html"},
+      {"label": "Pankhuri restaurant website", "href": "pankhuri.html"}
+    ],
+    "faqs": [
+      ["Do you design for mobile as well as desktop?", "Yes. Responsive layouts are part of the design process, including navigation, content order, forms, and important interaction states."],
+      ["Can you redesign an existing website?", "Yes. We start by reviewing the current structure, content, and key journeys, then decide what should be retained, improved, or replaced."],
+      ["Is web development included in web design?", "They can be commissioned together or separately. Design defines the layout and behaviour; development turns the approved design into a working website. The proposal makes that distinction explicit."],
+      ["Will the website design support SEO?", "I plan clear page structure, readable content, descriptive headings, and useful internal links. Technical implementation, content quality, and ongoing search visibility also need attention during development and after launch."]
+    ],
+    "related": ["web-development", "graphic-design", "social-media-management"]
+  },
+  {
+    "slug": "web-development",
+    "name": "Web development",
+    "title": "Web Development Services | Himanshu Narwaria",
+    "description": "Web development by Himanshu Narwaria in Agra: responsive frontend builds, business websites, landing pages, and accessible digital interfaces.",
+    "headline": "Web development that brings the design to life.",
+    "intro": "I’m Himanshu Narwaria, a designer and frontend developer based in Agra, India. I build responsive websites and digital interfaces with attention to usability, accessibility, performance, and maintainable delivery.",
+    "summary": "Working websites and interfaces, from the approved design through launch checks.",
+    "fit": "For businesses that need a website built, an approved design implemented, or an existing frontend improved for real users and devices.",
+    "deliverables": [
+      ["Responsive frontend implementation", "Layouts and components that adapt to different screens, with clear navigation and predictable interactions."],
+      ["Useful interface behaviour", "Forms, menus, filtering, and other agreed interactions, including relevant loading, empty, validation, and error states."],
+      ["Technical search foundations", "Semantic HTML, page titles, descriptions, canonical URLs, internal links, and sitemap support where appropriate to the site."],
+      ["Testing and handoff", "Checks of key user journeys, keyboard access, mobile layouts, and essential loading behaviour, followed by a documented handoff."]
+    ],
+    "approach": [
+      ["Define the build", "We review the designs, content, hosting, integrations, and who will maintain the site, then agree on an appropriate implementation."],
+      ["Develop and review", "The site is built in reviewable stages so layout, content, and interaction decisions can be checked before launch."],
+      ["Validate and launch", "We test the agreed paths, resolve launch issues, and confirm deployment access, ownership, and the maintenance arrangement."]
+    ],
+    "inputs": "Send the designs or existing site, page list, content, required interactions, hosting preferences, and any integration requirements. Payments, user accounts, databases, and ongoing maintenance are scoped explicitly.",
+    "proofHeading": "Explore completed digital work",
+    "proofIntro": "These case studies include project context, interfaces, and links to the published work.",
+    "proof": [
+      {"label": "Xavik Labs studio website", "href": "xavik-labs.html"},
+      {"label": "Padma Shree Travels website", "href": "padma-shree-travels.html"},
+      {"label": "UPSC quiz app case study", "href": "upsc-quiz-app.html"}
+    ],
+    "faqs": [
+      ["Can you build from an existing Figma design?", "Yes. I review the design files, responsive layouts, component states, and functionality before estimating the implementation."],
+      ["Can you handle both web design and development?", "Yes. A combined project covers the website structure, visual design, frontend implementation, and the agreed launch checks. Each phase has a clear review point."],
+      ["Are hosting, backend systems, and maintenance included?", "Those responsibilities are defined in the proposal. A frontend build does not automatically include hosting fees, custom backend services, payment integrations, or ongoing maintenance."],
+      ["Can you guarantee a Google ranking after launch?", "No. Technical SEO makes a site easier to crawl and understand, but rankings also depend on content, competition, authority, location, and search engine decisions."]
+    ],
+    "related": ["web-design", "graphic-design", "social-media-management"]
+  }
+]

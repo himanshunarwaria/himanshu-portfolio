@@ -355,15 +355,26 @@
   function setupKineticHero() {
     var stage = document.getElementById('heroStage');
     if (!stage) return;
-    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var finePointer = window.matchMedia('(pointer: fine)').matches;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var finePointer = window.matchMedia('(pointer: fine)');
     var frame = 0;
 
+    function resetPointer() {
+      if (frame) window.cancelAnimationFrame(frame);
+      frame = 0;
+      stage.style.setProperty('--tilt-x', '0deg');
+      stage.style.setProperty('--tilt-y', '0deg');
+      stage.style.setProperty('--shift-x', '0px');
+      stage.style.setProperty('--shift-y', '0px');
+    }
+
     function updatePointer(event) {
-      if (frame) return;
+      if (reduceMotion.matches || !finePointer.matches || event.pointerType === 'touch' || frame) return;
       frame = window.requestAnimationFrame(function () {
         frame = 0;
+        if (reduceMotion.matches || !finePointer.matches) return;
         var rect = stage.getBoundingClientRect();
+        if (!rect.width || !rect.height) return;
         var x = ((event.clientX - rect.left) / rect.width) - .5;
         var y = ((event.clientY - rect.top) / rect.height) - .5;
         stage.style.setProperty('--tilt-x', (y * -9).toFixed(2) + 'deg');
@@ -373,15 +384,11 @@
       });
     }
 
-    if (!reduceMotion && finePointer) {
-      stage.addEventListener('pointermove', updatePointer, { passive: true });
-      stage.addEventListener('pointerleave', function () {
-        stage.style.setProperty('--tilt-x', '0deg');
-        stage.style.setProperty('--tilt-y', '0deg');
-        stage.style.setProperty('--shift-x', '0px');
-        stage.style.setProperty('--shift-y', '0px');
-      });
-    }
+    stage.addEventListener('pointermove', updatePointer, { passive: true });
+    stage.addEventListener('pointerleave', resetPointer);
+    stage.addEventListener('pointercancel', resetPointer);
+    reduceMotion.addEventListener('change', resetPointer);
+    finePointer.addEventListener('change', resetPointer);
   }
 
   function setupHeader() {
@@ -389,10 +396,29 @@
     var toggle = document.getElementById('menuToggle');
     var menu = document.getElementById('mobileMenu');
     var lastFocused = null;
+    var inertElements = [];
     if (!header || !toggle || !menu) return;
 
     function focusableItems() {
-      return Array.prototype.slice.call(menu.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])'));
+      return [toggle].concat(Array.prototype.slice.call(menu.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])')));
+    }
+
+    function setBackgroundInert() {
+      var background = Array.prototype.slice.call(document.querySelectorAll('#main-content,.site-footer,.skip-link'));
+      background = background.concat(Array.prototype.slice.call(header.querySelectorAll('.brand,.desktop-nav,.header-cta')));
+      inertElements = background.map(function (element) {
+        var state = { element: element, wasInert: element.inert };
+        element.inert = true;
+        return state;
+      });
+    }
+
+    function focusDestination(destination) {
+      if (!destination.hasAttribute('tabindex')) {
+        destination.setAttribute('tabindex', '-1');
+        destination.addEventListener('blur', function () { destination.removeAttribute('tabindex'); }, { once: true });
+      }
+      destination.focus({ preventScroll: true });
     }
 
     function openMenu() {
@@ -401,8 +427,9 @@
       toggle.setAttribute('aria-expanded', 'true');
       toggle.setAttribute('aria-label', 'Close menu');
       document.body.classList.add('menu-open');
+      setBackgroundInert();
       var items = focusableItems();
-      if (items[0]) items[0].focus();
+      (items[1] || toggle).focus();
     }
 
     function closeMenu(restoreFocus) {
@@ -410,7 +437,12 @@
       toggle.setAttribute('aria-expanded', 'false');
       toggle.setAttribute('aria-label', 'Open menu');
       document.body.classList.remove('menu-open');
-      if (restoreFocus && lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+      inertElements.forEach(function (state) { state.element.inert = state.wasInert; });
+      inertElements = [];
+      if (restoreFocus) {
+        var target = lastFocused && lastFocused.isConnected && lastFocused.getClientRects().length ? lastFocused : header.querySelector('.brand');
+        if (target) target.focus({ preventScroll: true });
+      }
     }
 
     toggle.addEventListener('click', function () {
@@ -419,10 +451,22 @@
     });
 
     menu.addEventListener('click', function (event) {
-      if (event.target.closest('a')) closeMenu(false);
+      var link = event.target.closest('a');
+      if (!link) return;
+      var href = link.getAttribute('href') || '';
+      var destination = null;
+      if (href.charAt(0) === '#' && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+        try {
+          var id = decodeURIComponent(href.slice(1));
+          destination = document.getElementById(id === 'top' ? 'home' : id);
+        } catch (error) { /* Keep native navigation for malformed fragments. */ }
+      }
+      closeMenu(!destination);
+      if (destination) focusDestination(destination);
     });
 
-    menu.addEventListener('keydown', function (event) {
+    document.addEventListener('keydown', function (event) {
+      if (menu.hidden) return;
       if (event.key === 'Escape') {
         event.preventDefault();
         closeMenu(true);
@@ -443,7 +487,7 @@
     });
 
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 960 && !menu.hidden) closeMenu(false);
+      if (window.innerWidth > 960 && !menu.hidden) closeMenu(true);
     });
     window.addEventListener('scroll', function () { header.classList.toggle('is-scrolled', window.scrollY > 12); }, { passive: true });
   }

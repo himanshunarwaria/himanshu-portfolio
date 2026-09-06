@@ -1,0 +1,5 @@
+.related-service-note{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;padding:1.5rem clamp(1.5rem,4vw,3rem);margin:0;border-top:1px solid rgba(15,23,42,.12);background:#edf0e5;color:#25311f;font:400 .9rem/1.6 'Outfit','Segoe UI',sans-serif}
+.related-service-note p{margin:0;max-width:38rem}
+.related-service-note div{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem}
+.related-service-note a{color:inherit;text-decoration:underline;text-underline-offset:.25em;font-weight:500}
+@media(max-width:620px){.related-service-note{align-items:flex-start;flex-direction:column;padding:1.5rem}}
