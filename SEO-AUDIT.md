@@ -98,6 +98,8 @@ Review at roughly 30, 60, and 90 days for planning purposes, not as a promised r
 
 ## Maintenance and validation
 
+Current role update, 6 September 2026: the owner identified the [Xavik Labs team page](https://xaviklabs.com/team) as the source for his current status. It lists Himanshu Narwaria as **Co-founder**. The portfolio now presents that role prominently, links to the team page, and removes the obsolete current-employment statement. Current role data lives in `scripts/seo-config.mjs` and feeds the homepage role link, service/profile pages, and Person structured data. Past portfolio work remains historical work.
+
 Service copy lives in `content/services.json`; the shared identity and canonical origin live in `scripts/seo-config.mjs`. Generated pages are committed as ordinary static HTML. Edit those sources, then run:
 
 ```powershell

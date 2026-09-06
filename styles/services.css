@@ -19,6 +19,9 @@
 .directory-breadcrumb a{text-decoration:none}
 .directory-breadcrumb a:hover{text-decoration:underline}
 .directory-eyebrow{font-family:'Space Mono',Consolas,monospace;font-size:.65rem;letter-spacing:.09em;text-transform:uppercase;color:#59604f}
+.service-page .current-role{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem .4rem;width:fit-content;max-width:100%;margin:.9rem 0 0;padding:.45rem .8rem;border:1px solid #cbd3bb;border-radius:.25rem;background:#e8eddf;color:#303a24;font-size:.86rem;line-height:1.5}
+.current-role a{font-weight:600;text-decoration:underline;text-underline-offset:.2em}
+.current-role a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 .service-hero{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);align-items:center;gap:clamp(2rem,6vw,6rem);padding:3rem 0 5rem}
 .service-hero h1,.directory-intro h1{max-width:14ch;margin-top:1.2rem;font-size:clamp(3rem,5.8vw,5.5rem);font-weight:500;line-height:1.02;letter-spacing:-.055em;text-wrap:balance}
 .service-page .directory-lead{max-width:42rem;margin-top:1.75rem;color:#565d4c;font-size:1.12rem;line-height:1.75}

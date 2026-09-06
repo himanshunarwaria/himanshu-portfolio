@@ -337,6 +337,8 @@ button{ font: inherit; color: inherit; background: none; border: 0; cursor: poin
   max-width: 54ch;
 }
 .hero__lede strong{ color: var(--fg); font-weight: 600; }
+.hero__role{margin:0 0 1.25rem;color:var(--fg-2);font-size:.8rem;line-height:1.65}
+.hero__role a{color:var(--fg);text-decoration:underline;text-underline-offset:.2em}
 .hero .btn-row{ margin-top: clamp(26px, 3vw, 38px); }
 
 /* the featured frame — framed like a director's viewfinder */

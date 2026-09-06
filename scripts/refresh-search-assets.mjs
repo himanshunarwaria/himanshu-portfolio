@@ -53,7 +53,14 @@ for(const file of walk(root)){
       const data=JSON.parse(body.replaceAll(origin+'/AI-FILM/#himanshu',person['@id']));
       const visit=value=>{
         if(!value||typeof value!=='object')return;
-        if(value['@type']==='Person'&&value.name==='Himanshu Narwaria'){value['@id']=person['@id'];value.url=person.url;}
+        if(value['@type']==='Person'&&value.name==='Himanshu Narwaria'){
+          value['@id']=person['@id'];value.url=person.url;
+          // Full biographies carry the current role; small author references resolve to the profile.
+          if(value.jobTitle||value.description){
+            value.jobTitle=route==='AI-FILM/index.html'?[person.jobTitle,'AI Film Director & Producer']:person.jobTitle;
+            value.worksFor=person.worksFor;value.subjectOf=person.subjectOf;
+          }
+        }
         if(value['@type']==='BlogPosting'){
           value.image=value.image||image;
           value.mainEntityOfPage={'@type':'WebPage','@id':origin+pathname};
